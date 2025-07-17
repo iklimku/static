@@ -1,4 +1,4 @@
-data = [
+const data = [
   {
     slug: "Test"
   }

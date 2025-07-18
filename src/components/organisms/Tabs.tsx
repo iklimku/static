@@ -48,7 +48,7 @@ export function MainTabs() {
     <Tabs defaultValue="tab0" className="w-full max-w-screen-xl mx-auto mt-6">
       {/* Tab Triggers */}
       <div className="flex justify-center">
-        <TabsList className="flex flex-wrap justify-center bg-white shadow-md rounded-lg p-1 gap-2 w-full h-full">
+        <TabsList className="flex flex-wrap justify-center bg-gray-50 shadow-md rounded-lg p-1 gap-2 w-full h-full ">
           {tabsData.map((tab, i) => (
             <TabsTrigger
               key={tab.href}
@@ -68,7 +68,7 @@ export function MainTabs() {
         <TabsContent
           key={tab.href}
           value={`tab${i}`}
-          className="p-4 mt-4 rounded-lg shadow-md flex flex-col gap-4 bg-gray-50"
+          className="p-4 mt-4 rounded-lg shadow-xl flex flex-col gap-4 bg-white"
         >
           {/* Gambar */}
           <div className="w-full">

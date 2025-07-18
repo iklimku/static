@@ -46,21 +46,14 @@ export function MainTabs() {
     <Tabs defaultValue="tab0" className="w-full max-w-screen-xl mx-auto mt-6">
       {/* Tab Triggers */}
       <div className="flex justify-center">
-        <TabsList className="flex flex-wrap justify-center bg-white shadow-md rounded-lg p-1 gap-2 max-w-full overflow-x-auto">
+        <TabsList className="flex flex-wrap justify-center bg-white shadow-md rounded-lg p-1 gap-2 w-full h-full">
           {tabsData.map((tab, i) => (
-            // <TabsTrigger
-            //   key={tab.href}
-            //   value={`tab${i}`}
-            //   className="text-sm md:text-base whitespace-nowrap"
-            // >
-            //   {tab.title}
-            // </TabsTrigger>
             <TabsTrigger
               key={tab.href}
               value={`tab${i}`}
               className="text-sm md:text-base whitespace-nowrap px-4 py-2 rounded-md transition-colors
              data-[state=active]:bg-cyan-600 data-[state=active]:text-white
-             hover:bg-cyan-100"
+             hover:bg-cyan-100 "
             >
               {tab.title}
             </TabsTrigger>
@@ -73,7 +66,7 @@ export function MainTabs() {
         <TabsContent
           key={tab.href}
           value={`tab${i}`}
-          className="p-4 mt-4 bg-white rounded-lg shadow-md flex flex-col gap-4"
+          className="p-4 mt-4 bg-white rounded-lg shadow-md flex flex-col gap-4 bg-gray-50"
         >
           {/* Gambar */}
           <img

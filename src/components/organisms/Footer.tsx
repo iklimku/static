@@ -8,7 +8,7 @@ import Link from "next/link"
 export function Footer() {
   return (
     <footer className="w-full h-auto border-t-2 border-black flex mt-4">
-      <div className="container mx-auto py-4 grid grid-cols-3">
+      <div className="container mx-auto py-4 px-8 grid grid-cols-3">
         <div>
           <Image src={LogoBMKG} alt="Logo BMKG" width={56} />
           <h5 className="font-bold mt-2">Kontak Kami</h5>

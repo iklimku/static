@@ -1,5 +1,7 @@
 "use client";
 
+import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -52,8 +54,8 @@ export function MainTabs() {
               key={tab.href}
               value={`tab${i}`}
               className="text-sm md:text-base whitespace-nowrap px-4 py-2 rounded-md transition-colors
-             data-[state=active]:bg-cyan-600 data-[state=active]:text-white
-             hover:bg-cyan-100 "
+            data-[state=active]:bg-cyan-600 data-[state=active]:text-white
+            hover:bg-cyan-100 "
             >
               {tab.title}
             </TabsTrigger>
@@ -66,12 +68,20 @@ export function MainTabs() {
         <TabsContent
           key={tab.href}
           value={`tab${i}`}
-          className="p-4 mt-4 bg-white rounded-lg shadow-md flex flex-col gap-4 bg-gray-50"
+          className="p-4 mt-4 rounded-lg shadow-md flex flex-col gap-4 bg-gray-50"
         >
           {/* Gambar */}
-          <img
+          {/* <img
             src={tab.image}
             alt={tab.title}
+            className="w-full rounded-lg object-cover"
+          /> */}
+
+          <Image
+            src={tab.image}
+            alt={tab.title}
+            width={1200}
+            height={500}
             className="w-full rounded-lg object-cover"
           />
 

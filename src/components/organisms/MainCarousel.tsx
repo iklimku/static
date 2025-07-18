@@ -1,4 +1,7 @@
+'use client';
+
 import * as React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -25,9 +28,17 @@ export function MainCarousel() {
             <CarouselItem key={index} className="h-full">
               <Card className="h-full rounded-none">
                 <CardContent className="p-0 h-full">
-                  <img
+                  {/* <img
                     src={url}
                     alt={`Slide ${index + 1}`}
+                    className="object-cover w-full h-full rounded-xl"
+                  /> */}
+
+                  <Image
+                    src={url}
+                    alt={`Slide ${index + 1}`}
+                    width={1200}
+                    height={500}
                     className="object-cover w-full h-full rounded-xl"
                   />
                 </CardContent>

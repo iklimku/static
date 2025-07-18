@@ -170,12 +170,12 @@ const components: { title: string; subMenu: { title: string; href: string; descr
 
 export function Navbar() {
   return (
-    <nav className="bg-background border-b-2 sticky top-0 z-10">
-      <div className="container mx-auto py-4 flex flex-row justify-between">
+    <nav className="bg-white border-b-2 sticky top-0 z-10">
+      <div className="container mx-auto py-4 px-8 flex flex-row justify-between">
         <Link href={"/"}>
           <div className="flex flex-row">
             <Image src={LogoBMKG} alt="Logo BMKG" height={48} />
-            <div className="flex flex-col ml-2 justify-center">
+            <div className="hidden xl:flex xl:flex-col ml-2 justify-center">
               <span className="text-sm font-bold">Badan Meteorologi, Klimatologi, dan Geofisika</span>
               <span className="text-xs text-muted-foreground">Deputi Klimatologi</span>
             </div>
@@ -183,17 +183,18 @@ export function Navbar() {
         </Link>
 
         <NavigationMenu viewport={false}>
-          <NavigationMenuList>
+          <NavigationMenuList className="hidden lg:flex ">
             {components.map((component) => (
               <NavigationMenuItem key={component.title}>
                 <NavigationMenuTrigger>{component.title}</NavigationMenuTrigger>
-                <NavigationMenuContent className="border">
-                  <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <NavigationMenuContent className="bg-white 2xl:-left-80">
+                  <ul className="grid gap-2 lg:grid-cols-1 lg:w-72 xl:grid-cols-2">
                     {component.subMenu.map((item) => (
                       <ListItem
                         key={item.title}
                         title={item.title}
                         href={item.href}
+                        className="hover:bg-gray-100 rounded-sm"
                       >
                         {item.description}
                       </ListItem>
@@ -205,8 +206,8 @@ export function Navbar() {
 
           </NavigationMenuList>
         </NavigationMenu>
-      
-        <Button className="my-auto" variant="outline">Contact Center 196</Button>
+
+        <Button className="my-auto hidden lg:flex" variant="outline">Contact Center 196</Button>
       </div>
     </nav>
   )

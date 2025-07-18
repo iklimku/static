@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const tabsData = [
@@ -69,11 +70,17 @@ export function MainTabs() {
           className="p-4 mt-4 bg-white rounded-lg shadow-md flex flex-col gap-4 bg-gray-50"
         >
           {/* Gambar */}
-          <img
-            src={tab.image}
-            alt={tab.title}
-            className="w-full rounded-lg object-cover"
-          />
+          <div className="w-full">
+            <Image
+              src={tab.image}
+              alt={tab.title}
+              width={1920}
+              height={1080}
+              className="w-full h-auto rounded-lg"
+              sizes="100vw"
+              priority
+            />
+          </div>
 
           {/* Teks & Link */}
           <div>

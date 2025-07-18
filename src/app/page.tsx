@@ -1,5 +1,7 @@
 import { MainCarousel } from "@/components/organisms/MainCarousel";
 import { Sectorals } from "@/components/organisms/Sectorals";
+import { Main } from "next/document";
+import { MainTabs } from "@/components/organisms/Tabs";
 
 export default function Home() {
   return (
@@ -13,6 +15,9 @@ export default function Home() {
         {/* Daftar Sectoral */}
         <div className="w-auto h-auto mt-9">
           <Sectorals />
+        </div>
+        <div className="w-auto h-auto mt-9">
+          <MainTabs />
         </div>
       </main>
     </>

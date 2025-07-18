@@ -57,7 +57,7 @@ export function Sectorals() {
         <Link
           key={index}
           href={sector.href}
-          className="block rounded-xl bg-white p-6 shadow hover:shadow-lg hover:bg-gray-100 transition-all duration-300 text-center shadow-xl"
+          className="block rounded-xl bg-white p-6 shadow hover:shadow-lg hover:bg-cyan-200 transition-all duration-300 text-center shadow-xl"
         >
           <sector.icon className="mx-auto mb-4 h-8 w-8 text-cyan-600" />
           <h3 className="font-semibold text-lg text-gray-800">

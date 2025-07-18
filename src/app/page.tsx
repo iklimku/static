@@ -1,6 +1,6 @@
 import { MainCarousel } from "@/components/organisms/MainCarousel";
 import { Sectorals } from "@/components/organisms/Sectorals";
-import { Main } from "next/document";
+// import { Main } from "next/document";
 import { MainTabs } from "@/components/organisms/Tabs";
 
 export default function Home() {

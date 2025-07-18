@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -25,7 +26,7 @@ export function MainCarousel() {
             <CarouselItem key={index} className="h-full">
               <Card className="h-full rounded-none">
                 <CardContent className="p-0 h-full">
-                  <img
+                  <Image
                     src={url}
                     alt={`Slide ${index + 1}`}
                     className="object-cover w-full h-full rounded-xl"

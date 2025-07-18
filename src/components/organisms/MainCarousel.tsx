@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import * as React from "react";
 import Image from "next/image";
@@ -13,33 +13,43 @@ import {
 
 export function MainCarousel() {
   const images = [
-    "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
-    "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.png",
-    "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
-    "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
-    "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi6.png",
+    {
+      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
+      alt: "ACH Bulan",
+    },
+    {
+      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.png",
+      alt: "ASH Bulan",
+    },
+    {
+      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
+      alt: "Poster Musim",
+    },
+    {
+      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
+      alt: "ANSPI 1",
+    },
+    {
+      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi6.png",
+      alt: "ANSPI 6",
+    },
   ];
 
   return (
     <div className="w-full px-4 sm:px-0">
-      <Carousel className="relative w-full max-w-screen-xl mx-auto rounded-xl h-56 sm:h-64 md:h-80 lg:h-96 mt-4 mb-4 shadow-xl overflow-hidden">
+      <Carousel className="relative w-full max-w-screen-xl mx-auto mt-4 mb-4 overflow-hidden rounded-xl shadow-xl">
         <CarouselContent className="h-full">
-          {images.map((url, index) => (
+          {images.map((img, index) => (
             <CarouselItem key={index} className="h-full">
-              <Card className="h-full rounded-none">
-                <CardContent className="p-0 h-full">
-                  {/* <img
-                    src={url}
-                    alt={`Slide ${index + 1}`}
-                    className="object-cover w-full h-full rounded-xl"
-                  /> */}
-
+              <Card className="h-full">
+                <CardContent className="p-0 relative h-[300px] sm:h-[400px] md:h-[500px]">
                   <Image
-                    src={url}
-                    alt={`Slide ${index + 1}`}
-                    width={1200}
-                    height={500}
-                    className="object-cover w-full h-full rounded-xl"
+                    src={img.url}
+                    alt={img.alt}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, 70vh"
+                    priority={index === 0} // preload gambar pertama
                   />
                 </CardContent>
               </Card>

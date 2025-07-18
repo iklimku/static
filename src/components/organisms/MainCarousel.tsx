@@ -48,7 +48,7 @@ export function MainCarousel() {
                     alt={img.alt}
                     fill
                     className="object-contain"
-                    sizes="(max-width: 768px) 100vw, 768px"
+                    sizes="(max-width: 768px) 100vw, 70vh"
                     priority={index === 0} // preload gambar pertama
                   />
                 </CardContent>

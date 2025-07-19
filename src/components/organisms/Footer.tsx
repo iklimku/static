@@ -30,27 +30,27 @@ export function Footer() {
           <h5 className="font-bold mb-2">Tautan</h5>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link className="hover:font-bold" href="/sektor/pertanian">
+              <Link className="hover:font-bold" href="/pertanian/daftar">
                 Pertanian dan Kehutanan
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/sektor/air-bencana">
+              <Link className="hover:font-bold" href="/air-bencana/daftar">
                 Sumber Daya Air dan Bencana
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/sektor/kesehatan">
+              <Link className="hover:font-bold" href="/kesehatan/daftar">
                 Kesehatan
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/sektor/energi">
+              <Link className="hover:font-bold" href="/energi/daftar">
                 Energi
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/sektor/pembangunan">
+              <Link className="hover:font-bold" href="/pembangunan/daftar">
                 Perencanaan dan Pembangunan
               </Link>
             </li>

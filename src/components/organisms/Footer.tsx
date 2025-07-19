@@ -9,11 +9,13 @@ export function Footer() {
     <footer className="w-full bg-cyan-100 mt-4">
       <div className="container mx-auto py-8 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Kolom 1: Logo dan Kontak */}
-        <div>
+        <div className="justify-items-center text-center md:justify-items-start md:text-start">
           <Image src={LogoBMKG} alt="Logo BMKG" width={56} />
           <h5 className="font-bold mt-4">Kontak Kami</h5>
           <p className="text-sm mt-2">
-            Jl. Angkasa I No.2 Kemayoran, Jakarta Pusat 10610, PO Box 3540 Jkt.
+            Jl. Angkasa I No.2 Kemayoran, Jakarta Pusat 10610,
+            <br className="sm:hidden" />
+            PO Box 3540 Jkt.
             <br />
             Contact Center (021) 196
             <br />
@@ -24,7 +26,7 @@ export function Footer() {
         </div>
 
         {/* Kolom 2: Tautan */}
-        <div>
+        <div className="justify-items-center text-center md:justify-items-start md:text-start">
           <h5 className="font-bold mb-2">Tautan</h5>
           <ul className="space-y-1 text-sm">
             <li>
@@ -61,7 +63,7 @@ export function Footer() {
         </div>
 
         {/* Kolom 3: Call Center & Aplikasi */}
-        <div>
+        <div className="justify-items-center text-center md:justify-items-start md:text-start">
           <h5 className="font-bold mb-2">Call Center</h5>
           <p className="text-sm mb-4">196</p>
 

@@ -195,14 +195,14 @@ export function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="sm:hidden text-muted-foreground"
+          className="xl:hidden text-muted-foreground"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Menu className="w-6 h-6 sticky top-0 z-100" />
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden sm:flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-4">
           <NavigationMenu>
             <NavigationMenuList>
               {components.map((component) => (
@@ -233,7 +233,7 @@ export function Navbar() {
 
       {/* Mobile Dropdown Navigation */}
       {isOpen && (
-        <div className="sm:hidden px-4 pb-4 space-y-4 bg-white border-t ">
+        <div className="xl:hidden px-4 pb-4 space-y-4 bg-white border-t ">
           {components.map((component) => (
             <div key={component.title}>
               <div className="font-semibold text-cyan-700 mb-2">

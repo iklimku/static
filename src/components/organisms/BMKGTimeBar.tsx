@@ -44,8 +44,8 @@ export default function BMKGTimeBar() {
   return (
     <div className="w-full text-xs md:text-sm px-4 py-2 flex justify-between items-center font-medium bg-cyan-700 text-white">
       <span>{dateStr}</span>
-      <span>
-        Standar Waktu Indonesia | {wibTime} WIB | {utcTime} UTC
+      <span className="text-end">
+        Standar Waktu Indonesia <br className="sm:hidden" /> | {wibTime} WIB | {utcTime} UTC
       </span>
     </div>
   );

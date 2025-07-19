@@ -245,6 +245,7 @@ export function Navbar() {
                     <Link
                       href={item.href}
                       className="block px-4 py-3 hover:bg-cyan-100 rounded-md transition data"
+                      onClick={() => setIsOpen(!isOpen)}
                     >
                       <div className="text-sm font-semibold">{item.title}</div>
                       <p className="text-xs text-muted-foreground">

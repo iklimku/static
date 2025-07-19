@@ -28,7 +28,7 @@ const data: {
       data: [
         {
           title: "Prediksi Curah Hujan",
-          href: "prediksi-curah-hujan",
+          href: "prediksi-curah-hujan/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -42,49 +42,49 @@ const data: {
         },
         {
           title: "Perkembangan ENSO dan IOD",
-          href: "perkembangan-enso-dan-iod",
+          href: "perkembangan-enso-dan-iod/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
         },
         {
           title: "Ketersediaan Air bagi Tanaman",
-          href: "ketersediaan-air-bagi-tanaman",
+          href: "ketersediaan-air-bagi-tanaman/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
         },
         // {
         //   title: "Prediksi Indeks Potensi Karhutla",
-        //   href: "prediksi-indeks-potensi-karhutla",
+        //   href: "prediksi-indeks-potensi-karhutla/detail",
         //   imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
         //   descriptionUrl: "",
         //   description: ""
         // },
         {
           title: "Prediksi Musim Hujan",
-          href: "prediksi-musim-hujan",
+          href: "prediksi-musim-hujan/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
         },
         {
           title: "Prediksi Musim Kemarau",
-          href: "prediksi-musim-kemarau",
+          href: "prediksi-musim-kemarau/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
         },
         {
           title: "Peringatan Dini Iklim Ekstrem",
-          href: "peringatan-dini-iklim-ekstrem",
+          href: "peringatan-dini-iklim-ekstrem/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
         },
         {
           title: "Indeks Persipitasi Terstandarisasi",
-          href: "indeks-presipitasi-terstandarisasi",
+          href: "indeks-presipitasi-terstandarisasi/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -98,7 +98,7 @@ const data: {
         // Prediksi Daerah Potensi Banjir
         {
           title: "Prediksi Daerah Potensi Banjir",
-          href: "prediksi-daerah-potensi-banjir",
+          href: "prediksi-daerah-potensi-banjir/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -114,7 +114,7 @@ const data: {
         // Prediksi Curah Hujan
         {
           title: "Prediksi Curah Hujan",
-          href: "prediksi-curah-hujan",
+          href: "prediksi-curah-hujan/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -122,7 +122,7 @@ const data: {
         // Prediksi Musim Hujan
         {
           title: "Prediksi Musim Hujan",
-          href: "prediksi-musim-hujan",
+          href: "prediksi-musim-hujan/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -130,7 +130,7 @@ const data: {
         // Prediksi Musim Kemarau
         {
           title: "Prediksi Musim Kemarau",
-          href: "prediksi-musim-kemarau",
+          href: "prediksi-musim-kemarau/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -138,7 +138,7 @@ const data: {
         // Peringatan Dini Iklim Ekstrem
         {
           title: "Peringatan Dini Iklim Ekstrem",
-          href: "peringatan-dini-iklim-ekstrem",
+          href: "peringatan-dini-iklim-ekstrem/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -146,7 +146,7 @@ const data: {
         // Perkembangan ENSO dan IOD
         {
           title: "Perkembangan ENSO dan IOD",
-          href: "perkembangan-enso-dan-iod",
+          href: "perkembangan-enso-dan-iod/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -154,7 +154,7 @@ const data: {
         // Indeks Presipitasi Terstandarisasi
         {
           title: "Indeks Presipitasi Terstandarisasi",
-          href: "indeks-presipitasi-terstandarisasi",
+          href: "indeks-presipitasi-terstandarisasi/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -168,7 +168,7 @@ const data: {
         // Peringatan Dini Demam Berdarah
         {
           title: "Peringatan Dini Demam Berdarah",
-          href: "peringatan-dini-demam-berdarah",
+          href: "peringatan-dini-demam-berdarah/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -176,7 +176,7 @@ const data: {
         // Monitoring Partikulat PM2.5 Realtime
         {
           title: "Monitoring Partikulat PM2.5 Realtime",
-          href: "monitoring-partikulat-pm25-realtime",
+          href: "monitoring-partikulat-pm25-realtime/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -184,7 +184,7 @@ const data: {
         // Informasi Partikulat SPM
         {
           title: "Informasi Partikulat SPM",
-          href: "informasi-partikulat-spm",
+          href: "informasi-partikulat-spm/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -192,7 +192,7 @@ const data: {
         // Informasi pH Air Hujan
         {
           title: "Informasi pH Air Hujan",
-          href: "informasi-ph-air-hujan",
+          href: "informasi-ph-air-hujan/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -206,7 +206,7 @@ const data: {
         // Potensi Energi Surya Stasiun
         {
           title: "Potensi Energi Surya Stasiun",
-          href: "potensi-energi-surya-stasiun",
+          href: "potensi-energi-surya-stasiun/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -214,7 +214,7 @@ const data: {
         // Potensi Energi Surya Spasial
         {
           title: "Potensi Energi Surya Spasial",
-          href: "potensi-energi-surya-spasial",
+          href: "potensi-energi-surya-spasial/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -222,7 +222,7 @@ const data: {
         // Prediksi Potensi Energi Surya
         {
           title: "Prediksi Potensi Energi Surya",
-          href: "prediksi-potensi-energi-surya",
+          href: "prediksi-potensi-energi-surya/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -230,7 +230,7 @@ const data: {
         // Potensi Energi Angin Stasiun
         {
           title: "Potensi Energi Angin Stasiun",
-          href: "potensi-energi-angin-stasiun",
+          href: "potensi-energi-angin-stasiun/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -244,7 +244,7 @@ const data: {
         // Proyeksi Perubahan Curah Hujan
         {
           title: "Proyeksi Perubahan Curah Hujan",
-          href: "proyeksi-perubahan-curah-hujan",
+          href: "proyeksi-perubahan-curah-hujan/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -252,7 +252,7 @@ const data: {
         // Proyeksi Perubahan Suhu
         {
           title: "Proyeksi Perubahan Suhu",
-          href: "proyeksi-perubahan-suhu-udara",
+          href: "proyeksi-perubahan-suhu-udara/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -260,7 +260,7 @@ const data: {
         // Anomali Suhu
         {
           title: "Anomali Suhu",
-          href: "anomali-suhu-udara",
+          href: "anomali-suhu-udara/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""
@@ -268,7 +268,7 @@ const data: {
         // Ekstrem Perubahan Iklim
         {
           title: "Ekstrem Perubahan Iklim",
-          href: "catatan-iklim-ekstrem",
+          href: "catatan-iklim-ekstrem/detail",
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: ""

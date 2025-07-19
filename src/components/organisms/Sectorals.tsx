@@ -1,7 +1,7 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Link from "next/link";
 import {
   Leaf,
   Waves,
@@ -52,7 +52,15 @@ const sectorals: Sectoral[] = [
 ];
 
 export function Sectorals() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null); // index card aktif
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const router = useRouter();
+
+  const handleClick = (index: number, href: string) => {
+    setActiveIndex(index);
+    setTimeout(() => {
+      router.push(href);
+    }, 150); // kasih delay 150ms biar animasi klik kelihatan
+  };
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
@@ -60,10 +68,10 @@ export function Sectorals() {
         const isActive = index === activeIndex;
 
         return (
-          <div
+          <button
             key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`cursor-pointer block rounded-xl p-6 text-center shadow-xl transition-all duration-300 ${
+            onClick={() => handleClick(index, sector.href)}
+            className={`w-full text-left rounded-xl p-6 shadow-xl transition-all duration-300 ${
               isActive
                 ? "bg-cyan-600 text-white"
                 : "bg-white text-gray-800 hover:bg-cyan-100"
@@ -74,15 +82,17 @@ export function Sectorals() {
                 isActive ? "text-white" : "text-cyan-600"
               }`}
             />
-            <h3 className="font-semibold text-lg">{sector.title}</h3>
+            <h3 className="font-semibold text-lg text-center">
+              {sector.title}
+            </h3>
             <p
-              className={`text-sm mt-1 ${
+              className={`text-sm mt-1 text-center ${
                 isActive ? "text-white/90" : "text-gray-600"
               }`}
             >
               {sector.description}
             </p>
-          </div>
+          </button>
         );
       })}
     </div>

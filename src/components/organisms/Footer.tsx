@@ -30,33 +30,28 @@ export function Footer() {
           <h5 className="font-bold mb-2">Tautan</h5>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link className="hover:font-bold" href="/">
-                Beranda
+              <Link className="hover:font-bold" href="/sektor/pertanian">
+                Pertanian dan Kehutanan
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/iklim-terkini">
-                Iklim Terkini
+              <Link className="hover:font-bold" href="/sektor/air-bencana">
+                Sumber Daya Air dan Bencana
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/analisis-iklim">
-                Analisis Iklim
+              <Link className="hover:font-bold" href="/sektor/kesehatan">
+                Kesehatan
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/peringatan-dini-iklim">
-                Peringatan Dini Iklim
+              <Link className="hover:font-bold" href="/sektor/energi">
+                Energi
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/prediksi-iklim">
-                Prediksi Iklim
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:font-bold" href="/perubahan-iklim">
-                Perubahan Iklim
+              <Link className="hover:font-bold" href="/sektor/pembangunan">
+                Perencanaan dan Pembangunan
               </Link>
             </li>
           </ul>

@@ -11,35 +11,35 @@ const tabsData = [
       "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
     title: "Pertanian dan Kehutanan",
     description: "Informasi iklim untuk sektor pertanian dan kehutanan.",
-    href: "/sektor/pertanian",
+    href: "pertanian/daftar",
   },
   {
     image:
       "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.png",
     title: "Sumber Daya Air & Bencana",
     description: "Informasi iklim untuk sektor sumber daya air dan bencana.",
-    href: "/sektor/air-bencana",
+    href: "air-bencana/daftar",
   },
   {
     image:
       "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
     title: "Kesehatan",
     description: "Informasi iklim untuk sektor kesehatan.",
-    href: "/sektor/kesehatan",
+    href: "kesehatan/daftar",
   },
   {
     image:
       "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
     title: "Energi",
     description: "Informasi iklim untuk sektor energi.",
-    href: "/sektor/energi",
+    href: "energi/daftar",
   },
   {
     image:
       "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi6.png",
     title: "Perencanaan & Pembangunan",
     description: "Informasi iklim untuk sektor pembangunan dan tata ruang.",
-    href: "/sektor/pembangunan",
+    href: "pembangunan/daftar",
   },
 ];
 

@@ -23,31 +23,31 @@ const sectorals: Sectoral[] = [
     title: "Pertanian dan Kehutanan",
     description: "Informasi iklim untuk sektor pertanian dan kehutanan.",
     icon: Leaf,
-    href: "/sektor/pertanian",
+    href: "pertanian/daftar",
   },
   {
     title: "Sumber Daya Air & Bencana",
     description: "Informasi iklim untuk sektor sumber daya air dan bencana.",
     icon: Waves,
-    href: "/sektor/air-bencana",
+    href: "air-bencana/daftar",
   },
   {
     title: "Kesehatan",
     description: "Informasi iklim untuk sektor kesehatan.",
     icon: HeartPulse,
-    href: "/sektor/kesehatan",
+    href: "kesehatan/daftar",
   },
   {
     title: "Energi",
     description: "Informasi iklim untuk sektor energi.",
     icon: Sun,
-    href: "/sektor/energi",
+    href: "energi/daftar",
   },
   {
     title: "Perencanaan & Pembangunan",
     description: "Informasi iklim untuk sektor pembangunan dan tata ruang.",
     icon: Building2,
-    href: "/sektor/pembangunan",
+    href: "pembangunan/daftar",
   },
 ];
 

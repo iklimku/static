@@ -4,44 +4,63 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Leaf,
+  Waves,
+  HeartPulse,
+  Sun,
+  Building2,
+  LucideIcon,
+} from "lucide-react";
 
-const tabsData = [
-  {
-    image:
-      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
-    title: "Pertanian dan Kehutanan",
-    description: "Informasi iklim untuk sektor pertanian dan kehutanan.",
-    href: "pertanian/daftar",
-  },
-  {
-    image:
-      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.png",
-    title: "Sumber Daya Air & Bencana",
-    description: "Informasi iklim untuk sektor sumber daya air dan bencana.",
-    href: "air-bencana/daftar",
-  },
-  {
-    image:
-      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
-    title: "Kesehatan",
-    description: "Informasi iklim untuk sektor kesehatan.",
-    href: "kesehatan/daftar",
-  },
-  {
-    image:
-      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
-    title: "Energi",
-    description: "Informasi iklim untuk sektor energi.",
-    href: "energi/daftar",
-  },
-  {
-    image:
-      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi6.png",
-    title: "Perencanaan & Pembangunan",
-    description: "Informasi iklim untuk sektor pembangunan dan tata ruang.",
-    href: "pembangunan/daftar",
-  },
-];
+const tabsData: {
+  image: string;
+  title: string;
+  description: string;
+  href: string;
+  icon: LucideIcon;
+}[] = [
+    {
+      image:
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
+      title: "Pertanian dan Kehutanan",
+      description: "Informasi iklim untuk sektor pertanian dan kehutanan.",
+      href: "pertanian/daftar",
+      icon: Leaf,
+    },
+    {
+      image:
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.png",
+      title: "Sumber Daya Air & Bencana",
+      description: "Informasi iklim untuk sektor sumber daya air dan bencana.",
+      href: "air-bencana/daftar",
+      icon: Waves,
+    },
+    {
+      image:
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
+      title: "Kesehatan",
+      description: "Informasi iklim untuk sektor kesehatan.",
+      href: "kesehatan/daftar",
+      icon: HeartPulse,
+    },
+    {
+      image:
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
+      title: "Energi",
+      description: "Informasi iklim untuk sektor energi.",
+      href: "energi/daftar",
+      icon: Sun,
+    },
+    {
+      image:
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi6.png",
+      title: "Perencanaan & Pembangunan",
+      description: "Informasi iklim untuk sektor pembangunan dan tata ruang.",
+      href: "pembangunan/daftar",
+      icon: Building2,
+    },
+  ];
 
 export function MainTabs() {
   return (
@@ -57,7 +76,12 @@ export function MainTabs() {
             data-[state=active]:bg-cyan-600 data-[state=active]:text-white
             hover:bg-cyan-100 "
             >
-              {tab.title}
+              <span className="lg:hidden">
+                <tab.icon />
+              </span>
+              <span className="hidden lg:inline">
+                {tab.title}
+              </span>
             </TabsTrigger>
           ))}
         </TabsList>

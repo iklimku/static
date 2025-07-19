@@ -178,7 +178,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-cyan-100 shadow-lg sticky top-0 z-10">
+    <nav className="bg-cyan-100 shadow-lg sticky top-0 z-100">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -198,7 +198,7 @@ export function Navbar() {
           className="sm:hidden text-muted-foreground"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Menu className="w-6 h-6 sticky top-0 z-10" />
+          <Menu className="w-6 h-6 sticky top-0 z-100" />
         </button>
 
         {/* Desktop Navigation */}

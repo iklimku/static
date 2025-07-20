@@ -75,7 +75,7 @@ const components: {
       },
       {
         title: "Indeks Presipitasi Terstandarisasi",
-        href: "/indeks-presipitasi-terstandarisasi",
+        href: "/indeks-presipitasi-terstandarisasi/detail",
         description: "Informasi tentang indeks presipitasi terstandarisasi.",
       },
       {

@@ -1,11 +1,12 @@
+import { Suspense } from "react";
+import Loading from "@/components/organisms/Loading";
+import Image from "next/image";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-import Image from "next/image";
 
 interface Tab {
   title: string;
@@ -24,7 +25,7 @@ interface Item {
 };
 
 export default async function DetailWithoutTabs(item: Item) {
-    // get descripsi from descripsiUlr (.txt) convert to string
+  // get descripsi from descripsiUlr (.txt) convert to string
   let description = item.description;
   if (item.descriptionUrl) {
     const res = await fetch(item.descriptionUrl);
@@ -41,16 +42,18 @@ export default async function DetailWithoutTabs(item: Item) {
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-6">
             <div className="mb-6">
-              <Image
-                src={item.imageUrl}
-                alt={item.title}
-                width={800}
-                height={400}
-                className="w-full h-auto object-cover rounded-md"
-              />
+              <Suspense fallback={<Loading />}>
+                <Image
+                  src={item.imageUrl}
+                  alt={item.title}
+                  width={800}
+                  height={400}
+                  className="w-full h-auto object-cover rounded-md"
+                />
+              </Suspense>
             </div>
 
-            { item.description || item.descriptionUrl && <Accordion
+            {item.description || item.descriptionUrl && <Accordion
               type="single"
               collapsible
               className="w-full"

@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import Loading from "@/components/organisms/Loading";
 import {
   Accordion,
   AccordionContent,
@@ -59,14 +61,14 @@ export default function DetailTabs(item: Item) {
           </div>
 
           {/* Tab Contents */}
-          {item.tabs && item.tabs.map(async(tab, i) => {
-              // get descripsi from descripsiUlr (.txt) convert to string
-              let description = tab.description;
+          {item.tabs && item.tabs.map(async (tab, i) => {
+            // get descripsi from descripsiUlr (.txt) convert to string
+            let description = tab.description;
 
-              if (item.descriptionUrl) {
-                const res = await fetch(item.descriptionUrl);
-                description = await res.text();
-              }
+            if (item.descriptionUrl) {
+              const res = await fetch(item.descriptionUrl);
+              description = await res.text();
+            }
             return (
               <TabsContent
                 key={tab.title}
@@ -75,15 +77,17 @@ export default function DetailTabs(item: Item) {
               >
                 {/* Gambar */}
                 <div className="w-full">
-                  <Image
-                    src={tab.imageUrl}
-                    alt={tab.title}
-                    width={1920}
-                    height={1080}
-                    className="w-full h-auto rounded-lg"
-                    sizes="100vw"
-                    priority
-                  />
+                  <Suspense fallback={<Loading />}>
+                    <Image
+                      src={tab.imageUrl}
+                      alt={tab.title}
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto rounded-lg"
+                      sizes="100vw"
+                      priority
+                    />
+                  </Suspense>
                 </div>
 
                 {/* Acoordion */}

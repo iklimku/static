@@ -2,6 +2,8 @@
 
 import * as React from "react";
 import Image from "next/image";
+import { Suspense } from "react";
+import Loading from "@/components/organisms/Loading";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -43,14 +45,16 @@ export function MainCarousel() {
             <CarouselItem key={index} className="h-full">
               <Card className="h-full">
                 <CardContent className="p-0 relative h-[300px] sm:h-[400px] md:h-[500px]">
-                  <Image
-                    src={img.url}
-                    alt={img.alt}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 100vw, 70vh"
-                    priority={index === 0} // preload gambar pertama
-                  />
+                  <Suspense fallback={<Loading />}>
+                    <Image
+                      src={img.url}
+                      alt={img.alt}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 70vh"
+                      priority={index === 0} // preload gambar pertama
+                    />
+                  </Suspense>
                 </CardContent>
               </Card>
             </CarouselItem>

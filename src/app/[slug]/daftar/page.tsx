@@ -1,6 +1,8 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Suspense } from "react";
+import Loading from "@/components/organisms/Loading";
 import {
   Card,
   CardContent,
@@ -264,7 +266,7 @@ const data: {
           imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
           descriptionUrl: "",
           description: "Informasi mengenai anomali suhu yang akan terjadi di Indonesia"
-        
+
         },
         // Ekstrem Perubahan Iklim
         {
@@ -311,13 +313,15 @@ export default async function Daftar({
           {item.data.map((item, index) => (
             <Card key={index} className="flex flex-col justify-between">
               <CardContent className="p-4">
-                <Image
-                  src={item.imageUrl}
-                  alt={item.title}
-                  width={1536}
-                  height={800}
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                />
+                <Suspense fallback={<Loading />}>
+                  <Image
+                    src={item.imageUrl}
+                    alt={item.title}
+                    width={1536}
+                    height={800}
+                    className="w-full h-48 object-cover rounded-md mb-4"
+                  />
+                </Suspense>
                 <CardTitle className="text-lg font-semibold mb-2">{item.title}</CardTitle>
                 <CardDescription className="text-sm text-gray-600">
                   {item.description}

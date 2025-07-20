@@ -18,14 +18,15 @@ interface Item {
   slug: string;
   title: string;
   imageUrl: string;
-  descriptionUrl: string | null;
+  descriptionUrl: string;
+  description: string;
   tabs: Tab[] | null;
 };
 
 export default async function DetailWithoutTabs(item: Item) {
     // get descripsi from descripsiUlr (.txt) convert to string
-  let description = null;
-  if (item?.descriptionUrl) {
+  let description = item.description;
+  if (item.descriptionUrl) {
     const res = await fetch(item.descriptionUrl);
     description = await res.text();
   }
@@ -49,7 +50,7 @@ export default async function DetailWithoutTabs(item: Item) {
               />
             </div>
 
-            <Accordion
+            { item.description || item.descriptionUrl && <Accordion
               type="single"
               collapsible
               className="w-full"
@@ -63,7 +64,7 @@ export default async function DetailWithoutTabs(item: Item) {
                   <p>{description}</p>
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
+            </Accordion>}
           </div>
         </div>
       </main>

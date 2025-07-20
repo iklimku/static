@@ -4,7 +4,7 @@ import DetailWithoutTabs from "@/components/organisms/DetailWithoutTabs";
 interface Tab {
   title: string;
   imageUrl: string;
-  descriptionUrl: string | null;
+  descriptionUrl: string;
   description: string;
 };
 
@@ -12,10 +12,10 @@ interface Item {
   slug: string;
   title: string;
   imageUrl: string;
-  descriptionUrl: string | null;
+  descriptionUrl: string;
+  description: string;
   tabs: Tab[] | null;
 };
-
 
 const data: Item[] = [
     // Iklim Terkini
@@ -24,13 +24,15 @@ const data: Item[] = [
       title: "Hari Tanpa Hujan",
       imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
       slug: "perkembangan-musim",
       title: "Perkembangan Musim",
       imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
-      descriptionUrl: "https//cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
+      descriptionUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
+      description: "",
       tabs: null
     },
     {
@@ -38,6 +40,7 @@ const data: Item[] = [
       title: "Anomali Suhu Udara",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Anomali+Suhu+Udara.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -45,6 +48,7 @@ const data: Item[] = [
       title: "Indeks Iklim Global",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Indeks+Iklim+Global.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -52,6 +56,7 @@ const data: Item[] = [
       title: "Catatan Iklim Ekstrem",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Catatan+Iklim+Ekstrem.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -59,6 +64,7 @@ const data: Item[] = [
       title: "Indeks Ultraviolet",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Indeks+Ultraviolet.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     // Analisis Iklim
@@ -67,6 +73,7 @@ const data: Item[] = [
       title: "Dinamika Atmosfer dan Laut",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Dinamika+Atmosfer+dan+Laut.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -74,6 +81,7 @@ const data: Item[] = [
       title: "Analisis Hujan Dasarian",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Analisis+Hujan+Dasarian.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -81,6 +89,7 @@ const data: Item[] = [
       title: "Analisis Hujan Bulanan",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Analisis+Hujan+Bulanan.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -88,6 +97,7 @@ const data: Item[] = [
       title: "Indeks Presipitasi Terstandarisasi",
       imageUrl: "",
       descriptionUrl: "",
+      description: "",
       tabs: [
         // SPI 1 
         {
@@ -117,6 +127,7 @@ const data: Item[] = [
       title: "Ketersediaan Air bagi Tanaman",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Ketersediaan+Air+bagi+Tanaman.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -124,6 +135,7 @@ const data: Item[] = [
       title: "Buletin",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Buletin.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     // Peringatan Dini Iklim
@@ -132,6 +144,7 @@ const data: Item[] = [
       title: "Peringatan Dini Kekeringan Meteorologis",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Peringatan+Dini+Kekeringan+Meteorologis.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -139,6 +152,7 @@ const data: Item[] = [
       title: "Peringatan Dini Curah Hujan Tinggi",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Peringatan+Dini+Curah+Hujan+Tinggi.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -146,6 +160,7 @@ const data: Item[] = [
       title: "Kondisi ENSO (EL Nino dan La Nina)",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Kondisi+ENSO+(EL+Nino+dan+La+Nina).png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     // Prediksi Iklim
@@ -154,6 +169,7 @@ const data: Item[] = [
       title: "Prediksi Musim",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Musim.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -161,6 +177,7 @@ const data: Item[] = [
       title: "Prediksi Indeks Presipitasi Terstandarisasi",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Indeks+Presipitasi+Terstandarisasi.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -168,6 +185,7 @@ const data: Item[] = [
       title: "Prediksi Hujan Bulanan",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Hujan+Bulanan.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -175,6 +193,7 @@ const data: Item[] = [
       title: "Prediksi Hujan Dasarian",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Hujan+Dasarian.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -182,6 +201,7 @@ const data: Item[] = [
       title: "Prediksi daerah Potensi Banjir",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+daerah+Potensi+Banjir.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     // Perubahan Iklim
@@ -190,6 +210,7 @@ const data: Item[] = [
       title: "Fakta Perubahan Iklim",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Fakta+Perubahan+Iklim.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -197,6 +218,7 @@ const data: Item[] = [
       title: "Analisis Laju Perubahan Suhu Udara",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Analisis+Laju+Perubahan+Suhu+Udara.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -204,6 +226,7 @@ const data: Item[] = [
       title: "Analisis Laju Perubahan Curah Hujan",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Analisis+Laju+Perubahan+Curah+Hujan.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -211,6 +234,7 @@ const data: Item[] = [
       title: "Proyeksi Perubahan Suhu Udara",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Proyeksi+Perubahan+Suhu+Udara.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
     {
@@ -218,6 +242,7 @@ const data: Item[] = [
       title: "Proyeksi Perubahan Curah Hujan",
       imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Proyeksi+Perubahan+Curah+Hujan.png",
       descriptionUrl: "",
+      description: "",
       tabs: null
     },
   ]

@@ -16,7 +16,7 @@ import Image from "next/image";
 interface Tab {
   title: string;
   imageUrl: string;
-  descriptionUrl: string | null;
+  descriptionUrl: string;
   description: string;
 };
 
@@ -25,40 +25,49 @@ interface Item {
   title: string;
   imageUrl: string;
   descriptionUrl: string | null;
+  description: string;
   tabs: Tab[] | null;
 };
 
-export default function DetailTabs(item: Item){
+export default function DetailTabs(item: Item) {
   return (
-      <>
-        <main className="container mx-auto px-4 max-w-screen-lg mt-20 mb-20">
-          <h2 className="text-3xl font-bold text-center text-gray-800">
-            {item.title}
-          </h2>
-          <p className="text-center text-gray-500  mb-8">Update: 15 Juli 2025</p>
+    <>
+      <main className="container mx-auto px-4 max-w-screen-lg mt-20 mb-20">
+        <h2 className="text-3xl font-bold text-center text-gray-800">
+          {item.title}
+        </h2>
+        <p className="text-center text-gray-500  mb-8">Update: 15 Juli 2025</p>
 
-          <Tabs defaultValue="tab0" className="w-full max-w-screen-xl mx-auto mt-6">
-            {/* Tab Triggers */}
-            <div className="flex justify-center">
-              <TabsList className="flex flex-wrap justify-center bg-gray-50 shadow-md rounded-lg p-1 gap-2 w-full h-full ">
-                {item.tabs && item.tabs.map((tab, i) => (
-                  <TabsTrigger
-                    key={tab.title}
-                    value={`tab${i}`}
-                    className="text-sm md:text-base whitespace-nowrap px-4 py-2 rounded-md transition-colors
+        <Tabs defaultValue="tab0" className="w-full max-w-screen-xl mx-auto mt-6">
+          {/* Tab Triggers */}
+          <div className="flex justify-center">
+            <TabsList className="flex flex-wrap justify-center bg-gray-50 shadow-md rounded-lg p-1 gap-2 w-full h-full ">
+              {item.tabs && item.tabs.map((tab, i) => (
+                <TabsTrigger
+                  key={tab.title}
+                  value={`tab${i}`}
+                  className="text-sm md:text-base whitespace-nowrap px-4 py-2 rounded-md transition-colors
             data-[state=active]:bg-cyan-600 data-[state=active]:text-white
             hover:bg-cyan-100 "
-                  >
-                    <span>
-                      {tab.title}
-                    </span>
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
+                >
+                  <span>
+                    {tab.title}
+                  </span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
 
-            {/* Tab Contents */}
-            {item.tabs && item.tabs.map((tab, i) => (
+          {/* Tab Contents */}
+          {item.tabs && item.tabs.map(async(tab, i) => {
+              // get descripsi from descripsiUlr (.txt) convert to string
+              let description = tab.description;
+
+              if (item.descriptionUrl) {
+                const res = await fetch(item.descriptionUrl);
+                description = await res.text();
+              }
+            return (
               <TabsContent
                 key={tab.title}
                 value={`tab${i}`}
@@ -78,7 +87,7 @@ export default function DetailTabs(item: Item){
                 </div>
 
                 {/* Acoordion */}
-                <Accordion
+                {(tab.description || tab.descriptionUrl) && <Accordion
                   type="single"
                   collapsible
                   className="w-full"
@@ -89,14 +98,15 @@ export default function DetailTabs(item: Item){
                       Deskripsi dan Analisis
                     </AccordionTrigger>
                     <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">
-                      <p>{tab.description}</p>
+                      <p>{description}</p>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-              </TabsContent>
-            ))}
-          </Tabs>
-        </main>
-      </>
+                }
+              </TabsContent>)
+          })}
+        </Tabs>
+      </main>
+    </>
   )
 }

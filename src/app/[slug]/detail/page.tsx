@@ -3,8 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-import Image from "next/image"
+} from "@/components/ui/accordion";
+import Image from "next/image";
 
 const data: {
   slug: string;
@@ -216,12 +216,12 @@ export async function generateStaticParams() {
 export default async function Home({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params
+  const { slug } = await params;
 
   // get title, imageUrl, and descriptionUrl from data by slug
-  const item = data.find((item) => item.slug === slug)
+  const item = data.find((item) => item.slug === slug);
 
   // get descripsi from descripsiUlr (.txt) convert to string
   let description = null;
@@ -231,23 +231,27 @@ export default async function Home({
   }
 
   if (!item) {
-    return (
-      <>
-        Data Not Found
-      </>
-    )
+    return <>Data Not Found</>;
   }
 
   return (
     <>
-      <main className="container mx-auto my-16 px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800">{ item.title }</h2>
-        <p className="text-center text-gray-500 mb-8">Update: 15 Juli 2025</p>
+      <main className="container mx-auto max-w-screen-lg mt-20 mb-20">
+        <h2 className="text-3xl font-bold text-center text-gray-800">
+          {item.title}
+        </h2>
+        <p className="text-center text-gray-500  mb-8">Update: 15 Juli 2025</p>
 
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-6">
-            <div className="text-center mb-6 w-auto">
-              <Image src={item.imageUrl} alt={item.title} height={0} width={1536} />
+            <div className="mb-6">
+              <Image
+                src={item.imageUrl}
+                alt={item.title}
+                width={800}
+                height={400}
+                className="w-full h-auto object-cover rounded-md"
+              />
             </div>
 
             <Accordion
@@ -257,9 +261,11 @@ export default async function Home({
               defaultValue="item-1"
             >
               <AccordionItem value="item-1">
-                <AccordionTrigger>Deskripsi dan Analisis</AccordionTrigger>
-                <AccordionContent className="flex flex-col gap-4 text-balance">
-                  <p>{ description }</p>
+                <AccordionTrigger className="px-10 text-center bg-cyan-500 text-white hover:bg-indigo-600 mt-8 mb-8">
+                  Deskripsi dan Analisis
+                </AccordionTrigger>
+                <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">
+                  <p>{description}</p>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -267,5 +273,5 @@ export default async function Home({
         </div>
       </main>
     </>
-  )
+  );
 }

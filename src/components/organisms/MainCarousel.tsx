@@ -39,7 +39,7 @@ export function MainCarousel() {
 
   return (
     <div className="w-full px-4 sm:px-0">
-      <Carousel className="relative w-full max-w-screen-xl mx-auto mt-4 mb-4 overflow-hidden rounded-xl shadow-xl">
+      <Carousel className="relative w-full mx-auto mt-4 mb-4 overflow-hidden rounded-xl shadow-xl">
         <CarouselContent className="h-full">
           {images.map((img, index) => (
             <CarouselItem key={index} className="h-full">

@@ -33,7 +33,7 @@ export default async function DetailWithoutTabs(item: Item) {
   }
   return (
     <>
-      <main className="container mx-auto px-4 max-w-screen-lg mt-20 mb-20">
+      <main className="container mx-auto px-4 mt-20 mb-20">
         <h2 className="text-3xl font-bold text-center text-gray-800">
           {item.title}
         </h2>

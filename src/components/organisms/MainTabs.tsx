@@ -66,7 +66,7 @@ const tabsData: {
 
 export function MainTabs() {
   return (
-    <Tabs defaultValue="tab0" className="w-full max-w-screen-xl mx-auto mt-6">
+    <Tabs defaultValue="tab0" className="w-full mx-auto mt-6">
       {/* Tab Triggers */}
       <div className="flex justify-center">
         <TabsList className="flex flex-wrap justify-center bg-gray-50 shadow-md rounded-lg p-1 gap-2 w-full h-full ">

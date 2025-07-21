@@ -184,7 +184,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2">
           <Image src={LogoBMKG} alt="Logo BMKG" height={48} />
           <div className="hidden sm:flex flex-col">
-            <span className="text-sm font-bold">
+            <span className="text-xs font-bold 2xl:text-sm">
               Badan Meteorologi, Klimatologi, dan Geofisika
             </span>
             <span className="text-xs text-muted-foreground">
@@ -207,7 +207,7 @@ export function Navbar() {
             <NavigationMenuList>
               {components.map((component) => (
                 <NavigationMenuItem key={component.title}>
-                  <NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="font-normal hover:font-semibold">
                     {component.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[700px] border shadow-lg bg-white rounded-md z-50">
@@ -227,7 +227,7 @@ export function Navbar() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <Button variant="outline">Contact Center 196</Button>
+          <Button className="bg-white">Contact Center 196</Button>
         </div>
       </div>
 

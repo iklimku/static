@@ -6,7 +6,7 @@ import { MainTabs } from "@/components/organisms/MainTabs";
 export default function Home() {
   return (
     <>
-      <main className="container mx-auto max-w-screen-lg">
+      <main className="container mx-auto ">
         {/* Carousel */}
         <div className="w-auto h-auto mx-4">
           <MainCarousel />

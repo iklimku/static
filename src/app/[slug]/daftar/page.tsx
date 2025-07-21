@@ -329,7 +329,7 @@ export default async function Daftar({
               </CardContent>
               <CardFooter className="p-4 pt-0">
                 <Link href={`/${item.href}`}>
-                  <Button variant={"outline"} className="w-full hover:bg-gray-100">Baca Selengkapnya</Button>
+                  <Button variant={"outline"} className="w-full border-2 border-cyan-100 hover:bg-cyan-100">Baca Selengkapnya</Button>
                 </Link>
               </CardFooter>
             </Card>

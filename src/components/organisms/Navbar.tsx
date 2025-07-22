@@ -34,32 +34,32 @@ const components: {
       {
         title: "Hari Tanpa Hujan",
         href: "/hari-tanpa-hujan/detail",
-        description: "Informasi tentang hari tanpa hujan.",
+        description: "Informasi  hari tanpa hujan.",
       },
       {
         title: "Perkembangan Musim",
         href: "/perkembangan-musim/detail",
-        description: "Informasi tentang perkembangan musim.",
+        description: "Informasi  perkembangan musim.",
       },
       {
         title: "Anomali Suhu Udara",
         href: "/anomali-suhu-udara",
-        description: "Informasi tentang anomali suhu udara.",
+        description: "Informasi  anomali suhu udara.",
       },
       {
         title: "Indeks Iklim Global",
-        href: "/indeks-iklim-global/daftar",
-        description: "Informasi tentang indeks iklim global.",
+        href: "/indeks-iklim-global/detail",
+        description: "Informasi  indeks iklim global.",
       },
       {
         title: "Catatan Iklim Ekstrem",
         href: "/catatan-iklim-ekstrem",
-        description: "Informasi tentang catatan iklim ekstrem.",
+        description: "Informasi  catatan iklim ekstrem.",
       },
       {
         title: "Indeks Ultraviolet",
         href: "/indeks-ultraviolet",
-        description: "Informasi tentang indeks ultraviolet.",
+        description: "Informasi  indeks ultraviolet.",
       },
     ],
   },
@@ -69,32 +69,32 @@ const components: {
       {
         title: "Dinamika Atmosfer dan Laut",
         href: "/dinamika-atmosfer-dan-laut",
-        description: "Informasi tentang dinamika atmosfer dan laut.",
+        description: "Informasi  dinamika atmosfer dan laut.",
       },
       {
         title: "Analisis Hujan Dasarian",
         href: "/analisis-hujan-dasarian",
-        description: "Informasi tentang analisis hujan dasarian.",
+        description: "Informasi  analisis hujan dasarian.",
       },
       {
         title: "Analisis Hujan Bulanan",
         href: "/analisis-hujan-bulanan",
-        description: "Informasi tentang analisis hujan bulanan.",
+        description: "Informasi  analisis hujan bulanan.",
       },
       {
         title: "Indeks Presipitasi Terstandarisasi",
         href: "/indeks-presipitasi-terstandarisasi/detail",
-        description: "Informasi tentang indeks presipitasi terstandarisasi.",
+        description: "Informasi  indeks presipitasi terstandarisasi.",
       },
       {
         title: "Ketersediaan Air bagi Tanaman",
         href: "/ketersediaan-air-bagi-tanaman",
-        description: "Informasi tentang ketersediaan air bagi tanaman.",
+        description: "Informasi  ketersediaan air bagi tanaman.",
       },
       {
         title: "Buletin",
         href: "/buletin",
-        description: "Informasi tentang buletin",
+        description: "Informasi  buletin",
       },
     ],
   },
@@ -104,53 +104,57 @@ const components: {
       {
         title: "Peringatan Dini Kekeringan Meteorologis",
         href: "/peringatan-dini-kekeringan-meteorologis",
-        description:
-          "Informasi tentang peringatan dini kekeringan meteorologi.",
+        description: "Informasi  peringatan dini kekeringan meteorologi.",
       },
       {
         title: "Peringatan Dini Curah Hujan Tinggi",
         href: "/peringatan-dini-curah-hujan-tinggi",
-        description: "Informasi tentang peringatan dini curah hujan tinggi.",
+        description: "Informasi  peringatan dini curah hujan tinggi.",
       },
       {
         title: "Kondisi ENSO (EL Nino dan La Nina)",
         href: "/kondisi-enso-el-nino-dan-la-nina",
-        description: "Informasi tentang kondisi ENSO (EL Nino dan La Nina).",
+        description: "Informasi  kondisi ENSO (EL Nino dan La Nina).",
       },
     ],
-    },
-    {
-      title: "Prakiraan Kualitas Udara",
-      subMenu: []
-    },
+  },
+  {
+    title: "Prakiraan Kualitas Udara",
+    subMenu: [
+      {
+        title: "",
+        href: "",
+        description: "",
+      },
+    ],
+  },
   {
     title: "Prediksi Iklim",
     subMenu: [
       {
         title: "Prediksi Musim",
         href: "/prediksi-musim",
-        description: "Informasi tentang prediksi musim.",
+        description: "Informasi  prediksi musim.",
       },
       {
         title: "Prediksi Indeks Presipitasi Terstandarisasi",
         href: "/prediksi-indeks-presipitasi-terstandarisasi",
-        description:
-          "Informasi tentang prediksi indeks presipitasi terstandarisasi.",
+        description: "Informasi  prediksi indeks presipitasi terstandarisasi.",
       },
       {
         title: "Prediksi Hujan Bulanan",
         href: "/prediksi-hujan-bulanan",
-        description: "Informasi tentang prediksi hujan bulanan.",
+        description: "Informasi  prediksi hujan bulanan.",
       },
       {
         title: "Prediksi Hujan Dasarian",
         href: "/prediksi-hujan-dasarian",
-        description: "Informasi tentang prediksi hujan dasarian.",
+        description: "Informasi  prediksi hujan dasarian.",
       },
       {
         title: "Prediksi daerah Potensi Banjir",
         href: "/prediksi-daerah-potensi-banjir",
-        description: "Informasi tentang prediksi daerah potensi banjir.",
+        description: "Informasi  prediksi daerah potensi banjir.",
       },
     ],
   },
@@ -160,27 +164,27 @@ const components: {
       {
         title: "Fakta Perubahan Iklim",
         href: "/data-iklim-harian",
-        description: "Informasi tentang data iklim harian.",
+        description: "Informasi  data iklim harian.",
       },
       {
         title: "Analisis Laju Perubahan Suhu Udara",
         href: "/analisis-laju-perubahan-suhu-udara",
-        description: "Informasi tentang analisis laju perubahan suhu udara.",
+        description: "Informasi  analisis laju perubahan suhu udara.",
       },
       {
         title: "Analisis Laju Perubahan Curah Hujan",
         href: "/data-iklim-tahunan",
-        description: "Informasi tentang data iklim tahunan.",
+        description: "Informasi  data iklim tahunan.",
       },
       {
         title: "Proyeksi Perubahan Suhu Udara",
         href: "/proyeksi-perubahan-suhu-udara",
-        description: "Informasi tentang proyeksi perubahan suhu udara.",
+        description: "Informasi  proyeksi perubahan suhu udara.",
       },
       {
         title: "Proyeksi Perubahan Curah Hujan",
         href: "/proyeksi-perubahan-curah-hujan",
-        description: "Informasi tentang Proyeksi Perubahan Curah Hujan.",
+        description: "Informasi  Proyeksi Perubahan Curah Hujan.",
       },
     ],
   },

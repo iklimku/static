@@ -99,7 +99,38 @@ const data: Item[] = [
       "https://placehold.co/1200x700/f5e9e8/333?text=Indeks+Iklim+Global.png",
     descriptionUrl: "",
     description: "",
-    tabs: null,
+    tabs: [
+      {
+        title: "Australian Monsoon Index (AUSMI)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/INDEX/ausmi_index.png",
+        descriptionUrl: "",
+        description: "Informasi terkait Australian Monsoon Index (ausmi)",
+      },
+      {
+        title: "Cross Equatorial Northly Surges (CENS)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/INDEX/cens_index.png",
+        descriptionUrl: "",
+        description: "Informasi terkait Cross Equatorial Northly Surges (CENS)",
+      },
+      {
+        title: "South China Sea Cross Equatorial Flow (SCSCEF)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/INDEX/scscef_index.png",
+        descriptionUrl: "",
+        description:
+          "Informasi terkait South China Sea Cross Equatorial Flow (SCSCEF)",
+      },
+      {
+        title: "Western North Pacific Monsoon Index (WNPMI)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/INDEX/wnpmi_index.png",
+        descriptionUrl: "",
+        description:
+          "Informasi terkait Western North Pacific Monsoon Index (WNPMI)",
+      },
+    ],
   },
   {
     slug: "catatan-iklim-ekstrem",

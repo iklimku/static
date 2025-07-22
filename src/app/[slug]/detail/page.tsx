@@ -22,56 +22,10 @@ const data: Item[] = [
   {
     slug: "hari-tanpa-hujan",
     title: "Hari Tanpa Hujan",
-    imageUrl: "",
-    // https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png
+    imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
     descriptionUrl: "",
-    description: "",
-    tabs: [
-      {
-        title: "Consecutive Dry Day",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/cdd.png",
-        descriptionUrl: "",
-        description: "Informasi terkait Consecutive Dry Day",
-      },
-
-      {
-        title: "Consecutive Dry Day",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/cwd.png",
-        descriptionUrl: "",
-        description: "Informasi mengenai Consecutive Dry Day",
-      },
-
-      {
-        title: "Hari Tanpa Hujan",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
-        description: "Informasi mengenai Hari Tanpa Hujan",
-      },
-      {
-        title: "CDD Realtime",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH_REALTIME/cdd_realtime.png",
-        descriptionUrl: "",
-        description: "Informasi mengenai CDD Realtime",
-      },
-      {
-        title: "CWD Realtime",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH_REALTIME/cwd_realtime.png",
-        descriptionUrl: "",
-        description: "Informasi mengenai CWD Realtime",
-      },
-      {
-        title: "HTH Realtime",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH_REALTIME/hth_realtime.png",
-        descriptionUrl: "",
-        description: "Informasi mengenai HTH Realtime",
-      },
-    ],
+    description: "Informasi Hari Tanpa Hujan",
+    tabs: null,
   },
   {
     slug: "perkembangan-musim",
@@ -101,21 +55,21 @@ const data: Item[] = [
     description: "",
     tabs: [
       {
-        title: "Australian Monsoon Index (AUSMI)",
+        title: "AUSMI",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/INDEX/ausmi_index.png",
         descriptionUrl: "",
         description: "Informasi terkait Australian Monsoon Index (ausmi)",
       },
       {
-        title: "Cross Equatorial Northly Surges (CENS)",
+        title: "CENS",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/INDEX/cens_index.png",
         descriptionUrl: "",
         description: "Informasi terkait Cross Equatorial Northly Surges (CENS)",
       },
       {
-        title: "South China Sea Cross Equatorial Flow (SCSCEF)",
+        title: "SCSCEF",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/INDEX/scscef_index.png",
         descriptionUrl: "",
@@ -123,7 +77,7 @@ const data: Item[] = [
           "Informasi terkait South China Sea Cross Equatorial Flow (SCSCEF)",
       },
       {
-        title: "Western North Pacific Monsoon Index (WNPMI)",
+        title: "WNPMI",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/INDEX/wnpmi_index.png",
         descriptionUrl: "",

@@ -13,7 +13,7 @@ interface Tab {
   imageUrl: string;
   descriptionUrl: string | null;
   description: string;
-};
+}
 
 interface Item {
   slug: string;
@@ -22,12 +22,12 @@ interface Item {
   descriptionUrl: string;
   description: string;
   tabs: Tab[] | null;
-};
+}
 
 export default async function DetailWithoutTabs(item: Item) {
   // get descripsi from descripsiUlr (.txt) convert to string
   let description = item.description;
-  if (item.descriptionUrl) {
+  if (item.descriptionUrl != "") {
     const res = await fetch(item.descriptionUrl);
     description = await res.text();
   }
@@ -53,24 +53,26 @@ export default async function DetailWithoutTabs(item: Item) {
               </Suspense>
             </div>
 
-            {item.description || item.descriptionUrl && <Accordion
-              type="single"
-              collapsible
-              className="w-full"
-              defaultValue="item-1"
-            >
-              <AccordionItem value="item-1">
-                <AccordionTrigger className="px-10 text-center bg-cyan-500 text-white hover:bg-indigo-600 mt-8 mb-8">
-                  Deskripsi dan Analisis
-                </AccordionTrigger>
-                <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">
-                  <p>{description}</p>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>}
+            {(item.description || item.descriptionUrl) && (
+              <Accordion
+                type="single"
+                collapsible
+                className="w-full"
+                defaultValue="item-1"
+              >
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="px-10 text-center bg-cyan-500 text-white hover:bg-indigo-600 mt-8 mb-8">
+                    Deskripsi dan Analisis
+                  </AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">
+                    <p>{description}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            )}
           </div>
         </div>
       </main>
     </>
-  )
+  );
 }

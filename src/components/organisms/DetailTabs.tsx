@@ -7,12 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger
-} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 
 interface Tab {
@@ -20,7 +15,7 @@ interface Tab {
   imageUrl: string;
   descriptionUrl: string;
   description: string;
-};
+}
 
 interface Item {
   slug: string;
@@ -29,7 +24,7 @@ interface Item {
   descriptionUrl: string | null;
   description: string;
   tabs: Tab[] | null;
-};
+}
 
 export default function DetailTabs(item: Item) {
   return (
@@ -40,77 +35,82 @@ export default function DetailTabs(item: Item) {
         </h2>
         <p className="text-center text-gray-500  mb-8">Update: 15 Juli 2025</p>
 
-        <Tabs defaultValue="tab0" className="w-full max-w-screen-xl mx-auto mt-6">
+        <Tabs
+          defaultValue="tab0"
+          className="w-full max-w-screen-xl mx-auto mt-6"
+        >
           {/* Tab Triggers */}
           <div className="flex justify-center">
             <TabsList className="flex flex-wrap justify-center bg-gray-50 shadow-md rounded-lg p-1 gap-2 w-full h-full ">
-              {item.tabs && item.tabs.map((tab, i) => (
-                <TabsTrigger
-                  key={tab.title}
-                  value={`tab${i}`}
-                  className="text-sm md:text-base whitespace-nowrap px-4 py-2 rounded-md transition-colors
+              {item.tabs &&
+                item.tabs.map((tab, i) => (
+                  <TabsTrigger
+                    key={tab.title}
+                    value={`tab${i}`}
+                    className="text-sm md:text-base whitespace-nowrap px-4 py-2 rounded-md transition-colors
             data-[state=active]:bg-cyan-600 data-[state=active]:text-white
             hover:bg-cyan-100 "
-                >
-                  <span>
-                    {tab.title}
-                  </span>
-                </TabsTrigger>
-              ))}
+                  >
+                    <span>{tab.title}</span>
+                  </TabsTrigger>
+                ))}
             </TabsList>
           </div>
 
           {/* Tab Contents */}
-          {item.tabs && item.tabs.map(async (tab, i) => {
-            // get descripsi from descripsiUlr (.txt) convert to string
-            let description = tab.description;
+          {item.tabs &&
+            item.tabs.map(async (tab, i) => {
+              // get descripsi from descripsiUlr (.txt) convert to string
+              let description = tab.description;
 
-            if (item.descriptionUrl) {
-              const res = await fetch(item.descriptionUrl);
-              description = await res.text();
-            }
-            return (
-              <TabsContent
-                key={tab.title}
-                value={`tab${i}`}
-                className="p-4 mt-4 rounded-lg shadow-xl flex flex-col gap-4 bg-white"
-              >
-                {/* Gambar */}
-                <div className="w-full">
-                  <Suspense fallback={<Loading />}>
-                    <Image
-                      src={tab.imageUrl}
-                      alt={tab.title}
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto rounded-lg"
-                      sizes="100vw"
-                      priority
-                    />
-                  </Suspense>
-                </div>
-
-                {/* Acoordion */}
-                {(tab.description || tab.descriptionUrl) && <Accordion
-                  type="single"
-                  collapsible
-                  className="w-full"
-                  defaultValue="item-1"
+              if (item.descriptionUrl) {
+                const res = await fetch(item.descriptionUrl);
+                description = await res.text();
+              }
+              return (
+                <TabsContent
+                  key={tab.title}
+                  value={`tab${i}`}
+                  className="p-4 mt-4 rounded-lg shadow-xl flex flex-col gap-4 bg-white"
                 >
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger className="px-10 text-center bg-cyan-500 text-white hover:bg-indigo-600 mt-8 mb-8">
-                      Deskripsi dan Analisis
-                    </AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">
-                      <p>{description}</p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-                }
-              </TabsContent>)
-          })}
+                  {/* Gambar */}
+                  <div className="w-full">
+                    <Suspense fallback={<Loading />}>
+                      <Image
+                        src={tab.imageUrl}
+                        alt={tab.title}
+                        width={1920}
+                        height={1080}
+                        className="w-full h-auto rounded-lg"
+                        sizes="100vw"
+                        priority
+                      />
+                    </Suspense>
+                  </div>
+
+                  {/* Acoordion */}
+                  {(tab.description || tab.descriptionUrl) && (
+                    <Accordion
+                      type="single"
+                      collapsible
+                      className="w-full"
+                      defaultValue="item-1"
+                    >
+                      <AccordionItem value="item-1">
+                        <AccordionTrigger className="px-10 text-center bg-cyan-500 text-white hover:bg-indigo-600 mt-8 mb-8">
+                          Deskripsi dan Analisis
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">
+                          <p>{description}</p>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  )}
+                </TabsContent>
+              );
+            })}
         </Tabs>
       </main>
     </>
-  )
+  );
 }

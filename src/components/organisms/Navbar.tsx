@@ -13,6 +13,14 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import { Menu } from "lucide-react";
 import LogoBMKG from "@/../public/logo-bmkg.svg";
 
@@ -237,31 +245,38 @@ export function Navbar() {
 
       {/* Mobile Dropdown Navigation */}
       {isOpen && (
-        <div className="xl:hidden px-4 pb-4 space-y-4 bg-white border-t ">
-          {components.map((component) => (
-            <div key={component.title}>
-              <div className="font-semibold text-cyan-700 mb-2">
-                {component.title}
-              </div>
-              <ul className="space-y-2">
-                {component.subMenu.map((item) => (
-                  <li key={item.title}>
-                    <Link
-                      href={item.href}
-                      className="block px-4 py-3 hover:bg-cyan-100 rounded-md transition data"
-                      onClick={() => setIsOpen(!isOpen)}
-                    >
-                      <div className="text-sm font-semibold">{item.title}</div>
-                      <p className="text-xs text-muted-foreground">
-                        {item.description}
-                      </p>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <Button variant="outline" className="w-full">
+        <div className="xl:hidden px-4 pb-4 space-y-4 bg-white border-t">
+          <Accordion type="multiple" className="w-full">
+            {components.map((component) => (
+              <AccordionItem key={component.title} value={component.title}>
+                <AccordionTrigger className="text-left text-cyan-700 font-semibold">
+                  {component.title}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="space-y-2">
+                    {component.subMenu.map((item) => (
+                      <li key={item.title}>
+                        <Link
+                          href={item.href}
+                          className="block px-4 py-2 hover:bg-cyan-100 rounded-md transition"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <div className="text-sm font-semibold">
+                            {item.title}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            {item.description}
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          <Button variant="outline" className="w-full mt-4">
             Contact Center 196
           </Button>
         </div>

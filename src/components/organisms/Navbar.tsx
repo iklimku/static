@@ -21,7 +21,7 @@ const components: {
   subMenu: { title: string; href: string; description: string }[];
 }[] = [
   {
-    title: "Iklim Terkini",
+    title: "Perkembangan Terkini",
     subMenu: [
       {
         title: "Hari Tanpa Hujan",
@@ -40,7 +40,7 @@ const components: {
       },
       {
         title: "Indeks Iklim Global",
-        href: "/indeks-iklim-global",
+        href: "/indeks-iklim-global/daftar",
         description: "Informasi tentang indeks iklim global.",
       },
       {
@@ -56,7 +56,7 @@ const components: {
     ],
   },
   {
-    title: "Analisis Iklim",
+    title: "Analisis",
     subMenu: [
       {
         title: "Dinamika Atmosfer dan Laut",
@@ -91,7 +91,7 @@ const components: {
     ],
   },
   {
-    title: "Peringatan Dini Iklim",
+    title: "Peringatan Dini",
     subMenu: [
       {
         title: "Peringatan Dini Kekeringan Meteorologis",
@@ -110,7 +110,11 @@ const components: {
         description: "Informasi tentang kondisi ENSO (EL Nino dan La Nina).",
       },
     ],
-  },
+    },
+    {
+      title: "Prakiraan Kualitas Udara",
+      subMenu: []
+    },
   {
     title: "Prediksi Iklim",
     subMenu: [
@@ -227,7 +231,7 @@ export function Navbar() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <Button className="bg-white">Contact Center 196</Button>
+          {/* <Button className="bg-white">Contact Center 196</Button> */}
         </div>
       </div>
 

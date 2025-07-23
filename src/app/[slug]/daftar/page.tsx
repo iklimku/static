@@ -56,13 +56,13 @@ const data: {
           descriptionUrl: "",
           description: "Informasi mengenai ketersediaan air bagi tanaman"
         },
-        // {
-        //   title: "Prediksi Indeks Potensi Karhutla",
-        //   href: "prediksi-indeks-potensi-karhutla/detail",
-        //   imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        //   descriptionUrl: "",
-        //   description: 
-        // },
+        {
+          title: "Prediksi Indeks Potensi Karhutla",
+          href: "prediksi-indeks-potensi-karhutla/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai prediksi indeks potensi Karhutla yang akan terjadi di Indonesia"
+        },
         {
           title: "Prediksi Musim Hujan",
           href: "prediksi-musim-hujan/detail",
@@ -284,9 +284,124 @@ const data: {
       title: "Prediksi Hujan Bulanan",
       data: [
         // Curah Hujan
+        {
+          title: "Curah Hujan",
+          href: "prediksi-hujan-bulanan/curah-hujan/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai curah hujan bulanan"
+        },
         // Sifat Hujan
-        // Peluang Curah Hujan
-        
+        {
+          title: "Sifat Hujan",
+          href: "prediksi-hujan-bulanan/sifat-hujan/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai sifat hujan bulanan"
+        },
+        // Peluang Curah Hujan di atas 500
+        {
+          title: "Peluang Curah Hujan di atas 500",
+          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-500/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan bulanan di atas 500"
+        },
+        // Peluang Curah Hujan di atas 400
+        {
+          title: "Peluang Curah Hujan di atas 400",
+          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-400/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan bulanan di atas 400"
+        },
+        // Peluang Curah Hujan di atas 300
+        {
+          title: "Peluang Curah Hujan di atas 300",
+          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-300/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan bulanan di atas 300"
+        },
+        // Peluang Curah Hujan di bawah 150
+        {
+          title: "Peluang Curah Hujan di bawah 150",
+          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-bawah-150/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan bulanan di bawah 150"
+        },
+        // Peluang Curah Hujan di bawah 100
+        {
+          title: "Peluang Curah Hujan di bawah 100",
+          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-bawah-100/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan bulanan di bawah 100"
+        }
+      ]
+    },
+    // Prediksi Hujan Dasarian
+    {
+      slug: "prediksi-hujan-dasarian",
+      title: "Prediksi Hujan Dasarian",
+      data: [
+        // Curah Hujan
+        {
+          title: "Curah Hujan",
+          href: "prediksi-hujan-dasarian/curah-hujan/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai curah hujan dasarian"
+        },
+        // Sifat Hujan
+        {
+          title: "Sifat Hujan",
+          href: "prediksi-hujan-dasarian/sifat-hujan/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai sifat hujan dasarian"
+        },
+        // Peluang Curah Hujan di atas 500
+        {
+          title: "Peluang Curah Hujan di atas 500",
+          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-atas-500/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan dasarian di atas 500"
+        },
+        // Peluang Curah Hujan di atas 400
+        {
+          title: "Peluang Curah Hujan di atas 400",
+          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-atas-400/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan dasarian di atas 400"
+        },
+        // Peluang Curah Hujan di atas 300
+        {
+          title: "Peluang Curah Hujan di atas 300",
+          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-atas-300/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan dasarian di atas 300"
+        },
+        // Peluang Curah Hujan di bawah 100
+        {
+          title: "Peluang Curah Hujan di bawah 100",
+          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-bawah-100/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan dasarian di bawah 100"
+        },
+        // Peluang Curah Hujan di bawah 150
+        {
+          title: "Peluang Curah Hujan di bawah 150",
+          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-bawah-150/detail",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai peluang curah hujan dasarian di bawah 150"
+        }
       ]
     }
   ]

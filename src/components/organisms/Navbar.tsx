@@ -43,7 +43,7 @@ const components: {
       },
       {
         title: "Anomali Suhu Udara",
-        href: "/anomali-suhu-udara",
+        href: "/anomali-suhu-udara/detail",
         description: "Informasi anomali suhu udara.",
       },
       {
@@ -53,12 +53,12 @@ const components: {
       },
       {
         title: "Catatan Iklim Ekstrem",
-        href: "/catatan-iklim-ekstrem",
+        href: "/catatan-iklim-ekstrem/detail",
         description: "Informasi catatan iklim ekstrem.",
       },
       {
         title: "Indeks Ultraviolet",
-        href: "/indeks-ultraviolet",
+        href: "/indeks-ultraviolet/detail",
         description: "Informasi indeks ultraviolet.",
       },
     ],
@@ -68,17 +68,17 @@ const components: {
     subMenu: [
       {
         title: "Dinamika Atmosfer dan Laut",
-        href: "/dinamika-atmosfer-dan-laut",
+        href: "/dinamika-atmosfer-dan-laut/detail",
         description: "Informasi dinamika atmosfer dan laut.",
       },
       {
         title: "Hujan Dasarian",
-        href: "/analisis-hujan-dasarian",
+        href: "/analisis-hujan-dasarian/detail",
         description: "Informasi hujan dasarian.",
       },
       {
         title: "Hujan Bulanan",
-        href: "/analisis-hujan-bulanan",
+        href: "/analisis-hujan-bulanan/detail",
         description: "Informasi hujan bulanan.",
       },
       {
@@ -88,12 +88,12 @@ const components: {
       },
       {
         title: "Ketersediaan Air bagi Tanaman",
-        href: "/ketersediaan-air-bagi-tanaman",
+        href: "/ketersediaan-air-bagi-tanaman/detail",
         description: "Informasi ketersediaan air bagi tanaman.",
       },
       {
         title: "Buletin",
-        href: "/buletin",
+        href: "/buletin/daftar",
         description: "Informasi buletin",
       },
     ],
@@ -103,22 +103,22 @@ const components: {
     subMenu: [
       {
         title: "Peringatan Dini Kekeringan Meteorologis",
-        href: "/peringatan-dini-kekeringan-meteorologis",
+        href: "/peringatan-dini-kekeringan-meteorologis/detail",
         description: "Informasi peringatan dini kekeringan meteorologi.",
       },
       {
         title: "Peringatan Dini Curah Hujan Tinggi",
-        href: "/peringatan-dini-curah-hujan-tinggi",
+        href: "/peringatan-dini-curah-hujan-tinggi/detail",
         description: "Informasi peringatan dini curah hujan tinggi.",
       },
       {
         title: "Kondisi ENSO (EL Nino dan La Nina)",
-        href: "/kondisi-enso-el-nino-dan-la-nina",
+        href: "/kondisi-enso-el-nino-dan-la-nina/detail",
         description: "Informasi kondisi ENSO (EL Nino dan La Nina).",
       },
       {
         title: "Peringatan Dini Konsentrasi Partikulat (PM2,5)",
-        href: "/peringatan-dini-konsentrasi-particulat",
+        href: "/peringatan-dini-konsentrasi-particulat/detail",
         description: "Informasi peringatan dini konsentrasi particulat.",
       }
     ],
@@ -163,7 +163,7 @@ const components: {
       },
       {
         title: "Prediksi Indeks Presipitasi Terstandarisasi",
-        href: "/prediksi-indeks-presipitasi-terstandarisasi/daftar",
+        href: "/prediksi-indeks-presipitasi-terstandarisasi/detail",
         description: "Informasi prediksi indeks presipitasi terstandarisasi.",
       },
       {
@@ -186,12 +186,6 @@ const components: {
   {
     title: "Perubahan Iklim",
     subMenu: [
-      // Fakta Perubahan Iklim
-      // Analisis Laju Perubahan Suhu Udara
-      // Analisis Laju Perubahan Curah Hujan
-      // Proyeksi Perubahan Suhu Udara
-      // Proyeksi Perubahan Curah Hujan
-      // Warming Stripes
       {
         title: "Fakta Perubahan Iklim",
         href: "/fakta-perubahan-iklim/detail",

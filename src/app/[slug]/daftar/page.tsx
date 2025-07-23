@@ -277,6 +277,17 @@ const data: {
           description: "Informasi mengenai ekstrem perubahan iklim yang akan terjadi di Indonesia"
         }
       ]
+    },
+    // Prediksi Hujan Bulanan
+    {
+      slug: "prediksi-hujan-bulanan",
+      title: "Prediksi Hujan Bulanan",
+      data: [
+        // Curah Hujan
+        // Sifat Hujan
+        // Peluang Curah Hujan
+        
+      ]
     }
   ]
 
@@ -305,7 +316,7 @@ export default async function Daftar({
     <>
       {/* Card with image, some description, and button "Baca Selengkapnya" */}
       <main className="container mx-auto my-16 px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Daftar {item.title}</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">{item.title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {/* Filter data based on slug (category) */}
           {/* For now, let's just display all items from the 'data' array for demonstration */}

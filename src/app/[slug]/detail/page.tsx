@@ -258,16 +258,103 @@ const data: Item[] = [
     imageUrl: "",
     descriptionUrl: "",
     description: "",
-    tabs: null,
+    tabs: [
+      {
+        title: "Prakiraan SPI-1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PRAKSPI/prakspi1.png",
+        descriptionUrl: "",
+        description: "Prakiraan SPI-1",
+      },
+      {
+        title: "Prakiraan SPI-3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PRAKSPI/prakspi3.png",
+        descriptionUrl: "",
+        description: "Prakiraan SPI-3",
+      },
+      {
+        title: "Prakiraan SPI-6",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PRAKSPI/prakspi6.png",
+        descriptionUrl: "",
+        description: "Prakiraan SPI-6",
+      },
+    ],
   },
+  // {
+  //   slug: "prediksi-hujan-bulanan",
+  //   title: "Prediksi Hujan Bulanan",
+  //   imageUrl:
+  //     "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Hujan+Bulanan.png",
+  //   descriptionUrl: "",
+  //   description: "",
+  //   tabs: null,
+  // },
   {
-    slug: "prediksi-hujan-bulanan",
-    title: "Prediksi Hujan Bulanan",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Hujan+Bulanan.png",
+    slug: "prediksi-curah-hujan-bulanan",
+    title: "Prediksi Curah Hujan Bulanan",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
-    tabs: null,
+    tabs: [
+      {
+        title: "PCH Bulanan Deterministik Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step1.txt",
+        description: "",
+      },
+      {
+        title: "PCH Bulanan Deterministik Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step2.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step2.txt",
+        description: "",
+      },
+      {
+        title: "PCH Bulanan Deterministik Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step3.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step3.txt",
+        description: "",
+      },
+      {
+        title: "PCH Bulanan Deterministik Step 4",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step4.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step4.txt",
+        description: "",
+      },
+      {
+        title: "PCH Bulanan Deterministik Step 5",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step5.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step5.txt",
+        description: "",
+      },
+      {
+        title: "PCH Bulanan Deterministik Step 6",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step6.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step6.txt",
+        description: "",
+      },
+      {
+        title: "PCH Bulanan Deterministik Step 7",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step7.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step7.txt",
+        description: "",
+      },
+    ],
   },
   {
     slug: "prediksi-hujan-dasarian",

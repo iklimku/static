@@ -207,8 +207,7 @@ const data: {
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PRAKSPI/prakspi1.png",
         descriptionUrl: "",
-        description:
-          "Prediksi SPI 1",
+        description: "Prediksi SPI 1",
       },
 
       // Peringatan Dini Iklim Ekstrem
@@ -386,14 +385,15 @@ const data: {
   // Prediksi Hujan Bulanan
   {
     slug: "prediksi-hujan-bulanan",
-    title: "Prediksi Hujan Bulanan",
+    title: "Prediksi Curah Hujan Bulanan",
     data: [
       // Curah Hujan
       {
         title: "Curah Hujan",
-        href: "prediksi-hujan-bulanan/curah-hujan/detail",
+        // href: "prediksi-hujan-bulanan/curah-hujan/detail",
+        href: "prediksi-curah-hujan-bulanan/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
         descriptionUrl: "",
         description: "Informasi mengenai curah hujan bulanan",
       },

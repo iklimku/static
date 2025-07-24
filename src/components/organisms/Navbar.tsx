@@ -90,13 +90,8 @@ const components: {
           title: "Ketersediaan Air bagi Tanaman",
           href: "/ketersediaan-air-bagi-tanaman/detail",
           description: "Informasi ketersediaan air bagi tanaman.",
-        },
-        {
-          title: "Buletin",
-          href: "/buletin/daftar",
-          description: "Informasi buletin",
-        },
-      ],
+        }
+      ]
     },
     {
       title: "Peringatan Dini",
@@ -230,6 +225,18 @@ const components: {
           title: "Frequently Asked Question",
           href: "/faq/detail",
           description: "Informasi pertanyaan yang sering diajukan.",
+        },
+        // Buletin
+        // Regulasi
+        {
+          title: "Buletin",
+          href: "/buletin/daftar",
+          description: "Informasi buletin",
+        },
+        {
+          title: "Regulasi",
+          href: "/regulasi/daftar",
+          description: "Informasi regulasi.",
         }
       ]
     }

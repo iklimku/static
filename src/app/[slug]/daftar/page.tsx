@@ -24,414 +24,497 @@ const data: {
     description: string;
   }[];
 }[] = [
-    // Pertanian dan Kehutanan
-    {
-      slug: "pertanian",
-      title: "Informasi Iklim untuk Sektor Pertanian dan Kehutanan",
-      data: [
-        {
-          title: "Prediksi Curah Hujan",
-          href: "prediksi-curah-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi curah hujan yang akan terjadi di Indonesia"
-        },
-        {
-          title: "Hari Tanpa Hujan",
-          href: "hari-tanpa-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai hari tanpa hujan yang akan terjadi di Indonesia"
-        },
-        {
-          title: "Perkembangan ENSO dan IOD",
-          href: "perkembangan-enso-dan-iod/detail",
-          imageUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
-          descriptionUrl: "",
-          description: "Informasi mengenai perkembangan ENSO dan IOD"
-        },
-        {
-          title: "Ketersediaan Air bagi Tanaman",
-          href: "ketersediaan-air-bagi-tanaman/detail",
-          imageUrl: "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/0625_07Indonesia_ATi_web-2025.jpg",
-          descriptionUrl: "",
-          description: "Informasi mengenai ketersediaan air bagi tanaman"
-        },
-        {
-          title: "Prediksi Indeks Potensi Karhutla",
-          href: "prediksi-indeks-potensi-karhutla/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi indeks potensi Karhutla yang akan terjadi di Indonesia"
-        },
-        {
-          title: "Prediksi Musim Hujan",
-          href: "prediksi-musim-hujan/detail",
-          imageUrl: "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Pemutakhiran-PMH-2425.jpg",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi musim hujan yang akan terjadi di Indonesia"
-        },
-        {
-          title: "Prediksi Musim Kemarau",
-          href: "prediksi-musim-kemarau/detail",
-          imageUrl: "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/PMK-Pemutakhiran-Mei-2025.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi musim kemarau yang akan terjadi di Indonesia"
-        },
-        {
-          title: "Peringatan Dini Kekeringan Meteorologis",
-          href: "/peringatan-dini-kekeringan-meteorologis/detail",
-          imageUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
-          descriptionUrl: "",
-          description: "Informasi peringatan dini kekeringan meteorologi.",
-        },
-        {
-          title: "Peringatan Dini Curah Hujan Tinggi",
-          href: "/peringatan-dini-curah-hujan-tinggi/detail",
-          imageUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.jpg",
-          descriptionUrl: "",
-          description: "Informasi peringatan dini curah hujan tinggi.",
-        },
-        {
-          title: "Kondisi ENSO (EL Nino dan La Nina)",
-          href: "/kondisi-enso-el-nino-dan-la-nina/detail",
-          imageUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
-          descriptionUrl: "",
-          description: "Informasi kondisi ENSO (EL Nino dan La Nina).",
-        },
-        {
-          title: "Indeks Persipitasi Terstandarisasi",
-          href: "indeks-presipitasi-terstandarisasi/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai indeks presipitasi terstandarisasi yang akan terjadi di Indonesia"
-        }
-      ]
-    },
-    // Sumber Daya Air dan Bencana
-    {
-      slug: "air-bencana",
-      title: "Informasi Iklim untuk Sektor Sumber Daya Air dan Bencana",
-      data: [
-        // Prediksi Daerah Potensi Banjir
-        {
-          title: "Prediksi Daerah Potensi Banjir",
-          href: "prediksi-daerah-potensi-banjir/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi daerah potensi banjir yang akan terjadi di Indonesia"
-        },
-        // Monitoring Hari Tanpa Hujan
-        {
-          title: "Monitoring Hari Tanpa Hujan",
-          href: "hari-tanpa-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai monitoring hari tanpa hujan yang akan terjadi di Indonesia"
-        },
-        // Prediksi Curah Hujan
-        {
-          title: "Prediksi Hujan Bulanan",
-          href: "/prediksi-hujan-bulanan/daftar",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi curah hujan bulanan yang akan terjadi di Indonesia",
-        },
-        {
-          title: "Prediksi Hujan Dasarian",
-          href: "/prediksi-hujan-dasarian/daftar",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_det_step1.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi curah hujan dasarian yang akan terjadi di Indonesia",
-        },
-        // Prediksi Musim Hujan
-        {
-          title: "Prediksi Musim Hujan",
-          href: "prediksi-musim-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi musim hujan yang akan terjadi di Indonesia"
-        },
-        // Prediksi Musim Kemarau
-        {
-          title: "Prediksi Musim Kemarau",
-          href: "prediksi-musim-kemarau/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi musim kemarau yang akan terjadi di Indonesia"
-        },
-        // Peringatan Dini Iklim Ekstrem
-        {
-          title: "Peringatan Dini Iklim Ekstrem",
-          href: "peringatan-dini-iklim-ekstrem/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peringatan dini iklim ekstrem yang akan terjadi di Indonesia"
-        },
-        // Perkembangan ENSO dan IOD
-        {
-          title: "Perkembangan ENSO dan IOD",
-          href: "perkembangan-enso-dan-iod/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai perkembangan ENSO dan IOD"
-        },
-        // Indeks Presipitasi Terstandarisasi
-        {
-          title: "Indeks Presipitasi Terstandarisasi",
-          href: "indeks-presipitasi-terstandarisasi/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai indeks presipitasi terstandarisasi yang akan terjadi di Indonesia"
-        }
-      ]
-    },
-    // Kesehatan
-    {
-      slug: "kesehatan",
-      title: "Informasi Iklim untuk Sektor Kesehatan",
-      data: [
-        // Peringatan Dini Demam Berdarah
-        {
-          title: "Peringatan Dini Demam Berdarah",
-          href: "peringatan-dini-demam-berdarah/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peringatan dini demam berdarah yang akan terjadi di Indonesia"
-        },
-        // Monitoring Partikulat PM2.5 Realtime
-        {
-          title: "Monitoring Partikulat PM2.5 Realtime",
-          href: "monitoring-partikulat-pm25-realtime/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai monitoring partikulat PM2.5 realtime yang akan terjadi di Indonesia"
-        },
-        // Informasi Partikulat SPM
-        {
-          title: "Informasi Partikulat SPM",
-          href: "informasi-partikulat-spm/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai partikulat SPM yang akan terjadi di Indonesia"
-        },
-        // Informasi pH Air Hujan
-        {
-          title: "Informasi pH Air Hujan",
-          href: "informasi-ph-air-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai pH air hujan yang akan terjadi di Indonesia"
-        }
-      ]
-    },
-    // Energi
-    {
-      slug: "energi",
-      title: "Informasi Iklim untuk Sektor Energi",
-      data: [
-        // Potensi Energi Surya Stasiun
-        {
-          title: "Potensi Energi Surya Stasiun",
-          href: "potensi-energi-surya-stasiun/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai potensi energi surya stasiun yang akan terjadi di Indonesia"
-        },
-        // Potensi Energi Surya Spasial
-        {
-          title: "Potensi Energi Surya Spasial",
-          href: "potensi-energi-surya-spasial/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai potensi energi surya spasial yang akan terjadi di Indonesia"
-        },
-        // Prediksi Potensi Energi Surya
-        {
-          title: "Prediksi Potensi Energi Surya",
-          href: "prediksi-potensi-energi-surya/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai prediksi potensi energi surya yang akan terjadi di Indonesia"
-        },
-        // Potensi Energi Angin Stasiun
-        {
-          title: "Potensi Energi Angin Stasiun",
-          href: "potensi-energi-angin-stasiun/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai potensi energi angin stasiun yang akan terjadi di Indonesia"
-        }
-      ]
-    },
-    // Pembangunan
-    {
-      slug: "pembangunan",
-      title: "Informasi Iklim untuk Sektor Pembangunan",
-      data: [
-        // Proyeksi Perubahan Curah Hujan
-        {
-          title: "Proyeksi Perubahan Curah Hujan",
-          href: "proyeksi-perubahan-curah-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai proyeksi perubahan curah hujan yang akan terjadi di Indonesia"
-        },
-        // Proyeksi Perubahan Suhu
-        {
-          title: "Proyeksi Perubahan Suhu",
-          href: "proyeksi-perubahan-suhu-udara/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai proyeksi perubahan suhu yang akan terjadi di Indonesia"
-        },
-        // Anomali Suhu
-        {
-          title: "Anomali Suhu",
-          href: "anomali-suhu-udara/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai anomali suhu yang akan terjadi di Indonesia"
-
-        },
-        // Ekstrem Perubahan Iklim
-        {
-          title: "Ekstrem Perubahan Iklim",
-          href: "catatan-iklim-ekstrem/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai ekstrem perubahan iklim yang akan terjadi di Indonesia"
-        }
-      ]
-    },
-    // Prediksi Hujan Bulanan
-    {
-      slug: "prediksi-hujan-bulanan",
-      title: "Prediksi Hujan Bulanan",
-      data: [
-        // Curah Hujan
-        {
-          title: "Curah Hujan",
-          href: "prediksi-hujan-bulanan/curah-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai curah hujan bulanan"
-        },
-        // Sifat Hujan
-        {
-          title: "Sifat Hujan",
-          href: "prediksi-hujan-bulanan/sifat-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai sifat hujan bulanan"
-        },
-        // Peluang Curah Hujan di atas 500
-        {
-          title: "Peluang Curah Hujan di atas 500",
-          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-500/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan bulanan di atas 500"
-        },
-        // Peluang Curah Hujan di atas 400
-        {
-          title: "Peluang Curah Hujan di atas 400",
-          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-400/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan bulanan di atas 400"
-        },
-        // Peluang Curah Hujan di atas 300
-        {
-          title: "Peluang Curah Hujan di atas 300",
-          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-300/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan bulanan di atas 300"
-        },
-        // Peluang Curah Hujan di bawah 150
-        {
-          title: "Peluang Curah Hujan di bawah 150",
-          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-bawah-150/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan bulanan di bawah 150"
-        },
-        // Peluang Curah Hujan di bawah 100
-        {
-          title: "Peluang Curah Hujan di bawah 100",
-          href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-bawah-100/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan bulanan di bawah 100"
-        }
-      ]
-    },
-    // Prediksi Hujan Dasarian
-    {
-      slug: "prediksi-hujan-dasarian",
-      title: "Prediksi Hujan Dasarian",
-      data: [
-        // Curah Hujan
-        {
-          title: "Curah Hujan",
-          href: "prediksi-hujan-dasarian/curah-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai curah hujan dasarian"
-        },
-        // Sifat Hujan
-        {
-          title: "Sifat Hujan",
-          href: "prediksi-hujan-dasarian/sifat-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai sifat hujan dasarian"
-        },
-        // Peluang Curah Hujan di atas 500
-        {
-          title: "Peluang Curah Hujan di atas 500",
-          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-atas-500/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan dasarian di atas 500"
-        },
-        // Peluang Curah Hujan di atas 400
-        {
-          title: "Peluang Curah Hujan di atas 400",
-          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-atas-400/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan dasarian di atas 400"
-        },
-        // Peluang Curah Hujan di atas 300
-        {
-          title: "Peluang Curah Hujan di atas 300",
-          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-atas-300/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan dasarian di atas 300"
-        },
-        // Peluang Curah Hujan di bawah 100
-        {
-          title: "Peluang Curah Hujan di bawah 100",
-          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-bawah-100/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan dasarian di bawah 100"
-        },
-        // Peluang Curah Hujan di bawah 150
-        {
-          title: "Peluang Curah Hujan di bawah 150",
-          href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-bawah-150/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-          descriptionUrl: "",
-          description: "Informasi mengenai peluang curah hujan dasarian di bawah 150"
-        }
-      ]
-    }
-    // Lainnya
-  ]
+  // Pertanian dan Kehutanan
+  {
+    slug: "pertanian",
+    title: "Informasi Iklim untuk Sektor Pertanian dan Kehutanan",
+    data: [
+      {
+        title: "Prediksi Curah Hujan",
+        href: "prediksi-curah-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi curah hujan yang akan terjadi di Indonesia",
+      },
+      {
+        title: "Hari Tanpa Hujan",
+        href: "hari-tanpa-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai hari tanpa hujan yang akan terjadi di Indonesia",
+      },
+      {
+        title: "Perkembangan ENSO dan IOD",
+        href: "perkembangan-enso-dan-iod/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
+        descriptionUrl: "",
+        description: "Informasi mengenai perkembangan ENSO dan IOD",
+      },
+      {
+        title: "Ketersediaan Air bagi Tanaman",
+        href: "ketersediaan-air-bagi-tanaman/detail",
+        imageUrl:
+          "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/0625_07Indonesia_ATi_web-2025.jpg",
+        descriptionUrl: "",
+        description: "Informasi mengenai ketersediaan air bagi tanaman",
+      },
+      {
+        title: "Prediksi Indeks Potensi Karhutla",
+        href: "prediksi-indeks-potensi-karhutla/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi indeks potensi Karhutla yang akan terjadi di Indonesia",
+      },
+      {
+        title: "Prediksi Musim Hujan",
+        href: "prediksi-musim-hujan/detail",
+        imageUrl:
+          "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Pemutakhiran-PMH-2425.jpg",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi musim hujan yang akan terjadi di Indonesia",
+      },
+      {
+        title: "Prediksi Musim Kemarau",
+        href: "prediksi-musim-kemarau/detail",
+        imageUrl:
+          "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/PMK-Pemutakhiran-Mei-2025.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi musim kemarau yang akan terjadi di Indonesia",
+      },
+      {
+        title: "Peringatan Dini Kekeringan Meteorologis",
+        href: "/peringatan-dini-kekeringan-meteorologis/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.txt",
+        description: "",
+      },
+      {
+        title: "Peringatan Dini Curah Hujan Tinggi",
+        href: "/peringatan-dini-curah-hujan-tinggi/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.jpg",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.txt",
+        description: "",
+      },
+      {
+        title: "Kondisi ENSO (EL Nino dan La Nina)",
+        href: "/kondisi-enso-el-nino-dan-la-nina/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.giff",
+        descriptionUrl: "",
+        description: "Informasi kondisi ENSO (EL Nino dan La Nina).",
+      },
+      {
+        title: "Indeks Persipitasi Terstandarisasi",
+        href: "indeks-presipitasi-terstandarisasi/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai indeks presipitasi terstandarisasi yang akan terjadi di Indonesia",
+      },
+    ],
+  },
+  // Sumber Daya Air dan Bencana
+  {
+    slug: "air-bencana",
+    title: "Informasi Iklim untuk Sektor Sumber Daya Air dan Bencana",
+    data: [
+      // Prediksi Daerah Potensi Banjir
+      {
+        title: "Prediksi Daerah Potensi Banjir",
+        href: "prediksi-daerah-potensi-banjir/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi daerah potensi banjir yang akan terjadi di Indonesia",
+      },
+      // Monitoring Hari Tanpa Hujan
+      {
+        title: "Monitoring Hari Tanpa Hujan",
+        href: "hari-tanpa-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai monitoring hari tanpa hujan yang akan terjadi di Indonesia",
+      },
+      // Prediksi Curah Hujan
+      {
+        title: "Prediksi Hujan Bulanan",
+        href: "/prediksi-hujan-bulanan/daftar",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi curah hujan bulanan yang akan terjadi di Indonesia",
+      },
+      {
+        title: "Prediksi Hujan Dasarian",
+        href: "/prediksi-hujan-dasarian/daftar",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_det_step1.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi curah hujan dasarian yang akan terjadi di Indonesia",
+      },
+      // Prediksi Musim Hujan
+      {
+        title: "Prediksi Musim Hujan",
+        href: "prediksi-musim-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi musim hujan yang akan terjadi di Indonesia",
+      },
+      // Prediksi Musim Kemarau
+      {
+        title: "Prediksi Musim Kemarau",
+        href: "prediksi-musim-kemarau/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi musim kemarau yang akan terjadi di Indonesia",
+      },
+      // Peringatan Dini Iklim Ekstrem
+      {
+        title: "Peringatan Dini Iklim Ekstrem",
+        href: "peringatan-dini-iklim-ekstrem/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peringatan dini iklim ekstrem yang akan terjadi di Indonesia",
+      },
+      // Perkembangan ENSO dan IOD
+      {
+        title: "Perkembangan ENSO dan IOD",
+        href: "perkembangan-enso-dan-iod/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description: "Informasi mengenai perkembangan ENSO dan IOD",
+      },
+      // Indeks Presipitasi Terstandarisasi
+      {
+        title: "Indeks Presipitasi Terstandarisasi",
+        href: "indeks-presipitasi-terstandarisasi/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai indeks presipitasi terstandarisasi yang akan terjadi di Indonesia",
+      },
+    ],
+  },
+  // Kesehatan
+  {
+    slug: "kesehatan",
+    title: "Informasi Iklim untuk Sektor Kesehatan",
+    data: [
+      // Peringatan Dini Demam Berdarah
+      {
+        title: "Peringatan Dini Demam Berdarah",
+        href: "peringatan-dini-demam-berdarah/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peringatan dini demam berdarah yang akan terjadi di Indonesia",
+      },
+      // Monitoring Partikulat PM2.5 Realtime
+      {
+        title: "Monitoring Partikulat PM2.5 Realtime",
+        href: "monitoring-partikulat-pm25-realtime/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai monitoring partikulat PM2.5 realtime yang akan terjadi di Indonesia",
+      },
+      // Informasi Partikulat SPM
+      {
+        title: "Informasi Partikulat SPM",
+        href: "informasi-partikulat-spm/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai partikulat SPM yang akan terjadi di Indonesia",
+      },
+      // Informasi pH Air Hujan
+      {
+        title: "Informasi pH Air Hujan",
+        href: "informasi-ph-air-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai pH air hujan yang akan terjadi di Indonesia",
+      },
+    ],
+  },
+  // Energi
+  {
+    slug: "energi",
+    title: "Informasi Iklim untuk Sektor Energi",
+    data: [
+      // Potensi Energi Surya Stasiun
+      {
+        title: "Potensi Energi Surya Stasiun",
+        href: "potensi-energi-surya-stasiun/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai potensi energi surya stasiun yang akan terjadi di Indonesia",
+      },
+      // Potensi Energi Surya Spasial
+      {
+        title: "Potensi Energi Surya Spasial",
+        href: "potensi-energi-surya-spasial/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai potensi energi surya spasial yang akan terjadi di Indonesia",
+      },
+      // Prediksi Potensi Energi Surya
+      {
+        title: "Prediksi Potensi Energi Surya",
+        href: "prediksi-potensi-energi-surya/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai prediksi potensi energi surya yang akan terjadi di Indonesia",
+      },
+      // Potensi Energi Angin Stasiun
+      {
+        title: "Potensi Energi Angin Stasiun",
+        href: "potensi-energi-angin-stasiun/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai potensi energi angin stasiun yang akan terjadi di Indonesia",
+      },
+    ],
+  },
+  // Pembangunan
+  {
+    slug: "pembangunan",
+    title: "Informasi Iklim untuk Sektor Pembangunan",
+    data: [
+      // Proyeksi Perubahan Curah Hujan
+      {
+        title: "Proyeksi Perubahan Curah Hujan",
+        href: "proyeksi-perubahan-curah-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai proyeksi perubahan curah hujan yang akan terjadi di Indonesia",
+      },
+      // Proyeksi Perubahan Suhu
+      {
+        title: "Proyeksi Perubahan Suhu",
+        href: "proyeksi-perubahan-suhu-udara/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai proyeksi perubahan suhu yang akan terjadi di Indonesia",
+      },
+      // Anomali Suhu
+      {
+        title: "Anomali Suhu",
+        href: "anomali-suhu-udara/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai anomali suhu yang akan terjadi di Indonesia",
+      },
+      // Ekstrem Perubahan Iklim
+      {
+        title: "Ekstrem Perubahan Iklim",
+        href: "catatan-iklim-ekstrem/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai ekstrem perubahan iklim yang akan terjadi di Indonesia",
+      },
+    ],
+  },
+  // Prediksi Hujan Bulanan
+  {
+    slug: "prediksi-hujan-bulanan",
+    title: "Prediksi Hujan Bulanan",
+    data: [
+      // Curah Hujan
+      {
+        title: "Curah Hujan",
+        href: "prediksi-hujan-bulanan/curah-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description: "Informasi mengenai curah hujan bulanan",
+      },
+      // Sifat Hujan
+      {
+        title: "Sifat Hujan",
+        href: "prediksi-hujan-bulanan/sifat-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description: "Informasi mengenai sifat hujan bulanan",
+      },
+      // Peluang Curah Hujan di atas 500
+      {
+        title: "Peluang Curah Hujan di atas 500",
+        href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-500/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan bulanan di atas 500",
+      },
+      // Peluang Curah Hujan di atas 400
+      {
+        title: "Peluang Curah Hujan di atas 400",
+        href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-400/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan bulanan di atas 400",
+      },
+      // Peluang Curah Hujan di atas 300
+      {
+        title: "Peluang Curah Hujan di atas 300",
+        href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-300/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan bulanan di atas 300",
+      },
+      // Peluang Curah Hujan di bawah 150
+      {
+        title: "Peluang Curah Hujan di bawah 150",
+        href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-bawah-150/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan bulanan di bawah 150",
+      },
+      // Peluang Curah Hujan di bawah 100
+      {
+        title: "Peluang Curah Hujan di bawah 100",
+        href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-bawah-100/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan bulanan di bawah 100",
+      },
+    ],
+  },
+  // Prediksi Hujan Dasarian
+  {
+    slug: "prediksi-hujan-dasarian",
+    title: "Prediksi Hujan Dasarian",
+    data: [
+      // Curah Hujan
+      {
+        title: "Curah Hujan",
+        href: "prediksi-hujan-dasarian/curah-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description: "Informasi mengenai curah hujan dasarian",
+      },
+      // Sifat Hujan
+      {
+        title: "Sifat Hujan",
+        href: "prediksi-hujan-dasarian/sifat-hujan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description: "Informasi mengenai sifat hujan dasarian",
+      },
+      // Peluang Curah Hujan di atas 500
+      {
+        title: "Peluang Curah Hujan di atas 500",
+        href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-atas-500/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan dasarian di atas 500",
+      },
+      // Peluang Curah Hujan di atas 400
+      {
+        title: "Peluang Curah Hujan di atas 400",
+        href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-atas-400/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan dasarian di atas 400",
+      },
+      // Peluang Curah Hujan di atas 300
+      {
+        title: "Peluang Curah Hujan di atas 300",
+        href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-atas-300/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan dasarian di atas 300",
+      },
+      // Peluang Curah Hujan di bawah 100
+      {
+        title: "Peluang Curah Hujan di bawah 100",
+        href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-bawah-100/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan dasarian di bawah 100",
+      },
+      // Peluang Curah Hujan di bawah 150
+      {
+        title: "Peluang Curah Hujan di bawah 150",
+        href: "prediksi-hujan-dasarian/peluang-curah-hujan-di-bawah-150/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+        descriptionUrl: "",
+        description:
+          "Informasi mengenai peluang curah hujan dasarian di bawah 150",
+      },
+    ],
+  },
+  // Lainnya
+];
 
 export async function generateStaticParams() {
   return data.map((item) => ({

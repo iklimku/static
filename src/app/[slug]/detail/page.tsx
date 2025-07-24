@@ -216,8 +216,9 @@ const data: Item[] = [
     slug: "peringatan-dini-kekeringan-meteorologis",
     title: "Peringatan Dini Kekeringan Meteorologis",
     imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Peringatan+Dini+Kekeringan+Meteorologis.png",
-    descriptionUrl: "",
+      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
+    descriptionUrl:
+      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.txt",
     description: "",
     tabs: null,
   },
@@ -225,8 +226,9 @@ const data: Item[] = [
     slug: "peringatan-dini-curah-hujan-tinggi",
     title: "Peringatan Dini Curah Hujan Tinggi",
     imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Peringatan+Dini+Curah+Hujan+Tinggi.png",
-    descriptionUrl: "",
+      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.jpg",
+    descriptionUrl:
+      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.txt",
     description: "",
     tabs: null,
   },
@@ -234,9 +236,9 @@ const data: Item[] = [
     slug: "kondisi-enso-el-nino-dan-la-nina",
     title: "Kondisi ENSO (EL Nino dan La Nina)",
     imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Kondisi+ENSO+(EL+Nino+dan+La+Nina).png",
+      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
     descriptionUrl: "",
-    description: "",
+    description: "Informasi kondisi ENSO (EL Nino dan La Nina).",
     tabs: null,
   },
   // Prediksi Iklim
@@ -244,7 +246,7 @@ const data: Item[] = [
     slug: "prediksi-musim",
     title: "Prediksi Musim",
     imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Musim.png",
+      "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -253,7 +255,7 @@ const data: Item[] = [
     slug: "prediksi-indeks-presipitasi-terstandarisasi",
     title: "Prediksi Indeks Presipitasi Terstandarisasi",
     imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Indeks+Presipitasi+Terstandarisasi.png",
+      "",
     descriptionUrl: "",
     description: "",
     tabs: null,

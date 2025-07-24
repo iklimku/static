@@ -124,7 +124,7 @@ const data: Item[] = [
       {
         title: "Analisis Curah Hujan Dasarian",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ach_das.png",
         descriptionUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ach_das.txt",
         description: "",
@@ -157,9 +157,9 @@ const data: Item[] = [
       {
         title: "Analisis Sifat Hujan Bulanan",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ash_das.png",
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.png",
         descriptionUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ash_das.txt",
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.txt",
         description: "",
       },
     ],

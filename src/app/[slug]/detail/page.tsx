@@ -282,15 +282,8 @@ const data: Item[] = [
       },
     ],
   },
-  // {
-  //   slug: "prediksi-hujan-bulanan",
-  //   title: "Prediksi Hujan Bulanan",
-  //   imageUrl:
-  //     "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Hujan+Bulanan.png",
-  //   descriptionUrl: "",
-  //   description: "",
-  //   tabs: null,
-  // },
+
+  // PREDIKSI CURAH HUJAN BULANAN DETERMINISTIK
   {
     slug: "prediksi-curah-hujan-bulanan",
     title: "Prediksi Curah Hujan Bulanan",
@@ -356,7 +349,7 @@ const data: Item[] = [
       },
     ],
   },
-  // PREDIKSI SIFAT HUJAN BULANAN
+  // PREDIKSI SIFAT HUJAN BULANAN DETERMINISTIK
   {
     slug: "prediksi-sifat-hujan-bulanan",
     title: "Prediksi Sifat Hujan Bulanan",
@@ -777,16 +770,355 @@ const data: Item[] = [
     ],
   },
 
-  // PREDIKSI CURAH HUJAN DASARIAN
+  // PREDIKSI CURAH HUJAN DASARIAN DETERMINISTIK
   {
-    slug: "prediksi-hujan-dasarian",
-    title: "Prediksi Hujan Dasarian",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+Hujan+Dasarian.png",
+    slug: "prediksi-curah-hujan-dasarian",
+    title: "Prediksi Curah Hujan Dasarian",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
-    tabs: null,
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_det_step1.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_narasi_step1.txt",
+        description: "",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_det_step2.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_narasi_step2.txt",
+        description: "",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_det_step3.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_narasi_step3.txt",
+        description: "",
+      },
+    ],
   },
+  // PREDIKSI SIFAT HUJAN DASARIAN DETERMINISTIK
+  {
+    slug: "prediksi-sifat-hujan-dasarian",
+    title: "Prediksi Sifat Hujan Dasarian",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/psh_das_det_step1.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/psh_das_narasi_step1.txt",
+        description: "",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/psh_das_det_step2.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/psh_das_narasi_step2.txt",
+        description: "",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/psh_das_det_step3.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/psh_das_narasi_step3.txt",
+        description: "",
+      },
+    ],
+  },
+
+  // PELUANG CURAH HUJAN DASARIAN ATAS 300
+  {
+    slug: "peluang-curah-hujan-dasarian-di-atas-300",
+    title: "Peluang Curah Hujan Dasarian di Atas 300",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a300_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 300 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a300_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 300 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a300_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 300 (Step 3)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN DASARIAN ATAS 150
+  {
+    slug: "peluang-curah-hujan-dasarian-di-atas-150",
+    title: "Peluang Curah Hujan Dasarian di Atas 150",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a150_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 150 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a150_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 150 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a150_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 150 (Step 3)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN DASARIAN BAWAH 150
+  {
+    slug: "peluang-curah-hujan-dasarian-di-bawah-150",
+    title: "Peluang Curah Hujan Dasarian di Bawah 150",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b150_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 150 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b150_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 150 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b150_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 150 (Step 3)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN DASARIAN ATAS 100
+  {
+    slug: "peluang-curah-hujan-dasarian-di-atas-100",
+    title: "Peluang Curah Hujan Dasarian di Atas 100",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a100_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 100 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a100_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 100 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a100_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 100 (Step 3)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN DASARIAN BAWAH 100
+  {
+    slug: "peluang-curah-hujan-dasarian-di-bawah-100",
+    title: "Peluang Curah Hujan Dasarian di Bawah 100",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b100_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 100 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b100_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 100 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b100_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 100 (Step 3)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN DASARIAN ATAS 50
+  {
+    slug: "peluang-curah-hujan-dasarian-di-atas-50",
+    title: "Peluang Curah Hujan Dasarian di Atas 50",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a50_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 50 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a50_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 50 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a50_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 50 (Step 3)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN DASARIAN BAWAH 50
+  {
+    slug: "peluang-curah-hujan-dasarian-di-bawah-50",
+    title: "Peluang Curah Hujan Dasarian di Bawah 50",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b50_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 50 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b50_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 50 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b50_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 50 (Step 3)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN DASARIAN ATAS 20
+  {
+    slug: "peluang-curah-hujan-dasarian-di-atas-20",
+    title: "Peluang Curah Hujan Dasarian di Atas 20",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a20_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 20 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a20_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 20 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a20_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Atas 20 (Step 3)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN DASARIAN BAWAH 20
+  {
+    slug: "peluang-curah-hujan-dasarian-di-bawah-20",
+    title: "Peluang Curah Hujan Dasarian di Bawah 20",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b20_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 20 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b20_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 20 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b20_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Dasarian di Bawah 20 (Step 3)",
+      },
+    ],
+  },
+  /////////////////////////////////////////////////////////////////////// sampe sini dulu, 24 Jul 2025
   {
     slug: "prediksi-daerah-potensi-banjir",
     title: "Prediksi daerah Potensi Banjir",

@@ -356,6 +356,72 @@ const data: Item[] = [
       },
     ],
   },
+  // PREDIKSI SIFAT HUJAN BULANAN
+  {
+    slug: "prediksi-sifat-hujan-bulanan",
+    title: "Prediksi Sifat Hujan Bulanan",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "PSH Bulanan Deterministik Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_det_step1.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_narasi_step1.txt",
+        description: "",
+      },
+      {
+        title: "PSH Bulanan Deterministik Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_det_step2.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_narasi_step2.txt",
+        description: "",
+      },
+      {
+        title: "PSH Bulanan Deterministik Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_det_step3.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_narasi_step3.txt",
+        description: "",
+      },
+      {
+        title: "PSH Bulanan Deterministik Step 4",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_det_step4.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_narasi_step4.txt",
+        description: "",
+      },
+      {
+        title: "PSH Bulanan Deterministik Step 5",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_det_step5.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_narasi_step5.txt",
+        description: "",
+      },
+      {
+        title: "PSH Bulanan Deterministik Step 6",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_det_step6.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_narasi_step6.txt",
+        description: "",
+      },
+      {
+        title: "PSH Bulanan Deterministik Step 7",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_det_step7.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_narasi_step7.txt",
+        description: "",
+      },
+    ],
+  },
   {
     slug: "prediksi-hujan-dasarian",
     title: "Prediksi Hujan Dasarian",

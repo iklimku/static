@@ -400,7 +400,8 @@ const data: {
       // Sifat Hujan
       {
         title: "Sifat Hujan",
-        href: "prediksi-hujan-bulanan/sifat-hujan/detail",
+        // href: "prediksi-hujan-bulanan/sifat-hujan/detail",
+        href: "prediksi-sifat-hujan-bulanan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
         descriptionUrl: "",

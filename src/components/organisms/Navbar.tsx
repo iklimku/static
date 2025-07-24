@@ -231,6 +231,16 @@ const components: {
         href: "/faq/detail",
         description: "Informasi pertanyaan yang sering diajukan.",
       },
+      {
+        title: "Buletin",
+        href: "/buletin/daftar",
+        description: "Informasi buletin",
+      },
+      {
+        title: "Regulasi",
+        href: "/regulasi/daftar",
+        description: "Informasi regulasi.",
+      },
     ],
   },
 ];

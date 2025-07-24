@@ -24,6 +24,7 @@ const data: {
     description: string;
   }[];
 }[] = [
+    // Pertanian dan Kehutanan
     {
       slug: "pertanian",
       title: "Informasi Iklim untuk Sektor Pertanian dan Kehutanan",
@@ -31,7 +32,7 @@ const data: {
         {
           title: "Prediksi Curah Hujan",
           href: "prediksi-curah-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
           descriptionUrl: "",
           description: "Informasi mengenai prediksi curah hujan yang akan terjadi di Indonesia"
         },
@@ -45,14 +46,14 @@ const data: {
         {
           title: "Perkembangan ENSO dan IOD",
           href: "perkembangan-enso-dan-iod/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          imageUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
           descriptionUrl: "",
           description: "Informasi mengenai perkembangan ENSO dan IOD"
         },
         {
           title: "Ketersediaan Air bagi Tanaman",
           href: "ketersediaan-air-bagi-tanaman/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          imageUrl: "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/0625_07Indonesia_ATi_web-2025.jpg",
           descriptionUrl: "",
           description: "Informasi mengenai ketersediaan air bagi tanaman"
         },
@@ -66,33 +67,48 @@ const data: {
         {
           title: "Prediksi Musim Hujan",
           href: "prediksi-musim-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          imageUrl: "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Pemutakhiran-PMH-2425.jpg",
           descriptionUrl: "",
           description: "Informasi mengenai prediksi musim hujan yang akan terjadi di Indonesia"
         },
         {
           title: "Prediksi Musim Kemarau",
           href: "prediksi-musim-kemarau/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          imageUrl: "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/PMK-Pemutakhiran-Mei-2025.png",
           descriptionUrl: "",
           description: "Informasi mengenai prediksi musim kemarau yang akan terjadi di Indonesia"
         },
         {
-          title: "Peringatan Dini Iklim Ekstrem",
-          href: "peringatan-dini-iklim-ekstrem/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          title: "Peringatan Dini Kekeringan Meteorologis",
+          href: "/peringatan-dini-kekeringan-meteorologis/detail",
+          imageUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
           descriptionUrl: "",
-          description: "Informasi mengenai peringatan dini iklim ekstrem yang akan terjadi di Indonesia"
+          description: "Informasi peringatan dini kekeringan meteorologi.",
+        },
+        {
+          title: "Peringatan Dini Curah Hujan Tinggi",
+          href: "/peringatan-dini-curah-hujan-tinggi/detail",
+          imageUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.jpg",
+          descriptionUrl: "",
+          description: "Informasi peringatan dini curah hujan tinggi.",
+        },
+        {
+          title: "Kondisi ENSO (EL Nino dan La Nina)",
+          href: "/kondisi-enso-el-nino-dan-la-nina/detail",
+          imageUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
+          descriptionUrl: "",
+          description: "Informasi kondisi ENSO (EL Nino dan La Nina).",
         },
         {
           title: "Indeks Persipitasi Terstandarisasi",
           href: "indeks-presipitasi-terstandarisasi/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
           descriptionUrl: "",
           description: "Informasi mengenai indeks presipitasi terstandarisasi yang akan terjadi di Indonesia"
         }
       ]
     },
+    // Sumber Daya Air dan Bencana
     {
       slug: "air-bencana",
       title: "Informasi Iklim untuk Sektor Sumber Daya Air dan Bencana",
@@ -115,11 +131,18 @@ const data: {
         },
         // Prediksi Curah Hujan
         {
-          title: "Prediksi Curah Hujan",
-          href: "prediksi-curah-hujan/detail",
-          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          title: "Prediksi Hujan Bulanan",
+          href: "/prediksi-hujan-bulanan/daftar",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
           descriptionUrl: "",
-          description: "Informasi mengenai prediksi curah hujan yang akan terjadi di Indonesia"
+          description: "Informasi mengenai prediksi curah hujan bulanan yang akan terjadi di Indonesia",
+        },
+        {
+          title: "Prediksi Hujan Dasarian",
+          href: "/prediksi-hujan-dasarian/daftar",
+          imageUrl: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_det_step1.png",
+          descriptionUrl: "",
+          description: "Informasi mengenai prediksi curah hujan dasarian yang akan terjadi di Indonesia",
         },
         // Prediksi Musim Hujan
         {
@@ -163,6 +186,7 @@ const data: {
         }
       ]
     },
+    // Kesehatan
     {
       slug: "kesehatan",
       title: "Informasi Iklim untuk Sektor Kesehatan",
@@ -201,6 +225,7 @@ const data: {
         }
       ]
     },
+    // Energi
     {
       slug: "energi",
       title: "Informasi Iklim untuk Sektor Energi",
@@ -239,6 +264,7 @@ const data: {
         }
       ]
     },
+    // Pembangunan
     {
       slug: "pembangunan",
       title: "Informasi Iklim untuk Sektor Pembangunan",
@@ -404,6 +430,7 @@ const data: {
         }
       ]
     }
+    // Lainnya
   ]
 
 export async function generateStaticParams() {

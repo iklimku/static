@@ -422,7 +422,7 @@ const data: Item[] = [
       },
     ],
   },
-  // PELUANG CURAH HUJAN ATAS 500
+  // PELUANG CURAH HUJAN BULANAN ATAS 500
   {
     slug: "peluang-curah-hujan-bulanan-di-atas-500",
     title: "Peluang Curah Hujan Bulanan di Atas 500",
@@ -481,8 +481,7 @@ const data: Item[] = [
       },
     ],
   },
-
-  // PELUANG CURAH HUJAN ATAS 300
+  // PELUANG CURAH HUJAN BULANAN ATAS 300
   {
     slug: "peluang-curah-hujan-bulanan-di-atas-300",
     title: "Peluang Curah Hujan Bulanan di Atas 300",
@@ -541,7 +540,7 @@ const data: Item[] = [
       },
     ],
   },
-  // PELUANG CURAH HUJAN ATAS 150
+  // PELUANG CURAH HUJAN BULANAN ATAS 150
   {
     slug: "peluang-curah-hujan-bulanan-di-atas-150",
     title: "Peluang Curah Hujan Bulanan di Atas 150",
@@ -600,7 +599,7 @@ const data: Item[] = [
       },
     ],
   },
-  // PELUANG CURAH HUJAN BAWAH 150
+  // PELUANG CURAH HUJAN BULANAN BAWAH 150
   {
     slug: "peluang-curah-hujan-bulanan-di-bawah-150",
     title: "Peluang Curah Hujan Bulanan di Bawah 150",
@@ -656,6 +655,124 @@ const data: Item[] = [
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step7.png",
         descriptionUrl: "",
         description: "Informasi PCH Bulanan di Bawah 150 (Step 7)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN BULANAN ATAS 100
+  {
+    slug: "peluang-curah-hujan-bulanan-di-atas-100",
+    title: "Peluang Curah Hujan Bulanan di Atas 100",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 100 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 100 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 100 (Step 3)",
+      },
+      {
+        title: "Step 4",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step4.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 100 (Step 4)",
+      },
+      {
+        title: "Step 5",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step5.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 100 (Step 5)",
+      },
+      {
+        title: "Step 6",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step6.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 100 (Step )",
+      },
+      {
+        title: "Step 7",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step7.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 100 (Step 7)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN BULANAN BAWAH 100
+  {
+    slug: "peluang-curah-hujan-bulanan-di-bawah-100",
+    title: "Peluang Curah Hujan Bulanan di BAwah 100",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b100_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 100 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b100_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 100 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b100_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 100 (Step 3)",
+      },
+      {
+        title: "Step 4",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b100_step4.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 100 (Step 4)",
+      },
+      {
+        title: "Step 5",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b100_step5.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 100 (Step 5)",
+      },
+      {
+        title: "Step 6",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b100_step6.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 100 (Step )",
+      },
+      {
+        title: "Step 7",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b100_step7.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 100 (Step 7)",
       },
     ],
   },

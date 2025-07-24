@@ -720,7 +720,7 @@ const data: Item[] = [
   // PELUANG CURAH HUJAN BULANAN BAWAH 100
   {
     slug: "peluang-curah-hujan-bulanan-di-bawah-100",
-    title: "Peluang Curah Hujan Bulanan di BAwah 100",
+    title: "Peluang Curah Hujan Bulanan di Bawah 100",
     imageUrl: "",
     descriptionUrl: "",
     description: "",

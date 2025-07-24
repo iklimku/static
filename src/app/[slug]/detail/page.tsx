@@ -422,6 +422,66 @@ const data: Item[] = [
       },
     ],
   },
+  // PELUANG CURAH HUJAN ATAS 500
+  {
+    slug: "peluang-curah-hujan-bulanan-di-atas-500",
+    title: "Peluang Curah Hujan Bulanan di Atas 500",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "PCH Bulanan di Atas 500 (Step 1)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a500_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 500 (Step 1)",
+      },
+      {
+        title: "PCH Bulanan di Atas 500 (Step 2)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a500_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 500 (Step 2)",
+      },
+      {
+        title: "PCH Bulanan di Atas 500 (Step 3)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a500_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 500 (Step 3)",
+      },
+      {
+        title: "PCH Bulanan di Atas 500 (Step 4)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a500_step4.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 500 (Step 4)",
+      },
+      {
+        title: "PCH Bulanan di Atas 500 (Step 5)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a500_step5.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 500 (Step 5)",
+      },
+      {
+        title: "PCH Bulanan di Atas 500 (Step 6)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a500_step6.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 500 (Step 6)",
+      },
+      {
+        title: "PCH Bulanan di Atas 500 (Step 7)",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a500_step7.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Atas 500 (Step 7)",
+      },
+    ],
+  },
+  // PREDIKSI CURAH HUJAN DASARIAN
   {
     slug: "prediksi-hujan-dasarian",
     title: "Prediksi Hujan Dasarian",

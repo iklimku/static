@@ -410,7 +410,7 @@ const data: {
       // Peluang Curah Hujan di atas 500
       {
         title: "Peluang Curah Hujan di atas 500",
-        href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-atas-500/detail",
+        href: "peluang-curah-hujan-bulanan-di-atas-500/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
         descriptionUrl: "",

@@ -246,16 +246,16 @@ const data: Item[] = [
     slug: "prediksi-musim",
     title: "Prediksi Musim",
     imageUrl:
-      "",
-    descriptionUrl: "",
+      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
+    descriptionUrl:
+      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
     description: "",
     tabs: null,
   },
   {
     slug: "prediksi-indeks-presipitasi-terstandarisasi",
     title: "Prediksi Indeks Presipitasi Terstandarisasi",
-    imageUrl:
-      "",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,

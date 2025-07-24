@@ -73,6 +73,15 @@ const data: {
           "Informasi mengenai prediksi indeks potensi Karhutla yang akan terjadi di Indonesia",
       },
       {
+        title: "Prediksi Musim",
+        href: "prediksi-musim/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
+        description: "",
+      },
+      {
         title: "Prediksi Musim Hujan",
         href: "prediksi-musim-hujan/detail",
         imageUrl:
@@ -191,6 +200,17 @@ const data: {
         description:
           "Informasi mengenai prediksi musim kemarau yang akan terjadi di Indonesia",
       },
+      // Prediksi SPI
+      {
+        title: "Prediksi Indeks Presipitasi Terstandardisasi",
+        href: "prediksi-indeks-presipitasi-terstandarisasi/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PRAKSPI/prakspi1.png",
+        descriptionUrl: "",
+        description:
+          "Prediksi SPI 1",
+      },
+
       // Peringatan Dini Iklim Ekstrem
       {
         title: "Peringatan Dini Iklim Ekstrem",

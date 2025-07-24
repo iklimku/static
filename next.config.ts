@@ -3,12 +3,28 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
-      new URL('https://cews.bmkg.go.id/**'),
-      // https://i0.wp.com/
-      new URL('https://i0.wp.com/**'),
-      new URL('https://dataweb.bmkg.go.id/**'),
-    ]
-  }
+      {
+        protocol: "https",
+        hostname: "cews.bmkg.go.id",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "i0.wp.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "dataweb.bmkg.go.id",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+        pathname: "/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

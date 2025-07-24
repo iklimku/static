@@ -271,7 +271,7 @@ export function Navbar() {
                   <NavigationMenuTrigger className="font-normal hover:font-semibold">
                     {component.title}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[1000px] border shadow-lg bg-white rounded-md z-50 ">
+                  <NavigationMenuContent className="p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[1080px] border shadow-lg bg-white rounded-md z-50 ">
                     <ul className="grid gap-4 md:grid-cols-2 ">
                       {component.subMenu.map((item) => (
                         <ListItem

@@ -543,7 +543,7 @@ const data: Item[] = [
   },
   // PELUANG CURAH HUJAN ATAS 150
   {
-    slug: "peluang-curah-bulanan-di-atas-150",
+    slug: "peluang-curah-hujan-bulanan-di-atas-150",
     title: "Peluang Curah Hujan Bulanan di Atas 150",
     imageUrl: "",
     descriptionUrl: "",
@@ -597,6 +597,65 @@ const data: Item[] = [
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a150_step7.png",
         descriptionUrl: "",
         description: "Informasi PCH Bulanan di Atas 150 (Step 7)",
+      },
+    ],
+  },
+  // PELUANG CURAH HUJAN BAWAH 150
+  {
+    slug: "peluang-curah-hujan-bulanan-di-bawah-150",
+    title: "Peluang Curah Hujan Bulanan di Bawah 150",
+    imageUrl: "",
+    descriptionUrl: "",
+    description: "",
+    tabs: [
+      {
+        title: "Step 1",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step1.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 150 (Step 1)",
+      },
+      {
+        title: "Step 2",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step2.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 150 (Step 2)",
+      },
+      {
+        title: "Step 3",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step3.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 150 (Step 3)",
+      },
+      {
+        title: "Step 4",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step4.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 150 (Step 4)",
+      },
+      {
+        title: "Step 5",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step5.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 150 (Step 5)",
+      },
+      {
+        title: "Step 6",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step6.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 150 (Step )",
+      },
+      {
+        title: "Step 7",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step7.png",
+        descriptionUrl: "",
+        description: "Informasi PCH Bulanan di Bawah 150 (Step 7)",
       },
     ],
   },

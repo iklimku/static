@@ -430,17 +430,17 @@ const data: {
       // Peluang Curah Hujan di atas 150
       {
         title: "Peluang Curah Hujan di atas 150",
-        href: "peluang-curah-bulanan-di-atas-150/detail",
+        href: "peluang-curah-hujan-bulanan-di-atas-150/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a150_step1.png",
         descriptionUrl: "",
         description:
-          "Informasi mengenai peluang curah hujan bulanan di atas 300",
+          "Informasi mengenai peluang curah hujan bulanan di atas 150",
       },
       // Peluang Curah Hujan di bawah 150
       {
         title: "Peluang Curah Hujan di bawah 150",
-        href: "prediksi-hujan-bulanan/peluang-curah-hujan-di-bawah-150/detail",
+        href: "peluang-curah-hujan-bulanan-di-bawah-150/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
         descriptionUrl: "",

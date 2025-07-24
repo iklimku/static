@@ -223,8 +223,8 @@ const components: {
       subMenu: [
         {
           title: "Glosarium",
-          href: "/glosarium/detail",
-          description: "Informasi glosarium.",
+          href: "/glossary",
+          description: "Informasi glosarium tentang MKG.",
         },
         {
           title: "Frequently Asked Question",

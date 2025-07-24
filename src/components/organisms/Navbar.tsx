@@ -335,9 +335,9 @@ export function Navbar() {
             ))}
           </Accordion>
 
-          <Button variant="outline" className="w-full mt-4">
+          {/* <Button variant="outline" className="w-full mt-4">
             Contact Center 196
-          </Button>
+          </Button> */}
         </div>
       )}
     </nav>

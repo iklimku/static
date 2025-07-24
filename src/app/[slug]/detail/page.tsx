@@ -117,20 +117,52 @@ const data: Item[] = [
   {
     slug: "analisis-hujan-dasarian",
     title: "Analisis Hujan Dasarian",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Analisis+Hujan+Dasarian.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
-    tabs: null,
+    tabs: [
+      {
+        title: "Analisis Curah Hujan Dasarian",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ach_das.txt",
+        description: "",
+      },
+      {
+        title: "Analisis Sifat Hujan Dasarian",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ash_das.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ash_das.txt",
+        description: "",
+      },
+    ],
   },
   {
     slug: "analisis-hujan-bulanan",
     title: "Analisis Hujan Bulanan",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Analisis+Hujan+Bulanan.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
-    tabs: null,
+    tabs: [
+      {
+        title: "Analisis Curah Hujan Bulanan",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ach_das.txt",
+        description: "",
+      },
+      {
+        title: "Analisis Sifat Hujan Bulanan",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ash_das.png",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ash_das.txt",
+        description: "",
+      },
+    ],
   },
   {
     slug: "indeks-presipitasi-terstandarisasi",
@@ -139,7 +171,6 @@ const data: Item[] = [
     descriptionUrl: "",
     description: "",
     tabs: [
-      // SPI 1
       {
         title: "SPI-1",
         imageUrl:
@@ -147,7 +178,6 @@ const data: Item[] = [
         descriptionUrl: "",
         description: "Informasi mengenai indeks presipitasi terstandarisasi 1",
       },
-      // SPI 3
       {
         title: "SPI-3",
         imageUrl:
@@ -155,7 +185,6 @@ const data: Item[] = [
         descriptionUrl: "",
         description: "Informasi mengenai indeks presipitasi terstandarisasi 3",
       },
-      // SPI 6
       {
         title: "SPI-6",
         imageUrl:

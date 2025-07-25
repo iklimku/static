@@ -241,6 +241,47 @@ const data: Item[] = [
     description: "Informasi kondisi ENSO (EL Nino dan La Nina).",
     tabs: null,
   },
+  // Prakiraan Kualitas Udara
+  {
+    title: "Konsentrasi Partikulat (PM2,5)",
+    slug: "konsentrasi-partikulat",
+    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Konsentrasi+Partikulat+(PM2,5).png",
+    descriptionUrl: "",
+    description: "Informasi konsentrasi partikulat (PM2,5).",
+    tabs: null
+  },
+  {
+    title: "Karbon Dioksida (CO2)",
+    slug: "karbon-dioksida",
+    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Karbon+Dioksida+(CO2).png",
+    descriptionUrl: "",
+    description: "Informasi karbon dioksida (CO2).",
+    tabs: null
+  },
+  {
+    title: "Karbon Monoksida (CO)",
+    slug: "karbon-monoksida",
+    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Karbon+Monoksida+(CO).png",
+    descriptionUrl: "",
+    description: "Informasi karbon monoksida (CO).",
+    tabs: null
+  },
+  {
+    title: "Sulfur Dioksida (SO2)",
+    slug: "sulfur-dioksida",
+    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Sulfur+Dioksida+(SO2).png",
+    descriptionUrl: "",
+    description: "Informasi sulfur dioksida (SO2).",
+    tabs: null
+  },
+  {
+    title: "Ozon Permukaan (O3)",
+    slug: "ozon-permukaan",
+    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Ozon+Permukaan+(O3).png",
+    descriptionUrl: "",
+    description: "Informasi ozon permukaan (O3).",
+    tabs: null
+  },
   // Prediksi Iklim
   {
     slug: "prediksi-musim",
@@ -1172,6 +1213,7 @@ const data: Item[] = [
     tabs: null,
   },
   // Lainnya
+
 ];
 
 export async function generateStaticParams() {

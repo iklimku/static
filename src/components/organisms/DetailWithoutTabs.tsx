@@ -30,6 +30,9 @@ export default async function DetailWithoutTabs(item: Item) {
   if (item.descriptionUrl != "") {
     const res = await fetch(item.descriptionUrl);
     description = await res.text();
+
+    // replace enter to <br/>
+    description = description.replace(/\n/g, "<br/>");
   }
   return (
     <>
@@ -65,7 +68,9 @@ export default async function DetailWithoutTabs(item: Item) {
                     Deskripsi dan Analisis
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">
-                    <p>{description}</p>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: description }}
+                    />
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

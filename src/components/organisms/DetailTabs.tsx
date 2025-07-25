@@ -36,8 +36,12 @@ export default async function DetailTabs(item: Item) {
           const res = await fetch(tab.descriptionUrl);
           if (!res.ok) throw new Error("Gagal fetch");
           description = await res.text();
+
+          // replace enter to <br/>
+          description = description.replace(/\n/g, "<br/>");
         } catch (error) {
           description = "Deskripsi tidak tersedia.";
+          console.error(error);
         }
       }
       return { ...tab, description };
@@ -102,7 +106,9 @@ export default async function DetailTabs(item: Item) {
                     Deskripsi dan Analisis
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">
-                    <p>{tab.description}</p>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: tab.description }}
+                    />
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

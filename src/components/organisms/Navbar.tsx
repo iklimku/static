@@ -4,7 +4,6 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -90,12 +89,7 @@ const components: {
         title: "Ketersediaan Air bagi Tanaman",
         href: "/ketersediaan-air-bagi-tanaman/detail",
         description: "Informasi ketersediaan air bagi tanaman.",
-      },
-      {
-        title: "Buletin",
-        href: "/buletin/daftar",
-        description: "Informasi buletin",
-      },
+      }
     ],
   },
   {

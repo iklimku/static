@@ -282,7 +282,6 @@ const data: Item[] = [
       },
     ],
   },
-
   // PREDIKSI CURAH HUJAN BULANAN DETERMINISTIK
   {
     slug: "prediksi-curah-hujan-bulanan",
@@ -769,7 +768,6 @@ const data: Item[] = [
       },
     ],
   },
-
   // PREDIKSI CURAH HUJAN DASARIAN DETERMINISTIK
   {
     slug: "prediksi-curah-hujan-dasarian",
@@ -838,7 +836,6 @@ const data: Item[] = [
       },
     ],
   },
-
   // PELUANG CURAH HUJAN DASARIAN ATAS 300
   {
     slug: "peluang-curah-hujan-dasarian-di-atas-300",
@@ -1174,6 +1171,7 @@ const data: Item[] = [
     description: "",
     tabs: null,
   },
+  // Lainnya
 ];
 
 export async function generateStaticParams() {

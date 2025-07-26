@@ -40,8 +40,7 @@ const data: Item[] = [
   {
     slug: "anomali-suhu-udara",
     title: "Anomali Suhu Udara",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Anomali+Suhu+Udara.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -49,8 +48,7 @@ const data: Item[] = [
   {
     slug: "indeks-iklim-global",
     title: "Indeks Iklim Global",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Indeks+Iklim+Global.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: [
@@ -89,8 +87,7 @@ const data: Item[] = [
   {
     slug: "catatan-iklim-ekstrem",
     title: "Catatan Iklim Ekstrem",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Catatan+Iklim+Ekstrem.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -98,8 +95,7 @@ const data: Item[] = [
   {
     slug: "indeks-ultraviolet",
     title: "Indeks Ultraviolet",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Indeks+Ultraviolet.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -108,8 +104,7 @@ const data: Item[] = [
   {
     slug: "dinamika-atmosfer-dan-laut",
     title: "Dinamika Atmosfer dan Laut",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Dinamika+Atmosfer+dan+Laut.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -197,8 +192,7 @@ const data: Item[] = [
   {
     slug: "ketersediaan-air-bagi-tanaman",
     title: "Ketersediaan Air bagi Tanaman",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Ketersediaan+Air+bagi+Tanaman.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -206,7 +200,7 @@ const data: Item[] = [
   {
     slug: "buletin",
     title: "Buletin",
-    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Buletin.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -245,7 +239,7 @@ const data: Item[] = [
   {
     title: "Konsentrasi Partikulat (PM2,5)",
     slug: "konsentrasi-partikulat",
-    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Konsentrasi+Partikulat+(PM2,5).png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "Informasi konsentrasi partikulat (PM2,5).",
     tabs: null
@@ -253,7 +247,7 @@ const data: Item[] = [
   {
     title: "Karbon Dioksida (CO2)",
     slug: "karbon-dioksida",
-    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Karbon+Dioksida+(CO2).png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "Informasi karbon dioksida (CO2).",
     tabs: null
@@ -261,7 +255,7 @@ const data: Item[] = [
   {
     title: "Karbon Monoksida (CO)",
     slug: "karbon-monoksida",
-    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Karbon+Monoksida+(CO).png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "Informasi karbon monoksida (CO).",
     tabs: null
@@ -269,7 +263,7 @@ const data: Item[] = [
   {
     title: "Sulfur Dioksida (SO2)",
     slug: "sulfur-dioksida",
-    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Sulfur+Dioksida+(SO2).png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "Informasi sulfur dioksida (SO2).",
     tabs: null
@@ -277,7 +271,7 @@ const data: Item[] = [
   {
     title: "Ozon Permukaan (O3)",
     slug: "ozon-permukaan",
-    imageUrl: "https://placehold.co/1200x700/f5e9e8/333?text=Ozon+Permukaan+(O3).png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "Informasi ozon permukaan (O3).",
     tabs: null
@@ -1160,8 +1154,7 @@ const data: Item[] = [
   {
     slug: "prediksi-daerah-potensi-banjir",
     title: "Prediksi daerah Potensi Banjir",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Prediksi+daerah+Potensi+Banjir.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -1170,8 +1163,7 @@ const data: Item[] = [
   {
     slug: "data-iklim-harian",
     title: "Fakta Perubahan Iklim",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Fakta+Perubahan+Iklim.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -1179,8 +1171,7 @@ const data: Item[] = [
   {
     slug: "analisis-laju-perubahan-suhu-udara",
     title: "Analisis Laju Perubahan Suhu Udara",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Analisis+Laju+Perubahan+Suhu+Udara.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -1188,8 +1179,7 @@ const data: Item[] = [
   {
     slug: "data-iklim-tahunan",
     title: "Analisis Laju Perubahan Curah Hujan",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Analisis+Laju+Perubahan+Curah+Hujan.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -1197,8 +1187,7 @@ const data: Item[] = [
   {
     slug: "proyeksi-perubahan-suhu-udara",
     title: "Proyeksi Perubahan Suhu Udara",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Proyeksi+Perubahan+Suhu+Udara.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,
@@ -1206,8 +1195,7 @@ const data: Item[] = [
   {
     slug: "proyeksi-perubahan-curah-hujan",
     title: "Proyeksi Perubahan Curah Hujan",
-    imageUrl:
-      "https://placehold.co/1200x700/f5e9e8/333?text=Proyeksi+Perubahan+Curah+Hujan.png",
+    imageUrl: "",
     descriptionUrl: "",
     description: "",
     tabs: null,

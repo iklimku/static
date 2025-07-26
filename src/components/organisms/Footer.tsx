@@ -68,7 +68,7 @@ export function Footer() {
               <Image src={GooglePlay} alt="Google Play" height={56} />
             </Link>
             <Link href="https://apps.apple.com/id/app/info-bmkg/id1114372539">
-              <Image src={AppStore} alt="App Store" height={38} />
+              <Image src={AppStore} alt="App Store" height={56} />
             </Link>
           </div>
         </div>

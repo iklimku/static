@@ -546,10 +546,14 @@ export default async function Daftar({
   const item = data.find((item) => item.slug === slug)
   if (!item) {
     return (
-      <>
-        Data Not Found
-      </>
-    )
+      // Generate Comming Soon
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-4xl font-bold text-gray-800">Mohon Bersabar</h1>
+        <p className="text-gray-600">
+          Kami sedang mencari dan mengisi konten
+        </p>
+      </div>
+    );
   }
 
   return (

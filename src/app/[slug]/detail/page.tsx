@@ -1232,8 +1232,16 @@ export default async function Home({
   // get title, imageUrl, and descriptionUrl from data by slug
   const item = data.find((item) => item.slug === slug);
 
-  if (!item) {
-    return <>Data Not Found</>;
+  if (!item || !(item.imageUrl === "")) {
+    return (
+      // Generate Comming Soon
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-4xl font-bold text-gray-800">Mohon Bersabar</h1>
+        <p className="text-gray-600">
+          Kami sedang mencari dan mengisi konten
+        </p>
+      </div>
+    );
   } else if (item.tabs) {
     // if item has tabs, return DetailTabs component
     return <DetailTabs {...item} />;

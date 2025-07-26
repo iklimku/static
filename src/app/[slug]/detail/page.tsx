@@ -174,21 +174,21 @@ const data: Item[] = [
       {
         title: "SPI-1",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
         descriptionUrl: "",
         description: "Informasi mengenai indeks presipitasi terstandarisasi 1",
       },
       {
         title: "SPI-3",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi3.png",
         descriptionUrl: "",
         description: "Informasi mengenai indeks presipitasi terstandarisasi 3",
       },
       {
         title: "SPI-6",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi6.png",
         descriptionUrl: "",
         description: "Informasi mengenai indeks presipitasi terstandarisasi 6",
       },

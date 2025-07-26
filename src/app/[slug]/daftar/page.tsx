@@ -225,7 +225,7 @@ const data: Item[] = [
         title: "Peringatan Dini Demam Berdarah",
         href: "peringatan-dini-demam-berdarah/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+          "https://cews.bmkg.go.id/tempatikl/reports/rawdbd/AI_bul1.PNG",
         description:
           "Informasi mengenai peringatan dini demam berdarah yang akan terjadi di Indonesia",
       },

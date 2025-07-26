@@ -175,14 +175,14 @@ const data: Item[] = [
         title: "SPI-1",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
-        descriptionUrl: "",
+        descriptionUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/SPI1_analisis_latest.txt",
         description: "Informasi mengenai indeks presipitasi terstandarisasi 1",
       },
       {
         title: "SPI-3",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi3.png",
-        descriptionUrl: "",
+        descriptionUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/SPI3_analisis_latest.txt",
         description: "Informasi mengenai indeks presipitasi terstandarisasi 3",
       },
       {
@@ -311,7 +311,7 @@ const data: Item[] = [
         title: "Prakiraan SPI-3",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PRAKSPI/prakspi3.png",
-        descriptionUrl: "",
+        descriptionUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/SPI3_prediksi_latest.txt",
         description: "Prakiraan SPI-3",
       },
       {

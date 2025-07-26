@@ -1220,7 +1220,8 @@ export default async function Home({
   // get title, imageUrl, and descriptionUrl from data by slug
   const item = data.find((item) => item.slug === slug);
 
-  if (!item || item.imageUrl === "") {
+  // Show "Mohon Bersabar" if item not found, or if it's a simple page without an image.
+  if (!item || (!item.tabs && item.imageUrl === "")) {
     return (
       // Generate Comming Soon
       <div className="flex flex-col items-center justify-center h-screen">
@@ -1230,7 +1231,9 @@ export default async function Home({
         </p>
       </div>
     );
-  } else if (item.tabs) {
+  }
+
+  if (item.tabs) {
     // if item has tabs, return DetailTabs component
     return <DetailTabs {...item} />;
   }

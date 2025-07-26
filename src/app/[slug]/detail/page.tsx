@@ -1220,7 +1220,7 @@ export default async function Home({
   // get title, imageUrl, and descriptionUrl from data by slug
   const item = data.find((item) => item.slug === slug);
 
-  if (!item || !(item.imageUrl === "")) {
+  if (!item || item.imageUrl === "") {
     return (
       // Generate Comming Soon
       <div className="flex flex-col items-center justify-center h-screen">

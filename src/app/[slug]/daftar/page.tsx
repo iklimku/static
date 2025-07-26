@@ -12,18 +12,18 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-
-const data: {
+interface Item{
   slug: string;
   title: string;
   data: {
     title: string;
     href: string;
     imageUrl: string;
-    descriptionUrl: string;
     description: string;
   }[];
-}[] = [
+}
+
+const data: Item[] = [
   // Pertanian dan Kehutanan
   {
     slug: "pertanian",
@@ -34,7 +34,6 @@ const data: {
         href: "prediksi-curah-hujan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi curah hujan yang akan terjadi di Indonesia",
       },
@@ -43,7 +42,6 @@ const data: {
         href: "hari-tanpa-hujan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai hari tanpa hujan yang akan terjadi di Indonesia",
       },
@@ -52,7 +50,6 @@ const data: {
         href: "perkembangan-enso-dan-iod/detail",
         imageUrl:
           "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
-        descriptionUrl: "",
         description: "Informasi mengenai perkembangan ENSO dan IOD",
       },
       {
@@ -60,7 +57,6 @@ const data: {
         href: "ketersediaan-air-bagi-tanaman/detail",
         imageUrl:
           "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/0625_07Indonesia_ATi_web-2025.jpg",
-        descriptionUrl: "",
         description: "Informasi mengenai ketersediaan air bagi tanaman",
       },
       {
@@ -68,7 +64,6 @@ const data: {
         href: "prediksi-indeks-potensi-karhutla/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi indeks potensi Karhutla yang akan terjadi di Indonesia",
       },
@@ -77,16 +72,13 @@ const data: {
         href: "prediksi-musim/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
-        descriptionUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
-        description: "",
+        description: "Informasi mengenai prediksi musim yang akan terjadi di Indonesia",
       },
       {
         title: "Prediksi Musim Hujan",
         href: "prediksi-musim-hujan/detail",
         imageUrl:
           "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Pemutakhiran-PMH-2425.jpg",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi musim hujan yang akan terjadi di Indonesia",
       },
@@ -95,7 +87,6 @@ const data: {
         href: "prediksi-musim-kemarau/detail",
         imageUrl:
           "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/PMK-Pemutakhiran-Mei-2025.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi musim kemarau yang akan terjadi di Indonesia",
       },
@@ -104,25 +95,20 @@ const data: {
         href: "/peringatan-dini-kekeringan-meteorologis/detail",
         imageUrl:
           "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
-        descriptionUrl:
-          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.txt",
-        description: "",
+        description: "Informasi mengenai peringatan dini kekeringan meteorologis yang akan terjadi di Indonesia",
       },
       {
         title: "Peringatan Dini Curah Hujan Tinggi",
         href: "/peringatan-dini-curah-hujan-tinggi/detail",
         imageUrl:
           "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.jpg",
-        descriptionUrl:
-          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.txt",
-        description: "",
+        description: "Informasi mengenai peringatan dini curah hujan tinggi yang akan terjadi di Indonesia",
       },
       {
         title: "Kondisi ENSO (EL Nino dan La Nina)",
         href: "/kondisi-enso-el-nino-dan-la-nina/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.giff",
-        descriptionUrl: "",
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
         description: "Informasi kondisi ENSO (EL Nino dan La Nina).",
       },
       {
@@ -130,7 +116,6 @@ const data: {
         href: "indeks-presipitasi-terstandarisasi/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai indeks presipitasi terstandarisasi yang akan terjadi di Indonesia",
       },
@@ -147,7 +132,6 @@ const data: {
         href: "prediksi-daerah-potensi-banjir/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi daerah potensi banjir yang akan terjadi di Indonesia",
       },
@@ -157,7 +141,6 @@ const data: {
         href: "hari-tanpa-hujan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai monitoring hari tanpa hujan yang akan terjadi di Indonesia",
       },
@@ -167,7 +150,6 @@ const data: {
         href: "/prediksi-hujan-bulanan/daftar",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi curah hujan bulanan yang akan terjadi di Indonesia",
       },
@@ -176,7 +158,6 @@ const data: {
         href: "/prediksi-hujan-dasarian/daftar",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_det_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi curah hujan dasarian yang akan terjadi di Indonesia",
       },
@@ -186,7 +167,6 @@ const data: {
         href: "prediksi-musim-hujan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi musim hujan yang akan terjadi di Indonesia",
       },
@@ -196,7 +176,6 @@ const data: {
         href: "prediksi-musim-kemarau/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi musim kemarau yang akan terjadi di Indonesia",
       },
@@ -206,17 +185,14 @@ const data: {
         href: "prediksi-indeks-presipitasi-terstandarisasi/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PRAKSPI/prakspi1.png",
-        descriptionUrl: "",
         description: "Prediksi SPI 1",
       },
-
       // Peringatan Dini Iklim Ekstrem
       {
         title: "Peringatan Dini Iklim Ekstrem",
         href: "peringatan-dini-iklim-ekstrem/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peringatan dini iklim ekstrem yang akan terjadi di Indonesia",
       },
@@ -226,7 +202,6 @@ const data: {
         href: "perkembangan-enso-dan-iod/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description: "Informasi mengenai perkembangan ENSO dan IOD",
       },
       // Indeks Presipitasi Terstandarisasi
@@ -234,8 +209,7 @@ const data: {
         title: "Indeks Presipitasi Terstandarisasi",
         href: "indeks-presipitasi-terstandarisasi/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
         description:
           "Informasi mengenai indeks presipitasi terstandarisasi yang akan terjadi di Indonesia",
       },
@@ -252,7 +226,6 @@ const data: {
         href: "peringatan-dini-demam-berdarah/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peringatan dini demam berdarah yang akan terjadi di Indonesia",
       },
@@ -262,7 +235,6 @@ const data: {
         href: "monitoring-partikulat-pm25-realtime/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai monitoring partikulat PM2.5 realtime yang akan terjadi di Indonesia",
       },
@@ -272,7 +244,6 @@ const data: {
         href: "informasi-partikulat-spm/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai partikulat SPM yang akan terjadi di Indonesia",
       },
@@ -282,7 +253,6 @@ const data: {
         href: "informasi-ph-air-hujan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai pH air hujan yang akan terjadi di Indonesia",
       },
@@ -299,7 +269,6 @@ const data: {
         href: "potensi-energi-surya-stasiun/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai potensi energi surya stasiun yang akan terjadi di Indonesia",
       },
@@ -309,7 +278,6 @@ const data: {
         href: "potensi-energi-surya-spasial/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai potensi energi surya spasial yang akan terjadi di Indonesia",
       },
@@ -319,7 +287,6 @@ const data: {
         href: "prediksi-potensi-energi-surya/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai prediksi potensi energi surya yang akan terjadi di Indonesia",
       },
@@ -329,7 +296,6 @@ const data: {
         href: "potensi-energi-angin-stasiun/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai potensi energi angin stasiun yang akan terjadi di Indonesia",
       },
@@ -346,7 +312,6 @@ const data: {
         href: "proyeksi-perubahan-curah-hujan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai proyeksi perubahan curah hujan yang akan terjadi di Indonesia",
       },
@@ -356,7 +321,6 @@ const data: {
         href: "proyeksi-perubahan-suhu-udara/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai proyeksi perubahan suhu yang akan terjadi di Indonesia",
       },
@@ -366,7 +330,6 @@ const data: {
         href: "anomali-suhu-udara/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai anomali suhu yang akan terjadi di Indonesia",
       },
@@ -376,7 +339,6 @@ const data: {
         href: "catatan-iklim-ekstrem/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai ekstrem perubahan iklim yang akan terjadi di Indonesia",
       },
@@ -394,7 +356,6 @@ const data: {
         href: "prediksi-curah-hujan-bulanan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
-        descriptionUrl: "",
         description: "Informasi mengenai curah hujan bulanan",
       },
       // Sifat Hujan
@@ -404,7 +365,6 @@ const data: {
         href: "prediksi-sifat-hujan-bulanan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_det_step1.png",
-        descriptionUrl: "",
         description: "Informasi mengenai sifat hujan bulanan",
       },
       // Peluang Curah Hujan di atas 500
@@ -413,7 +373,6 @@ const data: {
         href: "peluang-curah-hujan-bulanan-di-atas-500/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a500_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan bulanan di atas 500",
       },
@@ -423,7 +382,6 @@ const data: {
         href: "peluang-curah-hujan-bulanan-di-atas-300/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a300_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan bulanan di atas 300",
       },
@@ -433,7 +391,6 @@ const data: {
         href: "peluang-curah-hujan-bulanan-di-atas-150/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a150_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan bulanan di atas 150",
       },
@@ -443,7 +400,6 @@ const data: {
         href: "peluang-curah-hujan-bulanan-di-bawah-150/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan bulanan di bawah 150",
       },
@@ -453,7 +409,6 @@ const data: {
         href: "peluang-curah-hujan-bulanan-di-atas-100/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan bulanan di atas 100",
       },
@@ -463,7 +418,6 @@ const data: {
         href: "peluang-curah-hujan-bulanan-di-bawah-100/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b100_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan bulanan di bawah 100",
       },
@@ -480,7 +434,6 @@ const data: {
         href: "prediksi-curah-hujan-dasarian/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_det_step1.png",
-        descriptionUrl: "",
         description: "Informasi mengenai curah hujan dasarian",
       },
       // Sifat Hujan
@@ -489,7 +442,6 @@ const data: {
         href: "prediksi-sifat-hujan-dasarian/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/psh_das_det_step1.png",
-        descriptionUrl: "",
         description: "Informasi mengenai sifat hujan dasarian",
       },
       // Peluang Curah Hujan di atas 300
@@ -498,7 +450,6 @@ const data: {
         href: "peluang-curah-hujan-dasarian-di-atas-300/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a300_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan dasarian di atas 300",
       },
@@ -508,7 +459,6 @@ const data: {
         href: "peluang-curah-hujan-dasarian-di-atas-150/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a150_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan dasarian di atas 150",
       },
@@ -518,7 +468,6 @@ const data: {
         href: "peluang-curah-hujan-dasarian-di-bawah-150/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b150_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan dasarian di bawah 150",
       },
@@ -528,7 +477,6 @@ const data: {
         href: "peluang-curah-hujan-dasarian-di-atas-100/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a100_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan dasarian di atas 100",
       },
@@ -538,7 +486,6 @@ const data: {
         href: "peluang-curah-hujan-dasarian-di-bawah-100/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b100_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan dasarian di bawah 100",
       },
@@ -548,7 +495,6 @@ const data: {
         href: "peluang-curah-hujan-dasarian-di-atas-50/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a50_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan dasarian di atas 50",
       },
@@ -558,7 +504,6 @@ const data: {
         href: "peluang-curah-hujan-dasarian-di-bawah-50/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b50_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan dasarian di bawah 50",
       },
@@ -568,7 +513,6 @@ const data: {
         href: "peluang-curah-hujan-dasarian-di-atas-20/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a20_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan dasarian di atas 20",
       },
@@ -578,7 +522,6 @@ const data: {
         href: "peluang-curah-hujan-dasarian-di-bawah-20/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b20_step1.png",
-        descriptionUrl: "",
         description:
           "Informasi mengenai peluang curah hujan dasarian di bawah 20",
       },

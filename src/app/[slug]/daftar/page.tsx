@@ -574,7 +574,7 @@ export default async function Daftar({
                     alt={item.title}
                     width={1536}
                     height={800}
-                    className="w-full h-48 object-cover rounded-md mb-4"
+                    className="w-full h-48 object-cover rounded-md mb-4 pointer-events-none"
                   />
                 </Suspense>
                 <CardTitle className="text-lg font-semibold mb-2">{item.title}</CardTitle>

@@ -51,7 +51,7 @@ export default async function DetailWithoutTabs(item: Item) {
                   alt={item.title}
                   width={800}
                   height={400}
-                  className="w-full h-auto object-cover rounded-md"
+                  className="w-full h-auto object-cover rounded-md pointer-events-none"
                 />
               </Suspense>
             </div>

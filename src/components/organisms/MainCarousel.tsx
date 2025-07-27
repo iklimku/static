@@ -50,7 +50,7 @@ export function MainCarousel() {
                       src={img.url}
                       alt={img.alt}
                       fill
-                      className="object-contain"
+                      className="object-contain pointer-events-none"
                       sizes="(max-width: 768px) 100vw, 70vh"
                       priority={index === 0} // preload gambar pertama
                     />

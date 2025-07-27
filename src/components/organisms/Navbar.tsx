@@ -252,7 +252,7 @@ export function Navbar() {
             <span className="text-xs font-bold 2xl:text-sm">
               Badan Meteorologi, Klimatologi, dan Geofisika
             </span>
-            <span className="text-xs text-muted-foreground">
+            <span className="text-xs text-muted-foreground pointer-events-none">
               Deputi Klimatologi
             </span>
           </div>

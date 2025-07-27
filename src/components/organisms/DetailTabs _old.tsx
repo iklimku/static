@@ -82,7 +82,7 @@ export default function DetailTabs(item: Item) {
                         alt={tab.title}
                         width={1920}
                         height={1080}
-                        className="w-full h-auto rounded-lg"
+                        className="w-full h-auto rounded-lg pointer-events-none"
                         sizes="100vw"
                         priority
                       />

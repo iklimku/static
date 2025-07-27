@@ -95,9 +95,9 @@ const data: Item[] = [
   {
     slug: "indeks-ultraviolet",
     title: "Indeks Ultraviolet",
-    imageUrl: "",
+    imageUrl: "https://cews.bmkg.go.id/UVI-Indonesia/png/0-update-terbaru-berjalan/uv-compile-20250727.gif",
     descriptionUrl: "",
-    description: "",
+    description: "Secara umum pita gelombang cahaya matahari dibagi menjadi tiga bagian utama yaitu sinar ultraviolet (UV) dengan panjang gelombang 100 - 400 nm. Berikutnya cahaya tampak atau cahaya yang bisa terlihat oleh mata manusia pada 400 - 700 nm. Kemudian bagian ketiga adalah sinar inframerah (IR) dengan panjang gelombang 700 nm - 1 mm. Sinar inframerah seperti juga sinar ultraviolet tidak bisa ditangkap oleh mata. Untuk diketahui 1 nm = 1 nanometer = 10-9 meter.\nSinar ultraviolet merupakan bagian gelombang elektromagnetik dari energi radiasi matahari pada pita 100-400 nm. Radiasi matahari yang menjangkau permukaan bumi sendiri berada pada sekitar panjang gelombang 100 nm sampai dengan 1 mm.\nBadan Meteorologi Dunia (World Meteorological Organisation/WMO) menuliskan bahwa sinar matahari yang kurang akan memengaruhi mood kita dan juga meningkatkan ancaman kekurangan vitamin D. Namun jika menerima paparan sinar matahari yang berlebihan akan menimbulkan bahaya bagi kesehatan.",
     tabs: null,
   },
   // Analisis Iklim

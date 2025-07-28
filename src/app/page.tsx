@@ -15,9 +15,9 @@ export default function Home() {
         <div className="w-auto h-auto mt-9">
           <Sectorals />
         </div>
-        <div className="w-auto h-auto mt-9 mx-4">
+        {/* <div className="w-auto h-auto mt-9 mx-4">
           <MainTabs />
-        </div>
+        </div> */}
       </main>
     </>
   );

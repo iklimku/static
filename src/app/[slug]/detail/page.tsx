@@ -95,9 +95,11 @@ const data: Item[] = [
   {
     slug: "indeks-ultraviolet",
     title: "Indeks Ultraviolet",
-    imageUrl: "https://cews.bmkg.go.id/UVI-Indonesia/png/0-update-terbaru-berjalan/uv-compile-20250727.gif",
+    imageUrl:
+      "https://cews.bmkg.go.id/UVI-Indonesia/png/0-update-terbaru-berjalan/uv-compile-20250727.gif",
     descriptionUrl: "",
-    description: "Secara umum pita gelombang cahaya matahari dibagi menjadi tiga bagian utama yaitu sinar ultraviolet (UV) dengan panjang gelombang 100 - 400 nm. Berikutnya cahaya tampak atau cahaya yang bisa terlihat oleh mata manusia pada 400 - 700 nm. Kemudian bagian ketiga adalah sinar inframerah (IR) dengan panjang gelombang 700 nm - 1 mm. Sinar inframerah seperti juga sinar ultraviolet tidak bisa ditangkap oleh mata. Untuk diketahui 1 nm = 1 nanometer = 10-9 meter.\nSinar ultraviolet merupakan bagian gelombang elektromagnetik dari energi radiasi matahari pada pita 100-400 nm. Radiasi matahari yang menjangkau permukaan bumi sendiri berada pada sekitar panjang gelombang 100 nm sampai dengan 1 mm.\nBadan Meteorologi Dunia (World Meteorological Organisation/WMO) menuliskan bahwa sinar matahari yang kurang akan memengaruhi mood kita dan juga meningkatkan ancaman kekurangan vitamin D. Namun jika menerima paparan sinar matahari yang berlebihan akan menimbulkan bahaya bagi kesehatan.",
+    description:
+      "Secara umum pita gelombang cahaya matahari dibagi menjadi tiga bagian utama yaitu sinar ultraviolet (UV) dengan panjang gelombang 100 - 400 nm. Berikutnya cahaya tampak atau cahaya yang bisa terlihat oleh mata manusia pada 400 - 700 nm. Kemudian bagian ketiga adalah sinar inframerah (IR) dengan panjang gelombang 700 nm - 1 mm. Sinar inframerah seperti juga sinar ultraviolet tidak bisa ditangkap oleh mata. Untuk diketahui 1 nm = 1 nanometer = 10-9 meter.\nSinar ultraviolet merupakan bagian gelombang elektromagnetik dari energi radiasi matahari pada pita 100-400 nm. Radiasi matahari yang menjangkau permukaan bumi sendiri berada pada sekitar panjang gelombang 100 nm sampai dengan 1 mm.\nBadan Meteorologi Dunia (World Meteorological Organisation/WMO) menuliskan bahwa sinar matahari yang kurang akan memengaruhi mood kita dan juga meningkatkan ancaman kekurangan vitamin D. Namun jika menerima paparan sinar matahari yang berlebihan akan menimbulkan bahaya bagi kesehatan.",
     tabs: null,
   },
   // Analisis Iklim
@@ -170,14 +172,16 @@ const data: Item[] = [
         title: "SPI-1",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
-        descriptionUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/SPI1_analisis_latest.txt",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/SPI1_analisis_latest.txt",
         description: "Informasi mengenai indeks presipitasi terstandarisasi 1",
       },
       {
         title: "SPI-3",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi3.png",
-        descriptionUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/SPI3_analisis_latest.txt",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/SPI3_analisis_latest.txt",
         description: "Informasi mengenai indeks presipitasi terstandarisasi 3",
       },
       {
@@ -242,7 +246,7 @@ const data: Item[] = [
     imageUrl: "",
     descriptionUrl: "",
     description: "Informasi konsentrasi partikulat (PM2,5).",
-    tabs: null
+    tabs: null,
   },
   {
     title: "Karbon Dioksida (CO2)",
@@ -250,7 +254,7 @@ const data: Item[] = [
     imageUrl: "",
     descriptionUrl: "",
     description: "Informasi karbon dioksida (CO2).",
-    tabs: null
+    tabs: null,
   },
   {
     title: "Karbon Monoksida (CO)",
@@ -258,7 +262,7 @@ const data: Item[] = [
     imageUrl: "",
     descriptionUrl: "",
     description: "Informasi karbon monoksida (CO).",
-    tabs: null
+    tabs: null,
   },
   {
     title: "Sulfur Dioksida (SO2)",
@@ -266,7 +270,7 @@ const data: Item[] = [
     imageUrl: "",
     descriptionUrl: "",
     description: "Informasi sulfur dioksida (SO2).",
-    tabs: null
+    tabs: null,
   },
   {
     title: "Ozon Permukaan (O3)",
@@ -274,7 +278,7 @@ const data: Item[] = [
     imageUrl: "",
     descriptionUrl: "",
     description: "Informasi ozon permukaan (O3).",
-    tabs: null
+    tabs: null,
   },
   // Prediksi Iklim
   {
@@ -305,7 +309,8 @@ const data: Item[] = [
         title: "Prakiraan SPI-3",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PRAKSPI/prakspi3.png",
-        descriptionUrl: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/SPI3_prediksi_latest.txt",
+        descriptionUrl:
+          "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/SPI3_prediksi_latest.txt",
         description: "Prakiraan SPI-3",
       },
       {
@@ -1201,7 +1206,6 @@ const data: Item[] = [
     tabs: null,
   },
   // Lainnya
-
 ];
 
 export async function generateStaticParams() {
@@ -1226,9 +1230,7 @@ export default async function Home({
       // Generate Comming Soon
       <div className="flex flex-col items-center justify-center h-screen">
         <h1 className="text-4xl font-bold text-gray-800">Mohon Bersabar</h1>
-        <p className="text-gray-600">
-          Kami sedang mencari dan mengisi konten
-        </p>
+        <p className="text-gray-600">Kami sedang mencari dan mengisi konten</p>
       </div>
     );
   }

@@ -8,11 +8,11 @@ import {
   CardContent,
   CardFooter,
   CardTitle,
-  CardDescription
+  CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-interface Item{
+interface Item {
   slug: string;
   title: string;
   data: {
@@ -30,10 +30,26 @@ const data: Item[] = [
     title: "Informasi Iklim untuk Sektor Pertanian dan Kehutanan",
     data: [
       {
-        title: "Prediksi Curah Hujan",
-        href: "prediksi-curah-hujan/detail",
+        title: "Prediksi Curah Hujan Bulanan",
+        href: "prediksi-curah-hujan-bulanan/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
+        description:
+          "Informasi mengenai prediksi curah hujan yang akan terjadi di Indonesia",
+      },
+      {
+        title: "Prediksi Sifat Hujan Bulanan",
+        href: "prediksi-sifat-hujan-bulanan/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_det_step1.png",
+        description:
+          "Informasi mengenai prediksi curah hujan yang akan terjadi di Indonesia",
+      },
+      {
+        title: "Prediksi Curah Hujan Dasarian",
+        href: "prediksi-curah-hujan-dasarian/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_det_step1.png",
         description:
           "Informasi mengenai prediksi curah hujan yang akan terjadi di Indonesia",
       },
@@ -72,7 +88,8 @@ const data: Item[] = [
         href: "prediksi-musim/detail",
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
-        description: "Informasi mengenai prediksi musim yang akan terjadi di Indonesia",
+        description:
+          "Informasi mengenai prediksi musim yang akan terjadi di Indonesia",
       },
       {
         title: "Prediksi Musim Hujan",
@@ -95,14 +112,16 @@ const data: Item[] = [
         href: "/peringatan-dini-kekeringan-meteorologis/detail",
         imageUrl:
           "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
-        description: "Informasi mengenai peringatan dini kekeringan meteorologis yang akan terjadi di Indonesia",
+        description:
+          "Informasi mengenai peringatan dini kekeringan meteorologis yang akan terjadi di Indonesia",
       },
       {
         title: "Peringatan Dini Curah Hujan Tinggi",
         href: "/peringatan-dini-curah-hujan-tinggi/detail",
         imageUrl:
           "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.jpg",
-        description: "Informasi mengenai peringatan dini curah hujan tinggi yang akan terjadi di Indonesia",
+        description:
+          "Informasi mengenai peringatan dini curah hujan tinggi yang akan terjadi di Indonesia",
       },
       {
         title: "Kondisi ENSO (EL Nino dan La Nina)",
@@ -540,18 +559,16 @@ export async function generateStaticParams() {
 export default async function Daftar({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params
-  const item = data.find((item) => item.slug === slug)
+  const { slug } = await params;
+  const item = data.find((item) => item.slug === slug);
   if (!item) {
     return (
       // Generate Comming Soon
       <div className="flex flex-col items-center justify-center h-screen">
         <h1 className="text-4xl font-bold text-gray-800">Mohon Bersabar</h1>
-        <p className="text-gray-600">
-          Kami sedang mencari dan mengisi konten
-        </p>
+        <p className="text-gray-600">Kami sedang mencari dan mengisi konten</p>
       </div>
     );
   }
@@ -560,7 +577,9 @@ export default async function Daftar({
     <>
       {/* Card with image, some description, and button "Baca Selengkapnya" */}
       <main className="container mx-auto my-16 px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">{item.title}</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+          {item.title}
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {/* Filter data based on slug (category) */}
           {/* For now, let's just display all items from the 'data' array for demonstration */}
@@ -577,14 +596,21 @@ export default async function Daftar({
                     className="w-full h-48 object-cover rounded-md mb-4 pointer-events-none"
                   />
                 </Suspense>
-                <CardTitle className="text-lg font-semibold mb-2">{item.title}</CardTitle>
+                <CardTitle className="text-lg font-semibold mb-2">
+                  {item.title}
+                </CardTitle>
                 <CardDescription className="text-sm text-gray-600">
                   {item.description}
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-4 pt-0">
                 <Link href={`/${item.href}`}>
-                  <Button variant={"outline"} className="w-full border-2 border-cyan-100 hover:bg-cyan-100">Baca Selengkapnya</Button>
+                  <Button
+                    variant={"outline"}
+                    className="w-full border-2 border-cyan-100 hover:bg-cyan-100"
+                  >
+                    Baca Selengkapnya
+                  </Button>
                 </Link>
               </CardFooter>
             </Card>
@@ -592,5 +618,5 @@ export default async function Daftar({
         </div>
       </main>
     </>
-  )
+  );
 }

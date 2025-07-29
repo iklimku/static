@@ -37,6 +37,9 @@ export default async function DetailTabs(item: Item) {
           if (!res.ok) throw new Error("Gagal fetch");
           description = await res.text();
 
+          // replace ; to <br/>
+          description = description.replace(/;/g, ".<br/>");
+
           // replace enter to <br/>
           description = description.replace(/\n/g, "<br/>");
         } catch (error) {

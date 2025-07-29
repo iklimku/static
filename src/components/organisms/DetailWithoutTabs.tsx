@@ -31,6 +31,9 @@ export default async function DetailWithoutTabs(item: Item) {
     const res = await fetch(item.descriptionUrl);
     description = await res.text();
 
+    // replace ; to <br/>
+    description = description.replace(/;/g, ".<br/>");
+
     // replace enter to <br/>
     description = description.replace(/\n/g, "<br/>");
   }

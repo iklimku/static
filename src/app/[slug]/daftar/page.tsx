@@ -413,23 +413,14 @@ const data: Item[] = [
         description:
           "Informasi mengenai peluang curah hujan bulanan di atas 150",
       },
-      // Peluang Curah Hujan di bawah 150
-      {
-        title: "Peluang Curah Hujan di bawah 150",
-        href: "peluang-curah-hujan-bulanan-di-bawah-150/detail",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step1.png",
-        description:
-          "Informasi mengenai peluang curah hujan bulanan di bawah 150",
-      },
       // Peluang Curah Hujan di atas 100
       {
         title: "Peluang Curah Hujan di Atas 100",
         href: "peluang-curah-hujan-bulanan-di-atas-100/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step1.png",
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_a100_step1.png",
         description:
-          "Informasi mengenai peluang curah hujan bulanan di atas 100",
+        "Informasi mengenai peluang curah hujan bulanan di atas 100",
       },
       // Peluang Curah Hujan di bawah 100
       {
@@ -438,7 +429,16 @@ const data: Item[] = [
         imageUrl:
           "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b100_step1.png",
         description:
-          "Informasi mengenai peluang curah hujan bulanan di bawah 100",
+        "Informasi mengenai peluang curah hujan bulanan di bawah 100",
+      },
+      // Peluang Curah Hujan di bawah 150
+      {
+        title: "Peluang Curah Hujan di bawah 150",
+        href: "peluang-curah-hujan-bulanan-di-bawah-150/detail",
+        imageUrl:
+          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_prob_b150_step1.png",
+        description:
+          "Informasi mengenai peluang curah hujan bulanan di bawah 150",
       },
     ],
   },
@@ -481,72 +481,72 @@ const data: Item[] = [
         description:
           "Informasi mengenai peluang curah hujan dasarian di atas 150",
       },
-      // Peluang Curah Hujan di bawah 150
-      {
-        title: "Peluang Curah Hujan di Bawah 150",
-        href: "peluang-curah-hujan-dasarian-di-bawah-150/detail",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b150_step1.png",
-        description:
-          "Informasi mengenai peluang curah hujan dasarian di bawah 150",
-      },
       // Peluang Curah Hujan di atas 100
       {
         title: "Peluang Curah Hujan di Atas 100",
         href: "peluang-curah-hujan-dasarian-di-atas-100/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a100_step1.png",
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a100_step1.png",
         description:
-          "Informasi mengenai peluang curah hujan dasarian di atas 100",
-      },
-      // Peluang Curah Hujan di bawah 100
-      {
-        title: "Peluang Curah Hujan di Bawah 100",
-        href: "peluang-curah-hujan-dasarian-di-bawah-100/detail",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b100_step1.png",
-        description:
-          "Informasi mengenai peluang curah hujan dasarian di bawah 100",
+        "Informasi mengenai peluang curah hujan dasarian di atas 100",
       },
       // Peluang Curah Hujan di atas 50
       {
         title: "Peluang Curah Hujan di Atas 50",
         href: "peluang-curah-hujan-dasarian-di-atas-50/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a50_step1.png",
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a50_step1.png",
         description:
-          "Informasi mengenai peluang curah hujan dasarian di atas 50",
-      },
-      // Peluang Curah Hujan di bawah 50
-      {
-        title: "Peluang Curah Hujan di Bawah 50",
-        href: "peluang-curah-hujan-dasarian-di-bawah-50/detail",
-        imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b50_step1.png",
-        description:
-          "Informasi mengenai peluang curah hujan dasarian di bawah 50",
+        "Informasi mengenai peluang curah hujan dasarian di atas 50",
       },
       // Peluang Curah Hujan di atas 20
       {
         title: "Peluang Curah Hujan di Atas 20",
         href: "peluang-curah-hujan-dasarian-di-atas-20/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a20_step1.png",
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_a20_step1.png",
         description:
-          "Informasi mengenai peluang curah hujan dasarian di atas 20",
+        "Informasi mengenai peluang curah hujan dasarian di atas 20",
       },
       // Peluang Curah Hujan di bawah 20
       {
         title: "Peluang Curah Hujan di Bawah 20",
         href: "peluang-curah-hujan-dasarian-di-bawah-20/detail",
         imageUrl:
-          "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b20_step1.png",
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b20_step1.png",
         description:
-          "Informasi mengenai peluang curah hujan dasarian di bawah 20",
+        "Informasi mengenai peluang curah hujan dasarian di bawah 20",
       },
-      /////////////////////////////////////////////////////////////////////// sampe sini dulu, 24 Jul 2025
+      // Peluang Curah Hujan di bawah 50
+      {
+        title: "Peluang Curah Hujan di Bawah 50",
+        href: "peluang-curah-hujan-dasarian-di-bawah-50/detail",
+        imageUrl:
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b50_step1.png",
+        description:
+        "Informasi mengenai peluang curah hujan dasarian di bawah 50",
+      },
+      // Peluang Curah Hujan di bawah 100
+      {
+        title: "Peluang Curah Hujan di Bawah 100",
+        href: "peluang-curah-hujan-dasarian-di-bawah-100/detail",
+        imageUrl:
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b100_step1.png",
+        description:
+        "Informasi mengenai peluang curah hujan dasarian di bawah 100",
+      },
+      // Peluang Curah Hujan di bawah 150
+      {
+        title: "Peluang Curah Hujan di Bawah 150",
+        href: "peluang-curah-hujan-dasarian-di-bawah-150/detail",
+        imageUrl:
+        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_prob_b150_step1.png",
+        description:
+        "Informasi mengenai peluang curah hujan dasarian di bawah 150",
+      },
     ],
   },
+  /////////////////////////////////////////////////////////////////////// sampe sini dulu, 24 Jul 2025
   // Lainnya
 ];
 

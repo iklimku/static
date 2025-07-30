@@ -1,33 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-
-const glossaryData = [
-  { term: "Atmosfer", definition: "Lapisan gas yang menyelimuti bumi." },
-  { term: "Banjir", definition: "Peristiwa meluapnya air ke daratan." },
-  {
-    term: "Cuaca",
-    definition: "Keadaan udara pada suatu tempat dan waktu tertentu.",
-  },
-  {
-    term: "Debu Vulkanik",
-    definition: "Partikel halus dari letusan gunung berapi.",
-  },
-  {
-    term: "El Nino",
-    definition:
-      "Fenomena pemanasan suhu permukaan laut di Samudra Pasifik bagian tengah dan timur.",
-  },
-  // Tambahin istilah lagi di sini
-];
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 export default function GlossaryPage() {
+  const [glossaryData, setGlossaryData] = useState<GlossaryItem[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLetter, setSelectedLetter] = useState("");
+
+  type GlossaryItem = {
+    term: string;
+    definition: string;
+  };
+
+  useEffect(() => {
+    fetch("/glossary/glossary.json")
+      .then((res) => res.json())
+      .then((data: GlossaryItem[]) => setGlossaryData(data));
+  }, []);
 
   const filteredGlossary = glossaryData.filter(({ term }) => {
     const matchesSearch = term.toLowerCase().includes(searchTerm.toLowerCase());

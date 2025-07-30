@@ -1,0 +1,341 @@
+[
+  { "term": "Atmosfer", "definition": "Lapisan gas yang menyelimuti bumi." },
+  { "term": "Banjir", "definition": "Peristiwa meluapnya air ke daratan." },
+  {
+    "term": "Cuaca",
+    "definition": "Keadaan udara pada suatu tempat dan waktu tertentu."
+  },
+  {
+    "term": "Debu Vulkanik",
+    "definition": "Partikel halus dari letusan gunung berapi."
+  },
+  {
+    "term": "El Nino",
+    "definition": "Fenomena pemanasan suhu permukaan laut di Samudra Pasifik bagian tengah dan timur."
+  },
+  {
+    "term": "Gempa Bumi",
+    "definition": "Getaran atau guncangan yang terjadi akibat pergerakan lempeng bumi."
+  },
+  {
+    "term": "Hujan",
+    "definition": "Presipitasi air cair yang turun dari atmosfer ke permukaan bumi."
+  },
+  {
+    "term": "Isobar",
+    "definition": "Garis pada peta cuaca yang menghubungkan tempat-tempat dengan tekanan udara yang sama."
+  },
+  {
+    "term": "Jet Stream",
+    "definition": "Arus udara cepat di atmosfer bagian atas."
+  },
+  {
+    "term": "Klimatologi",
+    "definition": "Ilmu yang mempelajari iklim dan variasinya dalam jangka panjang."
+  },
+  {
+    "term": "Lempeng Tektonik",
+    "definition": "Bagian kerak bumi yang bergerak dan dapat menimbulkan gempa bumi."
+  },
+  {
+    "term": "Magnitude",
+    "definition": "Ukuran kekuatan gempa bumi berdasarkan skala tertentu."
+  },
+  {
+    "term": "Nino",
+    "definition": "Nama lain dari El Nino, fenomena anomali iklim global."
+  },
+  {
+    "term": "Observatorium",
+    "definition": "Tempat pengamatan gejala-gejala alam seperti cuaca dan gempa."
+  },
+  {
+    "term": "Panas Laten",
+    "definition": "Energi yang diserap atau dilepaskan selama perubahan fase zat tanpa perubahan suhu."
+  },
+  {
+    "term": "Radiasi Surya",
+    "definition": "Energi matahari yang sampai ke permukaan bumi."
+  },
+  { "term": "Seismograf", "definition": "Alat untuk merekam gempa bumi." },
+  {
+    "term": "Tekanan Udara",
+    "definition": "Gaya yang diberikan udara terhadap suatu satuan luas permukaan."
+  },
+  {
+    "term": "Ultraviolet",
+    "definition": "Sinar dari matahari yang tidak terlihat oleh mata manusia."
+  },
+  {
+    "term": "Vulkanologi",
+    "definition": "Ilmu yang mempelajari gunung api dan aktivitasnya."
+  },
+  {
+    "term": "Warning",
+    "definition": "Peringatan dini terhadap potensi bencana alam."
+  },
+  {
+    "term": "Zona Konvergensi",
+    "definition": "Daerah pertemuan dua massa udara yang menyebabkan naiknya udara dan terbentuknya awan."
+  },
+  {
+    "term": "Anemometer",
+    "definition": "Alat untuk mengukur kecepatan angin."
+  },
+  { "term": "Barometer", "definition": "Alat untuk mengukur tekanan udara." },
+  {
+    "term": "Citra Satelit",
+    "definition": "Gambar bumi dari satelit yang digunakan untuk analisis cuaca dan iklim."
+  },
+  {
+    "term": "Drought",
+    "definition": "Kekeringan atau kekurangan air dalam jangka waktu panjang."
+  },
+  {
+    "term": "Efek Rumah Kaca",
+    "definition": "Pemanasan bumi akibat gas-gas yang menahan panas matahari."
+  },
+  {
+    "term": "Fohn",
+    "definition": "Angin kering dan panas yang turun dari gunung ke lembah."
+  },
+  {
+    "term": "Geofisika",
+    "definition": "Ilmu yang mempelajari sifat fisik bumi."
+  },
+  {
+    "term": "Hidroklimatologi",
+    "definition": "Cabang klimatologi yang mengkaji hubungan antara air dan iklim."
+  },
+  {
+    "term": "Inversi Temperatur",
+    "definition": "Keadaan di mana suhu udara bertambah dengan ketinggian."
+  },
+  {
+    "term": "Jarak Pandang",
+    "definition": "Seberapa jauh seseorang dapat melihat objek dengan jelas."
+  },
+  {
+    "term": "Kabut",
+    "definition": "Kondensasi uap air di dekat permukaan bumi."
+  },
+  {
+    "term": "Lapisan Ozon",
+    "definition": "Lapisan atmosfer yang melindungi bumi dari sinar ultraviolet."
+  },
+  {
+    "term": "Meteorologi",
+    "definition": "Ilmu yang mempelajari atmosfer dan fenomena cuaca."
+  },
+  {
+    "term": "Nol Derajat",
+    "definition": "Suhu pembekuan air dalam skala Celcius."
+  },
+  {
+    "term": "Ombak",
+    "definition": "Gerakan air laut yang disebabkan oleh angin di permukaan laut."
+  },
+  {
+    "term": "Presipitasi",
+    "definition": "Segala bentuk air yang jatuh dari atmosfer ke bumi."
+  },
+  { "term": "Quake", "definition": "Gempa bumi dalam bahasa Inggris." },
+  {
+    "term": "Radar Cuaca",
+    "definition": "Alat untuk mendeteksi dan memantau hujan dan awan."
+  },
+  {
+    "term": "Siklon Tropis",
+    "definition": "Badai kuat yang terbentuk di atas lautan tropis."
+  },
+  {
+    "term": "Tornado",
+    "definition": "Angin puting beliung yang sangat kuat dan merusak."
+  },
+  {
+    "term": "Umiditas",
+    "definition": "Kelembaban udara atau jumlah uap air di atmosfer."
+  },
+  {
+    "term": "Variabilitas Iklim",
+    "definition": "Perubahan jangka pendek dalam pola iklim."
+  },
+  {
+    "term": "Warning Tsunami",
+    "definition": "Peringatan dini terhadap potensi tsunami."
+  },
+  {
+    "term": "Zona Subduksi",
+    "definition": "Tempat pertemuan dua lempeng tektonik di mana salah satu menunjam ke bawah."
+  },
+  { "term": "Abrasi", "definition": "Pengikisan pantai oleh gelombang laut." },
+  {
+    "term": "Badai",
+    "definition": "Cuaca buruk dengan angin kencang dan hujan lebat."
+  },
+  {
+    "term": "Cahaya Aurora",
+    "definition": "Cahaya alami di langit malam akibat interaksi partikel matahari dengan atmosfer."
+  },
+  {
+    "term": "Data Klimatologi",
+    "definition": "Data historis terkait iklim suatu wilayah."
+  },
+  {
+    "term": "Epicentrum",
+    "definition": "Titik di permukaan bumi yang tepat di atas pusat gempa."
+  },
+  {
+    "term": "Fault",
+    "definition": "Patahan di kerak bumi tempat gempa bumi sering terjadi."
+  },
+  {
+    "term": "Gelombang Seismik",
+    "definition": "Gelombang getaran dari sumber gempa."
+  },
+  {
+    "term": "Hujan Asam",
+    "definition": "Hujan dengan pH rendah akibat pencemaran udara."
+  },
+  {
+    "term": "Indeks UV",
+    "definition": "Indikator tingkat radiasi ultraviolet di permukaan bumi."
+  },
+  {
+    "term": "Jarak Episentral",
+    "definition": "Jarak antara stasiun gempa dengan pusat gempa."
+  },
+  {
+    "term": "Kelembapan Relatif",
+    "definition": "Perbandingan kandungan uap air di udara dengan kapasitas maksimumnya."
+  },
+  {
+    "term": "Lintasan Topan",
+    "definition": "Jalur yang dilalui oleh badai tropis atau siklon."
+  },
+  {
+    "term": "Magnitudo Moment",
+    "definition": "Ukuran kekuatan gempa berdasarkan energi yang dilepaskan."
+  },
+  {
+    "term": "Normal Iklim",
+    "definition": "Rata-rata parameter iklim selama periode 30 tahun."
+  },
+  {
+    "term": "Peringatan Dini",
+    "definition": "Informasi cepat untuk menghindari dampak bencana."
+  },
+  {
+    "term": "Quaternary",
+    "definition": "Periode geologi terbaru dalam sejarah bumi."
+  },
+  {
+    "term": "Rembesan Gas",
+    "definition": "Keluarnya gas dari dalam bumi, biasanya di daerah gunung api."
+  },
+  {
+    "term": "Skala Richter",
+    "definition": "Skala untuk mengukur magnitudo gempa."
+  },
+  {
+    "term": "Tsunami",
+    "definition": "Gelombang besar akibat gempa bawah laut atau letusan gunung api."
+  },
+  {
+    "term": "Upwelling",
+    "definition": "Naiknya air laut yang dingin dan kaya nutrisi ke permukaan."
+  },
+  {
+    "term": "Vulkanik Eksplosif",
+    "definition": "Letusan gunung api yang disertai ledakan hebat."
+  },
+  {
+    "term": "Waspada Cuaca Ekstrem",
+    "definition": "Kondisi siaga terhadap fenomena cuaca ekstrem."
+  },
+  {
+    "term": "Zona Bahaya",
+    "definition": "Wilayah yang rawan terkena dampak bencana alam."
+  },
+  {
+    "term": "Analisis Synoptik",
+    "definition": "Evaluasi cuaca secara keseluruhan menggunakan peta sinoptik."
+  },
+  {
+    "term": "Bumi Padat",
+    "definition": "Bagian dalam bumi seperti mantel dan inti."
+  },
+  {
+    "term": "Cumulonimbus",
+    "definition": "Jenis awan besar yang sering menyebabkan hujan deras dan petir."
+  },
+  {
+    "term": "Data Seismik",
+    "definition": "Data hasil rekaman gelombang gempa bumi."
+  },
+  {
+    "term": "Efek Coriolis",
+    "definition": "Pembelokan arah angin akibat rotasi bumi."
+  },
+  {
+    "term": "Frontal System",
+    "definition": "Pertemuan massa udara berbeda yang memicu cuaca buruk."
+  },
+  {
+    "term": "Gelombang Panas",
+    "definition": "Kenaikan suhu ekstrem dalam waktu tertentu."
+  },
+  {
+    "term": "Hari Tanpa Hujan",
+    "definition": "Hari berturut-turut tanpa terjadi hujan."
+  },
+  {
+    "term": "Index ENSO",
+    "definition": "Indikator kekuatan El Nino dan La Nina."
+  },
+  {
+    "term": "Jarak Tempuh Angin",
+    "definition": "Seberapa jauh angin bergerak dalam waktu tertentu."
+  },
+  {
+    "term": "Kilat",
+    "definition": "Pelepasan listrik di atmosfer yang tampak sebagai cahaya terang."
+  },
+  {
+    "term": "Longsor",
+    "definition": "Pergerakan tanah atau batu akibat hujan atau getaran bumi."
+  },
+  {
+    "term": "Meteor",
+    "definition": "Benda langit yang terbakar di atmosfer dan tampak seperti bintang jatuh."
+  },
+  {
+    "term": "Nipah",
+    "definition": "Pasang laut maksimum yang terjadi saat bulan baru atau purnama."
+  },
+  {
+    "term": "Ombak Pasang",
+    "definition": "Naiknya permukaan laut akibat pengaruh angin dan gravitasi bulan/matahari."
+  },
+  {
+    "term": "Pusaran Tropis",
+    "definition": "Pusat tekanan rendah di wilayah tropis yang berputar."
+  },
+  {
+    "term": "Refraksi",
+    "definition": "Pembelokan gelombang cahaya atau suara saat melewati medium berbeda."
+  },
+  { "term": "Salinitas", "definition": "Kadar garam terlarut dalam air laut." },
+  {
+    "term": "Talweg",
+    "definition": "Garis terdalam lembah atau dasar sungai."
+  },
+  {
+    "term": "Uap Air",
+    "definition": "Air dalam bentuk gas yang terdapat di atmosfer."
+  },
+  {
+    "term": "Zona Megathrust",
+    "definition": "Zona subduksi dengan potensi gempa sangat besar."
+  }
+]

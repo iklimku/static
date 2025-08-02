@@ -25,6 +25,22 @@
       {
         "title": "Indeks Ultraviolet",
         "href": "/indeks-ultraviolet/detail"
+      },
+      {
+        "title": "Partikulat PM2,5",
+        "href": "/pm25/detail"
+      },
+      {
+        "title": "Gas Rumah Kaca",
+        "href": "/gas-rumah-kaca/detail"
+      },
+      {
+        "title": "Titik Panas Bulanan",
+        "href": "/titik-panas-bulanan/detail"
+      },
+      {
+        "title": "Monitoring Titik Panas",
+        "href": "/monitoring-titik-panas/detail"
       }
     ]
   },

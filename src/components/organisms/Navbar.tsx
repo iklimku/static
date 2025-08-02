@@ -67,14 +67,14 @@ export function Navbar() {
                     {data.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[1000px] border shadow-lg bg-white rounded-md z-50 ">
-                    <ul className={`grid gap-1 grid-flow-col grid-rows-${Math.ceil(data.subMenu.length / 2)}`}>
+                    {/* <ul className={`grid gap-1 grid-flow-col grid-rows-${Math.ceil(data.subMenu.length / 2)}`}> */}
+                    <ul className="grid gap-2 md:grid-cols-4">
                       {data.subMenu.map((item) => (
                         <ListItem
                           key={item.title}
                           title={item.title}
                           href={item.href}
-                        >
-                        </ListItem>
+                        ></ListItem>
                       ))}
                     </ul>
                   </NavigationMenuContent>

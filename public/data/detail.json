@@ -16,12 +16,79 @@
     "tabs": null
   },
   {
-    "slug": "anomali-suhu-udara",
-    "title": "Anomali Suhu Udara",
-    "imageUrl": "",
+    "slug": "normal-suhu-udara-rata-rata",
+    "title": "Normal & Suhu Udara Rata-Rata",
+    "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-4a-Peta-Suhu-rata-rata.png",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": [
+      {
+        "title": "Peta",
+        "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-4a-Peta-Suhu-rata-rata.png",
+        "descriptionUrl": "",
+        "description": "Informasi mengenai normal dan suhu udara rata-rata dalam bentuk peta"
+      },
+      {
+        "title": "Grafik",
+        "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-1-Grafik-Normal-suhu-bulanan-dan-suhu-rata-rata-bulanan.png",
+        "descriptionUrl": "",
+        "description": "Informasi mengenai normal dan suhu udara rata-rata dalam bentuk grafik"
+      },
+      {
+        "title": "Tabel",
+        "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-4b-Tabel-stasiun-dengan-suhu-rata-rata-tertinggi-dan-terendah.png",
+        "descriptionUrl": "",
+        "description": "Informasi mengenai normal dan suhu udara rata-rata dalam bentuk tabel"
+      }
+    ]
+  },
+  {
+    "slug": "anomali-suhu-udara-rata-rata",
+    "title": "Anomali Suhu Udara Rata-Rata",
+    "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-3a-Peta-Anomali-Suhu.png",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": [
+      {
+        "title": "Peta",
+        "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-3a-Peta-Anomali-Suhu.png",
+        "descriptionUrl": "",
+        "description": "Informasi mengenai anomali suhu udara dalam bentuk peta"
+      },
+      {
+        "title": "Grafik",
+        "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-2-Grafik-anomali-dan-suhu-rata-rata.png",
+        "descriptionUrl": "",
+        "description": "Informasi mengenai anomali suhu udara dalam bentuk grafik"
+      },
+      {
+        "title": "Tabel",
+        "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-3b-Tabel-stasiun-dengan-anomali-suhu-rata-rata-tertinggi-dan-terendah.png",
+        "descriptionUrl": "",
+        "description": "Informasi mengenai anomali suhu udara dalam bentuk tabel"
+      }
+    ]
+  },
+  {
+    "slug": "selisih-suhu-udara-rata-rata",
+    "title": "Selisih Suhu Udara Rata-Rata",
+    "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-4c-Mdiff.png",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": [
+      {
+        "title": "Peta",
+        "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-4c-Mdiff.png",
+        "descriptionUrl": "",
+        "description": "Informasi mengenai selisih suhu udara rata-rata dalam bentuk peta"
+      },
+      {
+        "title": "Tabel",
+        "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-4d-Tabel-stasiun-dengan-selisih-suhu-rata-rata-tertinggi-dan-terendah.png",
+        "descriptionUrl": "",
+        "description": "Informasi mengenai selisih suhu udara rata-rata dalam bentuk tabel"
+      }
+    ]
   },
   {
     "slug": "indeks-iklim-global",

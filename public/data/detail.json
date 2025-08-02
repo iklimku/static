@@ -32,7 +32,7 @@
         "title": "Grafik",
         "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-1-Grafik-Normal-suhu-bulanan-dan-suhu-rata-rata-bulanan.png",
         "descriptionUrl": "",
-        "description": "Informasi mengenai normal dan suhu udara rata-rata dalam bentuk grafik"
+        "description": "InfBerdasarkan analisis dari 114 stasiun pengamatan BMKG, suhu udara rata-rata bulan Juni 2025 adalah sebesar 26.9 °C. Normal suhu udara klimatologis untuk bulan Juni 2025 periode 1991-2020 di Indonesia adalah sebesar 26.5 °C (dalam kisaran normal 21.03 °C - 30.06 °C)"
       },
       {
         "title": "Tabel",
@@ -59,13 +59,13 @@
         "title": "Grafik",
         "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-2-Grafik-anomali-dan-suhu-rata-rata.png",
         "descriptionUrl": "",
-        "description": "Informasi mengenai anomali suhu udara dalam bentuk grafik"
+        "description": "Berdasarkan nilai-nilai tersebut, anomali suhu udara rata-rata pada bulan Juni 2025 menunjukan anomali positif dengan nilai sebesar 0.3 °C. Anomali suhu udara Indonesia pada bulan Juni 2025 ini merupakan nilai anomali tertinggi ke-6 sepanjang periode pengamatan sejak 1981."
       },
       {
         "title": "Tabel",
         "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-3b-Tabel-stasiun-dengan-anomali-suhu-rata-rata-tertinggi-dan-terendah.png",
         "descriptionUrl": "",
-        "description": "Informasi mengenai anomali suhu udara dalam bentuk tabel"
+        "description": "Secara umum di wilayah Indonesia, anomali suhu udara rata-rata per-stasiun pada bulan Juni 2025 menunjukkan nilai anomali positif atau lebih tinggi dari rata-rata klimatologisnya. Anomali maksimum tercatat di Stasiun Meteorologi Raja Haji Fisabilillah - Tanjungpinang (1.2 °C), sedangkan anomali minimum tercatat di Stasiun Meteorologi Karel Sadsuitubun - Maluku Tenggara (-0.8 °C)."
       }
     ]
   },
@@ -86,7 +86,7 @@
         "title": "Tabel",
         "imageUrl": "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/Gambar-4d-Tabel-stasiun-dengan-selisih-suhu-rata-rata-tertinggi-dan-terendah.png",
         "descriptionUrl": "",
-        "description": "Informasi mengenai selisih suhu udara rata-rata dalam bentuk tabel"
+        "description": "Perbedaan (selisih) suhu udara rata-rata bulan Juni 2025 terhadap bulan sebelumnya (Mei 2025), dari 158 stasiun pengamatan BMKG di Indonesia secara umum menunjukkan penurunan suhu (nilai negatif). Peningkatan suhu terbesar tercatat di Stasiun Meteorologi Trunojoyo - Madura dan Stasiun Meteorologi Sangkapura - Gresik (0.3 °C), sedangkan penurunan suhu terbesar tercatat di Stasiun Meteorologi Radin Inten II - Lampung Selatan (-1.4 °C)."
       }
     ]
   },

@@ -71,7 +71,7 @@ export function Sectorals() {
           <button
             key={index}
             onClick={() => handleClick(index, sector.href)}
-            className={`w-full text-left rounded-xl p-6 shadow-xl transition-all duration-300 ${
+            className={`flex  flex-col w-full text-center rounded-xl p-6 shadow-xl transition-all duration-300 ${
               isActive
                 ? "bg-cyan-600 text-white"
                 : "bg-white text-gray-800 hover:bg-cyan-100"

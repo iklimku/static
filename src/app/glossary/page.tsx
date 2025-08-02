@@ -1,28 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import glossaryJson from "@/../public/data/glossary.json";
 
-
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 export default function GlossaryPage() {
-  const [glossaryData, setGlossaryData] = useState<GlossaryItem[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLetter, setSelectedLetter] = useState("");
 
-  type GlossaryItem = {
-    term: string;
-    definition: string;
-  };
-
-  useEffect(() => {
-    setGlossaryData(glossaryJson);
-  }, []);
-
-  const filteredGlossary = glossaryData.filter(({ term }) => {
+  const filteredGlossary = glossaryJson.filter(({ term }) => {
     const matchesSearch = term.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesLetter = selectedLetter
       ? term.startsWith(selectedLetter)

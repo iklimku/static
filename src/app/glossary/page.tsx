@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
+import glossaryJson from "@/../public/data/glossary.json";
+
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
@@ -17,9 +19,7 @@ export default function GlossaryPage() {
   };
 
   useEffect(() => {
-    fetch("/glossary/glossary.json")
-      .then((res) => res.json())
-      .then((data: GlossaryItem[]) => setGlossaryData(data));
+    setGlossaryData(glossaryJson);
   }, []);
 
   const filteredGlossary = glossaryData.filter(({ term }) => {

@@ -10,10 +10,8 @@
   {
     "slug": "perkembangan-musim",
     "title": "Perkembangan Musim",
-    "imageUrl":
-      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
-    "descriptionUrl":
-      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
+    "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
+    "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
     "description": "",
     "tabs": null
   },
@@ -69,8 +67,7 @@
   {
     "slug": "indeks-ultraviolet",
     "title": "Indeks Ultraviolet",
-    "imageUrl":
-      "https://cews.bmkg.go.id/UVI-Indonesia/png/0-update-terbaru-berjalan/uv-compile-20250727.gif",
+    "imageUrl": "https://cews.bmkg.go.id/UVI-Indonesia/png/0-uv-compile-update.gif",
     "descriptionUrl": "",
     "description": "Secara umum pita gelombang cahaya matahari dibagi menjadi tiga bagian utama yaitu sinar ultraviolet (UV) dengan panjang gelombang 100 - 400 nm. Berikutnya cahaya tampak atau cahaya yang bisa terlihat oleh mata manusia pada 400 - 700 nm. Kemudian bagian ketiga adalah sinar inframerah (IR) dengan panjang gelombang 700 nm - 1 mm. Sinar inframerah seperti juga sinar ultraviolet tidak bisa ditangkap oleh mata. Untuk diketahui 1 nm = 1 nanometer = 10-9 meter.\nSinar ultraviolet merupakan bagian gelombang elektromagnetik dari energi radiasi matahari pada pita 100-400 nm. Radiasi matahari yang menjangkau permukaan bumi sendiri berada pada sekitar panjang gelombang 100 nm sampai dengan 1 mm.\nBadan Meteorologi Dunia (World Meteorological Organisation/WMO) menuliskan bahwa sinar matahari yang kurang akan memengaruhi mood kita dan juga meningkatkan ancaman kekurangan vitamin D. Namun jika menerima paparan sinar matahari yang berlebihan akan menimbulkan bahaya bagi kesehatan.",
     "tabs": null
@@ -171,28 +168,23 @@
   {
     "slug": "peringatan-dini-kekeringan-meteorologis",
     "title": "Peringatan Dini Kekeringan Meteorologis",
-    "imageUrl":
-      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
-    "descriptionUrl":
-      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.txt",
+    "imageUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
+    "descriptionUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.txt",
     "description": "",
     "tabs": null
   },
   {
     "slug": "peringatan-dini-curah-hujan-tinggi",
     "title": "Peringatan Dini Curah Hujan Tinggi",
-    "imageUrl":
-      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.jpg",
-    "descriptionUrl":
-      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.txt",
+    "imageUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.jpg",
+    "descriptionUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.txt",
     "description": "",
     "tabs": null
   },
   {
     "slug": "kondisi-enso-el-nino-dan-la-nina",
     "title": "Kondisi ENSO (EL Nino dan La Nina)",
-    "imageUrl":
-      "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
+    "imageUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
     "descriptionUrl": "",
     "description": "Informasi kondisi ENSO (EL Nino dan La Nina).",
     "tabs": null
@@ -240,10 +232,8 @@
   {
     "slug": "prediksi-musim",
     "title": "Prediksi Musim",
-    "imageUrl":
-      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
-    "descriptionUrl":
-      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
+    "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
+    "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
     "description": "",
     "tabs": null
   },

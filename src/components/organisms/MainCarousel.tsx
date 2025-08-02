@@ -16,24 +16,28 @@ import {
 export function MainCarousel() {
   const images = [
     {
-      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
-      alt: "ACH Bulan",
+      url: "https://dataweb.bmkg.go.id/iklim/hari-tanpa-hujan.png",
+      alt: "Hari Tanpa Hujan",
     },
     {
-      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.png",
-      alt: "ASH Bulan",
+      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ach_das.png",
+      alt: "Analisis Curah Hujan Dasarian",
     },
     {
-      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
-      alt: "Poster Musim",
+      url: "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
+      alt: "Peringatan Dini Kekeringan Meteorologis",
     },
     {
-      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
-      alt: "ANSPI 1",
+      url: "https://cews.bmkg.go.id/tempatirk/CAMS_PM2p5/update_pm2p5_aq.gif",
+      alt: "Kualitas Udara Berdasarkan PM2.5",
     },
     {
-      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi6.png",
-      alt: "ANSPI 6",
+      url: "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PRAKSPI/prakspi1.png",
+      alt: "Prediksi Indeks Presipitasi Terstandarisasi",
+    },
+    {
+      url: "https://i0.wp.com/content.bmkg.go.id/wp-content/uploads/warming_stripes_HD-2.png?ssl=1",
+      alt: "Warming Stripes",
     },
   ];
 

@@ -56,7 +56,6 @@ export default async function DetailTabs(item: Item) {
       <h2 className="text-3xl font-bold text-center text-gray-800">
         {item.title}
       </h2>
-      <p className="text-center text-gray-500 mb-8">Update: 15 Juli 2025</p>
 
       <Tabs defaultValue="tab0" className="w-full max-w-screen-xl mx-auto mt-6">
         {/* Tab Triggers */}

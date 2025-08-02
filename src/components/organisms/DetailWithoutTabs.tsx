@@ -43,7 +43,6 @@ export default async function DetailWithoutTabs(item: Item) {
         <h2 className="text-3xl font-bold text-center text-gray-800">
           {item.title}
         </h2>
-        <p className="text-center text-gray-500  mb-8">Update: 15 Juli 2025</p>
 
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-6">

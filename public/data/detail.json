@@ -2,9 +2,9 @@
   {
     "slug": "hari-tanpa-hujan",
     "title": "Hari Tanpa Hujan",
-    "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/HTH/hth.png",
+    "imageUrl": "https://dataweb.bmkg.go.id/iklim/hari-tanpa-hujan.png",
     "descriptionUrl": "",
-    "description": "Informasi Hari Tanpa Hujan",
+    "description": "Hari Tanpa Hujan (HTH) adalah periode berturut-turut di mana suatu wilayah tidak mengalami hujan atau hanya menerima curah hujan yang sangat rendah (kurang dari 1 mm). Istilah ini digunakan oleh Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) untuk memantau dan mengklasifikasikan tingkat kekeringan meteorologis di berbagai daerah di Indonesia. BMKG mengklasifikasikan HTH berdasarkan durasi hari tanpa hujan sebagai berikut:<br/>Sangat Pendek: 0-5 hari<br/>Pendek: 6-10 hari<br/>Menengah: 11-20 hari<br/>Panjang: 21-30 hari<br/>Sangat Panjang: 31-60 hari<br/>Ekstrem: lebih dari 60 hari<br/>Perhitungan HTH dilakukan dengan menganalisis curah hujan harian, di mana hari tanpa hujan berturut-turut dihitung dari hari terakhir pengamatan. Jika hari terakhir tidak terjadi hujan (curah hujan < 1 mm), maka dihitung sesuai dengan kriteria HTH. Sebaliknya, jika hari terakhir terdapat hujan (curah hujan ≥ 1 mm), maka langsung dikategorikan sebagai Hari Hujan (HH).",
     "tabs": null
   },
   {

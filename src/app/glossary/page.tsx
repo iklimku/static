@@ -57,7 +57,7 @@ export default function GlossaryPage() {
           {filteredGlossary.map(({ term, definition }) => (
             <Card key={term} className="shadow">
               <CardContent className="p-4">
-                <h3 className="font-semibold text-lg text-[var(--bmkggreen)] mb-2">
+                <h3 className="font-semibold text-lg text-[var(--bmkgcyan)] mb-2">
                   {term}
                 </h3>
                 <p className="text-sm text-gray-700 leading-relaxed">

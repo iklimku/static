@@ -74,7 +74,7 @@ export function Sectorals() {
             className={`flex  flex-col w-full text-center rounded-xl p-6 shadow-xl transition-all duration-300 ${
               isActive
                 ? "bg-cyan-600 text-white"
-                : "bg-white text-gray-800 hover:bg-cyan-100"
+                : "bg-white text-gray-800 hover:bg-[var(--bmkgcyan)]"
             }`}
           >
             <sector.icon

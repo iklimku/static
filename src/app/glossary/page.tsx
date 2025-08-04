@@ -39,7 +39,7 @@ export default function GlossaryPage() {
             }
             className={`px-3 py-1 rounded text-sm font-medium transition-colors duration-200 ${
               selectedLetter === letter
-                ? "bg-indigo-600 text-white"
+                ? "bg-[var(--bmkggreen)] text-white"
                 : "bg-gray-200 text-gray-800 hover:bg-indigo-100"
             }`}
           >
@@ -57,7 +57,7 @@ export default function GlossaryPage() {
           {filteredGlossary.map(({ term, definition }) => (
             <Card key={term} className="shadow">
               <CardContent className="p-4">
-                <h3 className="font-semibold text-lg text-indigo-700 mb-2">
+                <h3 className="font-semibold text-lg text-[var(--bmkggreen)] mb-2">
                   {term}
                 </h3>
                 <p className="text-sm text-gray-700 leading-relaxed">

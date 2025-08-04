@@ -4,6 +4,15 @@
 /* Removed unsupported @custom-variant dark (&:is(.dark *)); */
 
 :root {
+  --bmkgblue: oklch(28.894% 0.10466 263.647);
+  --bmkggreen: oklch(54.527% 0.13396 154.525);
+  --bmkgcyan: oklch(70.953% 0.1242 215.582);
+  --bmkgblack: oklch(0.145 0 0);
+  --bmkgwhite: oklch(1 0 0);
+  --bmkgyellow: oklch(61.496% 0.14224 61.408);
+}
+
+/* :root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -41,9 +50,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-}
+} */
 
-:root {
+/* :root {
   --radius: 0.625rem;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -76,7 +85,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
-}
+} */
 
 .dark {
   --background: oklch(0.145 0 0);

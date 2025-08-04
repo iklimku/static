@@ -51,6 +51,8 @@ export default async function DetailTabs(item: Item) {
     })
   );
 
+  const isAnimatedGif = item.imageUrl.endsWith(".gif");
+
   return (
     <main className="container mx-auto px-4 mt-20 mb-20">
       <h2 className="text-3xl font-bold text-center text-gray-800">
@@ -92,6 +94,7 @@ export default async function DetailTabs(item: Item) {
                   className="w-full h-auto rounded-lg pointer-events-none"
                   sizes="100vw"
                   priority
+                  {...(isAnimatedGif && { unoptimized: true })}
                 />
               </Suspense>
             </div>

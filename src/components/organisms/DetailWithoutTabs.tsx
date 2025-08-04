@@ -37,6 +37,7 @@ export default async function DetailWithoutTabs(item: Item) {
     // replace enter to <br/>
     description = description.replace(/\n/g, "<br/>");
   }
+  const isAnimatedGif = item.imageUrl.endsWith(".gif");
   return (
     <>
       <main className="container mx-auto px-4 mt-20 mb-20">
@@ -54,6 +55,7 @@ export default async function DetailWithoutTabs(item: Item) {
                   width={800}
                   height={400}
                   className="w-full h-auto object-cover rounded-md pointer-events-none"
+                  {...(isAnimatedGif && { unoptimized: true })}
                 />
               </Suspense>
             </div>

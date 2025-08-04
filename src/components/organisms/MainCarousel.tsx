@@ -45,24 +45,28 @@ export function MainCarousel() {
     <div className="w-full px-4 sm:px-0">
       <Carousel className="relative w-full mx-auto mt-4 mb-4 overflow-hidden rounded-xl shadow-xl">
         <CarouselContent className="h-full">
-          {images.map((img, index) => (
-            <CarouselItem key={index} className="h-full">
-              <Card className="h-full">
-                <CardContent className="p-0 relative h-[300px] sm:h-[400px] md:h-[500px]">
-                  <Suspense fallback={<Loading />}>
-                    <Image
-                      src={img.url}
-                      alt={img.alt}
-                      fill
-                      className="object-contain pointer-events-none"
-                      sizes="(max-width: 768px) 100vw, 70vh"
-                      priority={index === 0} // preload gambar pertama
-                    />
-                  </Suspense>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          ))}
+          {images.map((img, index) => {
+            const isAnimatedGif = img.url.endsWith(".gif");
+            return (
+              <CarouselItem key={index} className="h-full">
+                <Card className="h-full">
+                  <CardContent className="p-0 relative h-[300px] sm:h-[400px] md:h-[500px]">
+                    <Suspense fallback={<Loading />}>
+                      <Image
+                        src={img.url}
+                        alt={img.alt}
+                        fill
+                        className="object-contain pointer-events-none"
+                        sizes="(max-width: 768px) 100vw, 70vh"
+                        priority={index === 0} // preload gambar pertama
+                        {...(isAnimatedGif && { unoptimized: true })}
+                      />
+                    </Suspense>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            )
+          })}
         </CarouselContent>
 
         {/* Tombol Navigasi */}

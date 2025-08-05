@@ -43,7 +43,11 @@ export function MainCarousel() {
 
   return (
     <div className="w-full px-4 sm:px-0">
-      <Carousel className="relative w-full mx-auto mt-4 mb-4 overflow-hidden rounded-xl shadow-xl">
+      <Carousel plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]} className="relative w-full mx-auto mt-4 mb-4 overflow-hidden rounded-xl shadow-xl">
         <CarouselContent className="h-full">
           {images.map((img, index) => {
             const isAnimatedGif = img.url.endsWith(".gif");

@@ -4,7 +4,7 @@ import { useState } from "react";
 import GoogleDocViewer from "@/components/organisms/PDFView";
 import pdfData from "@/../public/data/pdfs.json";
 
-// Impor komponen paginasi dari shadcn/ui
+// Import komponen paginasi dari shadcn/ui
 import {
   Pagination,
   PaginationContent,
@@ -15,35 +15,34 @@ import {
   PaginationEllipsis,
 } from "@/components/ui/pagination";
 
-// Impor custom hook
+// Import custom hook
 import { usePagination, DOTS } from "@/hooks/use-pagination";
 
 export default function GalleryPage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3; // atur mau berapa file yang ditampilkan di halaman
+  const itemsPerPage = 3; //mau berapa file yg ditampilkan per page
 
-  // --- Gunakan custom hook
   const paginationRange = usePagination({
     currentPage,
     totalCount: pdfData.length,
     pageSize: itemsPerPage,
-    siblingCount: 1, // Opsional: jumlah halaman di samping halaman aktif
+    siblingCount: 1,
   });
 
-  // --- Logika untuk data tetap sama ---
   const currentItems = pdfData.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
-  // --- Fungsi navigasi yang lebih fleksibel ---
+  const totalPages = Math.ceil(pdfData.length / itemsPerPage);
+
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    window.scrollTo(0, 0); // Opsional: scroll ke atas saat ganti halaman
+    window.scrollTo(0, 0);
   };
 
   const handleNextPage = () => {
-    if (currentPage < Math.ceil(pdfData.length / itemsPerPage)) {
+    if (currentPage < totalPages) {
       handlePageChange(currentPage + 1);
     }
   };
@@ -55,42 +54,34 @@ export default function GalleryPage() {
   };
 
   return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Galeri Dokumen</h1>
+    <main className="container mx-auto px-4 py-8 md:px-6 lg:py-12">
+      <h1 className="text-3xl font-bold tracking-tight text-center mb-2">
+        Galeri Buletin Iklim
+      </h1>
+      <p className="text-center text-muted-foreground mb-8">
+        Menampilkan {currentItems.length} dari {pdfData.length} total dokumen.
+      </p>
 
-      {/* Grid Galeri (tidak berubah) */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-          gap: "1.5rem",
-          marginBottom: "2rem",
-        }}
-      >
+      {/* Grid Galeri yang Responsif */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {currentItems.map((pdf) => (
+          // Card
           <div
             key={pdf.url}
-            style={{
-              border: "1px solid #ddd",
-              borderRadius: "8px",
-              padding: "1rem",
-              height: "400px",
-              display: "flex",
-              flexDirection: "column",
-            }}
+            className="border rounded-lg shadow-sm p-4 h-[450px] flex flex-col"
           >
-            <h3 style={{ marginTop: 0 }}>{pdf.title}</h3>
-            <div style={{ flex: 1 }}>
+            {/* Title*/}
+            <h3 className="font-semibold text-lg truncate mb-2">{pdf.title}</h3>
+            <div className="flex-1">
               <GoogleDocViewer fileUrl={pdf.url} />
             </div>
           </div>
         ))}
       </div>
 
-      {/* --- Implementasi Paginasi shadcn/ui --- */}
+      {/* Implementasi Paginasi shadcn/ui (tidak perlu diubah) */}
       <Pagination>
         <PaginationContent>
-          {/* Tombol "Sebelumnya" */}
           <PaginationItem>
             <PaginationPrevious
               onClick={handlePrevPage}
@@ -102,12 +93,10 @@ export default function GalleryPage() {
             />
           </PaginationItem>
 
-          {/* Nomor Halaman & Elipsis */}
           {paginationRange.map((pageNumber, index) => {
             if (pageNumber === DOTS) {
               return <PaginationEllipsis key={`${pageNumber}-${index}`} />;
             }
-
             return (
               <PaginationItem key={pageNumber}>
                 <PaginationLink
@@ -121,12 +110,11 @@ export default function GalleryPage() {
             );
           })}
 
-          {/* Tombol "Berikutnya" */}
           <PaginationItem>
             <PaginationNext
               onClick={handleNextPage}
               className={
-                currentPage === Math.ceil(pdfData.length / itemsPerPage)
+                currentPage === totalPages
                   ? "pointer-events-none opacity-50"
                   : "cursor-pointer"
               }

@@ -173,20 +173,20 @@
     "title": "Lainnya",
     "subMenu": [
       {
-        "title": "Glosarium",
-        "href": "/glosarium"
-      },
-      {
-        "title": "Frequently Asked Question",
-        "href": "/faq/detail"
-      },
-      {
         "title": "Buletin",
         "href": "/buletin"
       },
       {
         "title": "Regulasi",
         "href": "/regulasi/daftar"
+      },
+      {
+        "title": "Glosarium",
+        "href": "/glosarium"
+      },
+      {
+        "title": "Frequently Asked Question",
+        "href": "/faq/detail"
       }
     ]
   }

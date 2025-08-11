@@ -4,7 +4,6 @@ import { useState } from "react";
 import GoogleDocViewer from "@/components/organisms/PDFView";
 import pdfData from "@/../public/data/pdfs.json";
 
-// Import komponen paginasi dari shadcn/ui
 import {
   Pagination,
   PaginationContent,
@@ -14,27 +13,38 @@ import {
   PaginationPrevious,
   PaginationEllipsis,
 } from "@/components/ui/pagination";
-
-// Import custom hook
 import { usePagination, DOTS } from "@/hooks/use-pagination";
+import { Button } from "@/components/ui/button";
 
 export default function GalleryPage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3; //mau berapa file yg ditampilkan per page
+  const [activeCategory, setActiveCategory] = useState("Semua");
+  const itemsPerPage = 3;
+
+  const categories = ["Semua", ...new Set(pdfData.map((pdf) => pdf.category))];
+
+  const filteredItems =
+    activeCategory === "Semua"
+      ? pdfData
+      : pdfData.filter((pdf) => pdf.category === activeCategory);
 
   const paginationRange = usePagination({
     currentPage,
-    totalCount: pdfData.length,
+    totalCount: filteredItems.length,
     pageSize: itemsPerPage,
-    siblingCount: 1,
   });
 
-  const currentItems = pdfData.slice(
+  const currentItems = filteredItems.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
-  const totalPages = Math.ceil(pdfData.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category);
+    setCurrentPage(1);
+  };
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -42,86 +52,109 @@ export default function GalleryPage() {
   };
 
   const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      handlePageChange(currentPage + 1);
-    }
+    if (currentPage < totalPages) handlePageChange(currentPage + 1);
   };
 
   const handlePrevPage = () => {
-    if (currentPage > 1) {
-      handlePageChange(currentPage - 1);
-    }
+    if (currentPage > 1) handlePageChange(currentPage - 1);
   };
 
   return (
     <main className="container mx-auto px-4 py-8 md:px-6 lg:py-12">
       <h1 className="text-3xl font-bold tracking-tight text-center mb-2">
-        Galeri Buletin Iklim
+        Galeri Buletin
       </h1>
-      <p className="text-center text-muted-foreground mb-8">
-        Menampilkan {currentItems.length} dari {pdfData.length} total dokumen.
-      </p>
 
-      {/* Grid Galeri yang Responsif */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-        {currentItems.map((pdf) => (
-          // Card
-          <div
-            key={pdf.url}
-            className="border rounded-lg shadow-sm p-4 h-[450px] flex flex-col"
+      <div className="flex justify-center flex-wrap gap-2 mb-8">
+        {categories.map((category) => (
+          <Button
+            key={category}
+            onClick={() => handleCategoryChange(category)}
+            variant={activeCategory === category ? "default" : "outline"}
           >
-            {/* Title*/}
-            <h3 className="font-semibold text-lg truncate mb-2">{pdf.title}</h3>
-            <div className="flex-1">
-              <GoogleDocViewer fileUrl={pdf.url} />
-            </div>
-          </div>
+            {category}
+          </Button>
         ))}
       </div>
 
-      {/* Implementasi Paginasi shadcn/ui (tidak perlu diubah) */}
-      <Pagination>
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious
-              onClick={handlePrevPage}
-              className={
-                currentPage === 1
-                  ? "pointer-events-none opacity-50"
-                  : "cursor-pointer"
-              }
-            />
-          </PaginationItem>
+      <p className="text-center text-muted-foreground mb-8">
+        Menampilkan {currentItems.length} dari {filteredItems.length} dokumen
+        {activeCategory !== "Semua" && ` kategori "${activeCategory}"`}.
+      </p>
 
-          {paginationRange.map((pageNumber, index) => {
-            if (pageNumber === DOTS) {
-              return <PaginationEllipsis key={`${pageNumber}-${index}`} />;
-            }
-            return (
-              <PaginationItem key={pageNumber}>
-                <PaginationLink
-                  isActive={currentPage === pageNumber}
-                  onClick={() => handlePageChange(pageNumber as number)}
-                  className="cursor-pointer"
-                >
-                  {pageNumber}
-                </PaginationLink>
-              </PaginationItem>
-            );
-          })}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 min-h-[480px]">
+        {currentItems.length > 0 ? (
+          currentItems.map((pdf) => (
+            <div
+              key={pdf.id}
+              className="border rounded-lg shadow-sm p-4 h-[450px] flex flex-col"
+            >
+              <h3 className="font-semibold text-lg truncate mb-2 text-center">
+                {pdf.title}
+              </h3>
+              <div className="flex-1">
+                <GoogleDocViewer fileUrl={pdf.url} />
+              </div>
+            </div>
+          ))
+        ) : (
+          <div className="md:col-span-2 lg:col-span-3 flex items-center justify-center">
+            <p className="text-center text-muted-foreground">
+              Tidak ada dokumen yang ditemukan untuk kategori ini.
+            </p>
+          </div>
+        )}
+      </div>
 
-          <PaginationItem>
-            <PaginationNext
-              onClick={handleNextPage}
-              className={
-                currentPage === totalPages
-                  ? "pointer-events-none opacity-50"
-                  : "cursor-pointer"
+      {/* Paginasi (hanya tampil jika total halaman lebih dari 1) */}
+      {totalPages > 1 && (
+        <Pagination>
+          <PaginationContent>
+            {/* Tombol "Sebelumnya" */}
+            <PaginationItem>
+              <PaginationPrevious
+                onClick={handlePrevPage}
+                className={
+                  currentPage === 1
+                    ? "pointer-events-none opacity-50"
+                    : "cursor-pointer"
+                }
+              />
+            </PaginationItem>
+
+            {/* Nomor Halaman & Elipsis */}
+            {paginationRange.map((pageNumber, index) => {
+              if (pageNumber === DOTS) {
+                return <PaginationEllipsis key={`${pageNumber}-${index}`} />;
               }
-            />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
+
+              return (
+                <PaginationItem key={pageNumber}>
+                  <PaginationLink
+                    isActive={currentPage === pageNumber}
+                    onClick={() => handlePageChange(pageNumber as number)}
+                    className="cursor-pointer"
+                  >
+                    {pageNumber}
+                  </PaginationLink>
+                </PaginationItem>
+              );
+            })}
+
+            {/* Tombol "Berikutnya" */}
+            <PaginationItem>
+              <PaginationNext
+                onClick={handleNextPage}
+                className={
+                  currentPage === totalPages
+                    ? "pointer-events-none opacity-50"
+                    : "cursor-pointer"
+                }
+              />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+      )}
     </main>
   );
 }

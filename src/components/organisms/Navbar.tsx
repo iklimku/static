@@ -58,15 +58,15 @@ export function Navbar() {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden xl:flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-1 ">
           <NavigationMenu>
             <NavigationMenuList>
               {datas.map((data) => (
                 <NavigationMenuItem key={data.title}>
-                  <NavigationMenuTrigger className="font-normal hover:font-semibold">
+                  <NavigationMenuTrigger className="font-normal hover:font-semibold p-1">
                     {data.title}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[1000px] border shadow-lg bg-white rounded-md z-50 ">
+                  <NavigationMenuContent className="p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[900px] border shadow-lg bg-white rounded-md z-50 ">
                     {/* <ul className={`grid gap-1 grid-flow-col grid-rows-${Math.ceil(data.subMenu.length / 2)}`}> */}
                     <ul className="grid gap-2 md:grid-cols-4">
                       {data.subMenu.map((item) => (
@@ -74,6 +74,7 @@ export function Navbar() {
                           key={item.title}
                           title={item.title}
                           href={item.href}
+                          className=""
                         ></ListItem>
                       ))}
                     </ul>

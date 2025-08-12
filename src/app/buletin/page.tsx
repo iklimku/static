@@ -61,11 +61,12 @@ export default function GalleryPage() {
 
   return (
     <main className="container mx-auto px-4 py-8 md:px-6 lg:py-12">
+      {/* Judul */}
       <h1 className="text-3xl font-bold tracking-tight text-center mb-2">
-        Galeri Buletin
+        Galeri Dokumen
       </h1>
-
       <div className="flex justify-center flex-wrap gap-2 mb-8">
+        {/* Tombol Filter*/}
         {categories.map((category) => (
           <Button
             key={category}
@@ -77,26 +78,31 @@ export default function GalleryPage() {
         ))}
       </div>
 
-      <p className="text-center text-muted-foreground mb-8">
-        Menampilkan {currentItems.length} dari {filteredItems.length} dokumen
-        {activeCategory !== "Semua" && ` kategori "${activeCategory}"`}.
-      </p>
-
+      {/* Grid Galeri */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 min-h-[480px]">
         {currentItems.length > 0 ? (
-          currentItems.map((pdf) => (
-            <div
-              key={pdf.id}
-              className="border rounded-lg shadow-sm p-4 h-[450px] flex flex-col"
-            >
-              <h3 className="font-semibold text-lg truncate mb-2 text-center">
-                {pdf.title}
-              </h3>
-              <div className="flex-1">
-                <GoogleDocViewer fileUrl={pdf.url} />
+          currentItems.map((pdf) => {
+            // Cek jika URL adalah lokal (diawali dengan '/')
+            // Jika ya, gabungkan dengan domain utama aplikasi. Jika tidak, gunakan URL aslinya.
+            const fullUrl = pdf.url.startsWith("/")
+              ? `${window.location.origin}${pdf.url}`
+              : pdf.url;
+
+            return (
+              <div
+                key={pdf.id}
+                className="border rounded-lg shadow-sm p-4 h-[450px] flex flex-col"
+              >
+                <h3 className="font-semibold text-lg truncate mb-2 text-center">
+                  {pdf.title}
+                </h3>
+                <div className="flex-1">
+                  {/* Berikan fullUrl yang sudah absolut ke viewer */}
+                  <GoogleDocViewer fileUrl={fullUrl} />
+                </div>
               </div>
-            </div>
-          ))
+            );
+          })
         ) : (
           <div className="md:col-span-2 lg:col-span-3 flex items-center justify-center">
             <p className="text-center text-muted-foreground">
@@ -106,7 +112,7 @@ export default function GalleryPage() {
         )}
       </div>
 
-      {/* Paginasi (hanya tampil jika total halaman lebih dari 1) */}
+      {/* Pagination */}
       {totalPages > 1 && (
         <Pagination>
           <PaginationContent>

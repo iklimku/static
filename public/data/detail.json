@@ -5,7 +5,8 @@
     "imageUrl": "https://dataweb.bmkg.go.id/iklim/hari-tanpa-hujan.png",
     "descriptionUrl": "",
     "description": "Hari Tanpa Hujan (HTH) adalah periode berturut-turut di mana suatu wilayah tidak mengalami hujan atau hanya menerima curah hujan yang sangat rendah (kurang dari 1 mm). Istilah ini digunakan oleh Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) untuk memantau dan mengklasifikasikan tingkat kekeringan meteorologis di berbagai daerah di Indonesia. BMKG mengklasifikasikan HTH berdasarkan durasi hari tanpa hujan sebagai berikut:<br/>Sangat Pendek: 0-5 hari<br/>Pendek: 6-10 hari<br/>Menengah: 11-20 hari<br/>Panjang: 21-30 hari<br/>Sangat Panjang: 31-60 hari<br/>Ekstrem: lebih dari 60 hari<br/>Perhitungan HTH dilakukan dengan menganalisis curah hujan harian, di mana hari tanpa hujan berturut-turut dihitung dari hari terakhir pengamatan. Jika hari terakhir tidak terjadi hujan (curah hujan < 1 mm), maka dihitung sesuai dengan kriteria HTH. Sebaliknya, jika hari terakhir terdapat hujan (curah hujan ≥ 1 mm), maka langsung dikategorikan sebagai Hari Hujan (HH).",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "perkembangan-musim",
@@ -13,7 +14,8 @@
     "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
     "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "normal-suhu-udara-rata-rata",
@@ -40,7 +42,8 @@
         "descriptionUrl": "",
         "description": "Informasi mengenai normal dan suhu udara rata-rata dalam bentuk tabel"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "anomali-suhu-udara-rata-rata",
@@ -67,7 +70,8 @@
         "descriptionUrl": "",
         "description": "Secara umum di wilayah Indonesia, anomali suhu udara rata-rata per-stasiun pada bulan Juni 2025 menunjukkan nilai anomali positif atau lebih tinggi dari rata-rata klimatologisnya. Anomali maksimum tercatat di Stasiun Meteorologi Raja Haji Fisabilillah - Tanjungpinang (1.2 °C), sedangkan anomali minimum tercatat di Stasiun Meteorologi Karel Sadsuitubun - Maluku Tenggara (-0.8 °C)."
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "selisih-suhu-udara-rata-rata",
@@ -88,7 +92,8 @@
         "descriptionUrl": "",
         "description": "Perbedaan (selisih) suhu udara rata-rata bulan Juni 2025 terhadap bulan sebelumnya (Mei 2025), dari 158 stasiun pengamatan BMKG di Indonesia secara umum menunjukkan penurunan suhu (nilai negatif). Peningkatan suhu terbesar tercatat di Stasiun Meteorologi Trunojoyo - Madura dan Stasiun Meteorologi Sangkapura - Gresik (0.3 °C), sedangkan penurunan suhu terbesar tercatat di Stasiun Meteorologi Radin Inten II - Lampung Selatan (-1.4 °C)."
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "indeks-iklim-global",
@@ -121,7 +126,8 @@
         "descriptionUrl": "",
         "description": "Informasi terkait Western North Pacific Monsoon Index (WNPMI)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "catatan-iklim-ekstrem",
@@ -129,7 +135,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "indeks-ultraviolet",
@@ -137,7 +144,35 @@
     "imageUrl": "https://cews.bmkg.go.id/UVI-Indonesia/png/0-uv-compile-update.gif",
     "descriptionUrl": "",
     "description": "Secara umum pita gelombang cahaya matahari dibagi menjadi tiga bagian utama yaitu sinar ultraviolet (UV) dengan panjang gelombang 100 - 400 nm. Berikutnya cahaya tampak atau cahaya yang bisa terlihat oleh mata manusia pada 400 - 700 nm. Kemudian bagian ketiga adalah sinar inframerah (IR) dengan panjang gelombang 700 nm - 1 mm. Sinar inframerah seperti juga sinar ultraviolet tidak bisa ditangkap oleh mata. Untuk diketahui 1 nm = 1 nanometer = 10-9 meter.\nSinar ultraviolet merupakan bagian gelombang elektromagnetik dari energi radiasi matahari pada pita 100-400 nm. Radiasi matahari yang menjangkau permukaan bumi sendiri berada pada sekitar panjang gelombang 100 nm sampai dengan 1 mm.\nBadan Meteorologi Dunia (World Meteorological Organisation/WMO) menuliskan bahwa sinar matahari yang kurang akan memengaruhi mood kita dan juga meningkatkan ancaman kekurangan vitamin D. Namun jika menerima paparan sinar matahari yang berlebihan akan menimbulkan bahaya bagi kesehatan.",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
+  },
+  {
+    "slug": "monitoring-titik-panas",
+    "title": "Monitoring Titik Panas",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": null,
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/HOTSPOT/"
+  },
+  {
+    "slug": "titik-panas-bulanan",
+    "title": "Titik Panas Bulanan",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": null,
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/HOTSPOT_ARCHIVED/"
+  },
+  {
+    "slug": "indeks-kualitas-air",
+    "title": "Indeks Kualitas Air",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "dinamika-atmosfer-dan-laut",
@@ -145,7 +180,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "analisis-hujan-dasarian",
@@ -166,7 +202,8 @@
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_DAS/ash_das.txt",
         "description": ""
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "analisis-hujan-bulanan",
@@ -187,7 +224,8 @@
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.txt",
         "description": ""
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "indeks-presipitasi-terstandarisasi",
@@ -214,7 +252,8 @@
         "descriptionUrl": "",
         "description": "Informasi mengenai indeks presipitasi terstandarisasi 6"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "ketersediaan-air-bagi-tanaman",
@@ -222,7 +261,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "buletin",
@@ -230,7 +270,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "peringatan-dini-kekeringan-meteorologis",
@@ -238,7 +279,8 @@
     "imageUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",
     "descriptionUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.txt",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "peringatan-dini-curah-hujan-tinggi",
@@ -246,7 +288,8 @@
     "imageUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.jpg",
     "descriptionUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDCHT_latest.txt",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "kondisi-enso-el-nino-dan-la-nina",
@@ -294,7 +337,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "Informasi ozon permukaan (O3).",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "prediksi-musim",
@@ -302,7 +346,8 @@
     "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
     "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_narasi.txt",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "prediksi-indeks-presipitasi-terstandarisasi",
@@ -329,7 +374,8 @@
         "descriptionUrl": "",
         "description": "Prakiraan SPI-6"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "prediksi-curah-hujan-bulanan",
@@ -380,7 +426,8 @@
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step7.txt",
         "description": ""
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "prediksi-sifat-hujan-bulanan",
@@ -431,7 +478,8 @@
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/psh_bln_narasi_step7.txt",
         "description": ""
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-bulanan-di-atas-500",
@@ -482,7 +530,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Bulanan di Atas 500 (Step 7)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-bulanan-di-atas-300",
@@ -533,7 +582,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Bulanan di Atas 300 (Step 7)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-bulanan-di-atas-150",
@@ -584,7 +634,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Bulanan di Atas 150 (Step 7)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-bulanan-di-bawah-150",
@@ -635,7 +686,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Bulanan di Bawah 150 (Step 7)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-bulanan-di-atas-100",
@@ -686,7 +738,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Bulanan di Atas 100 (Step 7)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-bulanan-di-bawah-100",
@@ -737,7 +790,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Bulanan di Bawah 100 (Step 7)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "prediksi-curah-hujan-dasarian",
@@ -764,7 +818,8 @@
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/pch_das_narasi_step3.txt",
         "description": ""
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "prediksi-sifat-hujan-dasarian",
@@ -791,7 +846,8 @@
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_DAS/psh_das_narasi_step3.txt",
         "description": ""
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-dasarian-di-atas-300",
@@ -818,7 +874,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Dasarian di Atas 300 (Step 3)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-dasarian-di-atas-150",
@@ -845,7 +902,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Dasarian di Atas 150 (Step 3)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-dasarian-di-bawah-150",
@@ -872,7 +930,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Dasarian di Bawah 150 (Step 3)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-dasarian-di-atas-100",
@@ -899,7 +958,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Dasarian di Atas 100 (Step 3)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-dasarian-di-bawah-100",
@@ -926,7 +986,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Dasarian di Bawah 100 (Step 3)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-dasarian-di-atas-50",
@@ -953,7 +1014,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Dasarian di Atas 50 (Step 3)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-dasarian-di-bawah-50",
@@ -980,7 +1042,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Dasarian di Bawah 50 (Step 3)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-dasarian-di-atas-20",
@@ -1007,7 +1070,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Dasarian di Atas 20 (Step 3)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "peluang-curah-hujan-dasarian-di-bawah-20",
@@ -1034,7 +1098,8 @@
         "descriptionUrl": "",
         "description": "Informasi PCH Dasarian di Bawah 20 (Step 3)"
       }
-    ]
+    ],
+    "iframeUrl": null
   },
   {
     "slug": "prediksi-daerah-potensi-banjir",
@@ -1042,7 +1107,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "data-iklim-harian",
@@ -1050,7 +1116,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "analisis-laju-perubahan-suhu-udara",
@@ -1058,7 +1125,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "data-iklim-tahunan",
@@ -1066,7 +1134,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "proyeksi-perubahan-suhu-udara",
@@ -1074,7 +1143,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "slug": "proyeksi-perubahan-curah-hujan",
@@ -1082,6 +1152,7 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   }
 ]

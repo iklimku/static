@@ -42,7 +42,7 @@ export default function BMKGTimeBar() {
   }, []);
 
   return (
-    <div className="w-full text-xs md:text-sm px-4 py-2 flex justify-between items-center font-medium bg-[var(--bmkgblue)] text-white">
+    <div className="w-full text-xs md:text-sm px-4 py-2 flex justify-between items-center font-medium bg-[var(--bmkgblue1)] text-white">
       <span>{dateStr}</span>
       <span className="text-end">
         Standar Waktu Indonesia <br className="sm:hidden" /> | {wibTime} WIB |{" "}

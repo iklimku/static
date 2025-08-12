@@ -9,18 +9,18 @@ body {
 
 /* BMKG Identity */
 
-/* :root {
+:root {
   --bmkgblue1: #182168;
-  --bmkggreen: #1A499A;
-  --bmkgwhite: #4D99D3;
-  --bmkgcyan: #8DC341;
-  --bmkgblack: #60A945;
+  --bmkgblue2: #1A499A;
+  --bmkgblue3: #4D99D3;
+  --bmkgblue4: #1A499A;
+  --bmkggreen1: #8DC341;
+  --bmkggreen2: #60A945;
   --bmkgyellow: #FAC016;
-  --bmkgyellow: #1A499A;
-  --bmkgyellow: #FFFFFF;
-  --bmkgyellow: #E6E7E8;
-  --bmkgwhite: #000000;
-} */
+  --bmkgwhite: #FFFFFF;
+  --bmkggrey: #E6E7E8;
+  --bmkgblack: #000000;
+}
 
 /* Removed unsupported @custom-variant dark (&:is(.dark *)); */
 :root {

@@ -35,12 +35,12 @@
         "href": "/gas-rumah-kaca/detail"
       },
       {
-        "title": "Titik Panas Bulanan",
-        "href": "/titik-panas-bulanan/detail"
-      },
-      {
         "title": "Monitoring Titik Panas",
         "href": "/monitoring-titik-panas/detail"
+      },
+      {
+        "title": "Titik Panas Bulanan",
+        "href": "/titik-panas-bulanan/detail"
       }
     ]
   },

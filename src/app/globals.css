@@ -1,17 +1,28 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Removed unsupported @custom-variant dark (&:is(.dark *)); */
-
-:root {
-  --bmkgblue: oklch(28.894% 0.10466 263.647);
-  --bmkggreen: oklch(54.527% 0.13396 154.525);
-  --bmkgcyan: oklch(88.431% 0.04695 209.979);
-  --bmkgblack: oklch(0.145 0 0);
-  --bmkgwhite: oklch(1 0 0);
-  --bmkgyellow: oklch(61.496% 0.14224 61.408);
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
+/* BMKG Identity */
+
+/* :root {
+  --bmkgblue1: #182168;
+  --bmkggreen: #1A499A;
+  --bmkgwhite: #4D99D3;
+  --bmkgcyan: #8DC341;
+  --bmkgblack: #60A945;
+  --bmkgyellow: #FAC016;
+  --bmkgyellow: #1A499A;
+  --bmkgyellow: #FFFFFF;
+  --bmkgyellow: #E6E7E8;
+  --bmkgwhite: #000000;
+} */
+
+/* Removed unsupported @custom-variant dark (&:is(.dark *)); */
 :root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

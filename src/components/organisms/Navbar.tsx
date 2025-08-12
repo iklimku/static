@@ -34,8 +34,8 @@ export function Navbar() {
   const datas: Data[] = navbarJson;
 
   return (
-    <nav className="bg-cyan-100 shadow-lg sticky top-0 z-100">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <nav className="bg-[var(--bmkggrey)] shadow-lg sticky top-0 z-100">
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between ">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image src={LogoBMKG} alt="Logo BMKG" height={48} />

@@ -58,9 +58,14 @@ export async function generateStaticParams() {
 }
 
 // --- KOMPONEN UTAMA HALAMAN ---
-export default function DetailPage({ params }: { params: { slug: string } }) {
-  // PERBAIKAN: 'params' bukan promise di App Router, jadi tidak perlu 'await'
-  const { slug } = params;
+
+export default async function DetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  // TAMBAHKAN 'await' di sini
+  const { slug } = await params;
   const item = getItemData(slug);
 
   // Tampilkan jika item tidak ada, atau jika tidak ada konten sama sekali untuk ditampilkan

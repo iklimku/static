@@ -62,7 +62,7 @@ export async function generateStaticParams() {
 export default async function DetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   // TAMBAHKAN 'await' di sini
   const { slug } = await params;

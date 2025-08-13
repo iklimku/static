@@ -1,10 +1,9 @@
 import DetailTabs from "@/components/organisms/DetailTabs";
 import DetailWithoutTabs from "@/components/organisms/DetailWithoutTabs";
-import DetailIframe from "@/components/organisms/DetailFrame"; // Pastikan path ini benar
+import DetailIframe from "@/components/organisms/DetailFrame";
 import detailJson from "@/../public/data/detail.json";
 import { Metadata } from "next";
 
-// Interface untuk data
 interface Tab {
   title: string;
   imageUrl: string;
@@ -22,28 +21,17 @@ interface Item {
   iframeUrl?: string | null;
 }
 
-// Tipe untuk props halaman
-type PageProps = {
+type Props = {
   params: Promise<{ slug: string }>;
 };
 
-// Tipe untuk props generateMetadata
-type MetadataProps = {
-  params: { slug: string };
-};
-
-// --- FUNGSI UNTUK MENGAMBIL DATA ---
 function getItemData(slug: string): Item | undefined {
   const data: Item[] = detailJson;
   return data.find((item) => item.slug === slug);
 }
 
-// --- FUNGSI UNTUK METADATA (DENGAN PERBAIKAN) ---
-export async function generateMetadata({
-  params,
-}: MetadataProps): Promise<Metadata> {
-  // PERBAIKAN: params perlu di-await di sini juga
-  const { slug } = params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   const item = getItemData(slug);
 
   if (!item) {
@@ -59,7 +47,6 @@ export async function generateMetadata({
   };
 }
 
-// --- FUNGSI UNTUK GENERATE STATIC PARAMS (Sudah Benar) ---
 export async function generateStaticParams() {
   const data: Item[] = detailJson;
   return data.map((item) => ({
@@ -67,8 +54,8 @@ export async function generateStaticParams() {
   }));
 }
 
-// --- KOMPONEN UTAMA HALAMAN (Sudah Benar) ---
-export default async function DetailPage({ params }: PageProps) {
+// --- KOMPONEN UTAMA HALAMAN
+export default async function DetailPage({ params }: Props) {
   const { slug } = await params;
   const item = getItemData(slug);
 

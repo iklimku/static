@@ -63,18 +63,16 @@ export function Navbar() {
             <NavigationMenuList>
               {datas.map((data) => (
                 <NavigationMenuItem key={data.title}>
-                  <NavigationMenuTrigger className="font-normal hover:font-semibold p-1">
+                  <NavigationMenuTrigger className="font-normal hover:text-[var(--bmkggreen1)] hover:font-semibold p-1">
                     {data.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[900px] border shadow-lg bg-white rounded-md z-50 ">
-                    {/* <ul className={`grid gap-1 grid-flow-col grid-rows-${Math.ceil(data.subMenu.length / 2)}`}> */}
                     <ul className="grid gap-2 md:grid-cols-4">
                       {data.subMenu.map((item) => (
                         <ListItem
                           key={item.title}
                           title={item.title}
                           href={item.href}
-                          className=""
                         ></ListItem>
                       ))}
                     </ul>
@@ -83,7 +81,6 @@ export function Navbar() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          {/* <Button className="bg-white">Contact Center 196</Button> */}
         </div>
       </div>
 
@@ -102,7 +99,7 @@ export function Navbar() {
                       <li key={item.title}>
                         <Link
                           href={item.href}
-                          className="block px-4 py-2 hover:bg-cyan-100 rounded-md transition"
+                          className="block px-4 py-2 hover:bg-[var(--bmkggreen3)] rounded-md transition"
                           onClick={() => setIsOpen(false)}
                         >
                           <div className="text-sm font-semibold">
@@ -133,9 +130,9 @@ function ListItem({
       <NavigationMenuLink asChild>
         <Link
           href={href}
-          className="block px-3 py-2 hover:bg-cyan-50 rounded-md transition"
+          className="block px-3 py-2 rounded-md transition-colors duration-200 hover:bg-[var(--bmkggreen3)] hover:font-semibold"
         >
-          <div className="text-sm font-medium">{title}</div>
+          <div className="text-sm">{title}</div>
           <p className="text-xs text-muted-foreground">{children}</p>
         </Link>
       </NavigationMenuLink>

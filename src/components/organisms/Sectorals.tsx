@@ -63,9 +63,8 @@ export function Sectorals() {
   };
 
   return (
-    <div className="bg-[var(--bmkggrey3)] py-8">
+    <div className="bg-[var(--bmkggrey3)] py-8 m-0">
       {/* Layanan Informasi Sektoral */}
-      
       <h2 className="font-semibold text-center text-2xl mb-4 text-[var(--bmkggreen1)]">Layanan Informasi Sektoral</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
         {sectorals.map((sector, index) => {

@@ -34,7 +34,7 @@ export function Navbar() {
   const datas: Data[] = navbarJson;
 
   return (
-    <nav className="bg-[var(--bmkggrey)] shadow-lg sticky top-0 z-100">
+    <nav className="bg-[var(--bmkggrey1)] shadow-lg sticky top-0 z-100">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between ">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -54,7 +54,7 @@ export function Navbar() {
           className="xl:hidden text-muted-foreground"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Menu className="w-6 h-6 sticky top-0 z-100" />
+          <Menu className="w-6 h-6 sticky top-0 z-100 bg-[var(--bmkggrey2)]" />
         </button>
 
         {/* Desktop Navigation */}

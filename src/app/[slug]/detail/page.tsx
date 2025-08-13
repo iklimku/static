@@ -1,11 +1,9 @@
 import DetailTabs from "@/components/organisms/DetailTabs";
 import DetailWithoutTabs from "@/components/organisms/DetailWithoutTabs";
-// PERBAIKAN: Kita akan buat komponen khusus untuk Iframe agar lebih rapi
 import DetailIframe from "@/components/organisms/DetailFrame";
 import detailJson from "@/../public/data/detail.json";
 import { Metadata } from "next";
 
-// PERBAIKAN: Update interface untuk menyertakan iframeUrl dari pembahasan kita sebelumnya
 interface Tab {
   title: string;
   imageUrl: string;
@@ -20,22 +18,21 @@ interface Item {
   descriptionUrl: string;
   description: string;
   tabs: Tab[] | null;
-  iframeUrl?: string | null; // <-- Punya iframeUrl atau engga
+  iframeUrl?: string | null;
 }
 
-// --- FUNGSI UNTUK MENGAMBIL DATA ---
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
 function getItemData(slug: string): Item | undefined {
   const data: Item[] = detailJson;
   return data.find((item) => item.slug === slug);
 }
 
-// --- FUNGSI UNTUK METADATA
-type Props = {
-  params: { slug: string };
-};
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const item = getItemData(params.slug);
+  const { slug } = await params;
+  const item = getItemData(slug);
 
   if (!item) {
     return {
@@ -57,18 +54,11 @@ export async function generateStaticParams() {
   }));
 }
 
-// --- KOMPONEN UTAMA HALAMAN ---
-
-export default async function DetailPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  // TAMBAHKAN 'await' di sini
+// --- KOMPONEN UTAMA HALAMAN
+export default async function DetailPage({ params }: Props) {
   const { slug } = await params;
   const item = getItemData(slug);
 
-  // Tampilkan jika item tidak ada, atau jika tidak ada konten sama sekali untuk ditampilkan
   if (
     !item ||
     (!item.tabs && !item.imageUrl && !item.description && !item.iframeUrl)

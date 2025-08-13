@@ -63,9 +63,10 @@ export function Sectorals() {
   };
 
   return (
-    <>
+    <div className="bg-[var(--bmkggrey3)] py-8">
       {/* Layanan Informasi Sektoral */}
-      <h2 className="font-semibold text-center text-2xl mb-4">Layanan Informasi Sektoral</h2>
+      
+      <h2 className="font-semibold text-center text-2xl mb-4 text-[var(--bmkggreen1)]">Layanan Informasi Sektoral</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
         {sectorals.map((sector, index) => {
           const isActive = index === activeIndex;
@@ -74,13 +75,13 @@ export function Sectorals() {
             <button
               key={index}
               onClick={() => handleClick(index, sector.href)}
-              className={`flex  flex-col w-full text-center rounded-xl p-6 shadow-xl transition-all duration-300 ${isActive
-                  ? "bg-cyan-600 text-white"
-                  : "bg-white text-gray-800 hover:bg-[var(--bmkgcyan)]"
+              className={`flex flex-col w-full text-center rounded-xl p-6 shadow-xl transition-all duration-300 ${isActive
+                  ? "bg-[var(--bmkggreen1)] text-white"
+                  : "bg-white text-gray-700 hover:bg-[var(--bmkgblue5)]"
                 }`}
             >
               <sector.icon
-                className={`mx-auto mb-4 h-8 w-8 transition-colors ${isActive ? "text-white" : "text-cyan-600"
+                className={`mx-auto mb-4 h-8 w-8 transition-colors ${isActive ? "text-white" : "text-[var(--bmkggreen1)]"
                   }`}
               />
               <h3 className="font-semibold text-lg text-center">
@@ -96,6 +97,6 @@ export function Sectorals() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

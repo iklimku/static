@@ -54,7 +54,7 @@ export function Navbar() {
           className="xl:hidden text-muted-foreground"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Menu className="w-6 h-6 sticky top-0 z-100 bg-[var(--bmkggrey2)]" />
+          <Menu className="w-6 h-6 sticky top-0 z-100 text-[var(--bmkggreen1)]" />
         </button>
 
         {/* Desktop Navigation */}
@@ -90,7 +90,7 @@ export function Navbar() {
           <Accordion type="multiple" className="w-full">
             {datas.map((data) => (
               <AccordionItem key={data.title} value={data.title}>
-                <AccordionTrigger className="text-left text-cyan-700 font-semibold">
+                <AccordionTrigger className="text-left text-[var(--bmkggreen1)] font-semibold">
                   {data.title}
                 </AccordionTrigger>
                 <AccordionContent>

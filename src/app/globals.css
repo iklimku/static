@@ -19,8 +19,9 @@ body {
   --bmkggreen2: #8dc341;
   --bmkggreen3: #adec96;
   --bmkgyellow: #fac016;
-  --bmkggrey1: #e6e7e8;
-  --bmkggrey2: #9b9b9b;
+  --bmkggrey1: #9b9b9b;
+  --bmkggrey2: #e6e7e8;
+  --bmkggrey3: #f5f5f5;
   --bmkgwhite: #ffffff;
   --bmkgblack: #000000;
 }

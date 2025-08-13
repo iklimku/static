@@ -11,16 +11,17 @@ body {
 
 :root {
   --bmkgblue1: #182168;
-  --bmkgblue2: #1A499A;
-  --bmkgblue3: #4D99D3;
-  --bmkgblue4: #1A499A;
+  --bmkgblue2: #1a499a;
+  --bmkgblue3: #4d99d3;
+  --bmkgblue4: #1a499a;
   --bmkgblue5: #c1e3ff;
-  --bmkggreen1: #60A945;
-  --bmkggreen2: #8DC341;
+  --bmkggreen1: #60a945;
+  --bmkggreen2: #8dc341;
   --bmkggreen3: #adec96;
-  --bmkgyellow: #FAC016;
-  --bmkgwhite: #FFFFFF;
-  --bmkggrey: #E6E7E8;
+  --bmkgyellow: #fac016;
+  --bmkggrey1: #e6e7e8;
+  --bmkggrey2: #9b9b9b;
+  --bmkgwhite: #ffffff;
   --bmkgblack: #000000;
 }
 

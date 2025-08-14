@@ -141,6 +141,10 @@
       {
         "title": "Prediksi daerah Potensi Banjir",
         "href": "/prediksi-daerah-potensi-banjir/detail"
+      },
+      {
+        "title": "Prediksi Konsentrasi GRK",
+        "href": "/prediksi-konsentrasi-grk/detail"
       }
     ]
   },

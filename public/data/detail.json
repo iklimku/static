@@ -319,6 +319,15 @@
     "iframeUrl": null
   },
   {
+    "slug": "peringatan-dini-konsentrasi-partikulat",
+    "title": "Peringatan Dini Konsentrasi Partikulat (PM2,5)",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "Informasi peringatan dini konsentrasi partikulat (PM2,5).",
+    "tabs": null,
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/AQ-PRED/"
+  },
+  {
     "title": "Konsentrasi Partikulat (PM2,5)",
     "slug": "konsentrasi-partikulat",
     "imageUrl": "",
@@ -1132,6 +1141,15 @@
     "description": "",
     "tabs": null,
     "iframeUrl": null
+  },
+  {
+    "slug": "prediksi-konsentrasi-grk",
+    "title": "Prediksi Konsentrasi GRK",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "Informasi ini menyediakan prediksi konsentrasi CO₂, CH₄, N₂O, dan SF₆ untuk enam bulan ke depan. Prediksi ini berbasis model statistik dan observasi historis, guna membantu pengambilan keputusan strategis dalam pengelolaan emisi dan perencanaan adaptasi terhadap perubahan iklim.",
+    "tabs": null,
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/WEB-GRK/PRED/"
   },
   {
     "slug": "data-iklim-harian",

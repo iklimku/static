@@ -19,10 +19,6 @@
         "href": "/indeks-iklim-global/detail"
       },
       {
-        "title": "Catatan Iklim Ekstrem",
-        "href": "/catatan-iklim-ekstrem/detail"
-      },
-      {
         "title": "Indeks Ultraviolet",
         "href": "/indeks-ultraviolet/detail"
       },
@@ -48,10 +44,6 @@
     "title": "Analisis",
     "subMenu": [
       {
-        "title": "Dinamika Atmosfer dan Laut",
-        "href": "/dinamika-atmosfer-dan-laut/detail"
-      },
-      {
         "title": "Hujan Dasarian",
         "href": "/analisis-hujan-dasarian/detail"
       },
@@ -66,6 +58,14 @@
       {
         "title": "Ketersediaan Air bagi Tanaman",
         "href": "/ketersediaan-air-bagi-tanaman/detail"
+      },
+      {
+        "title": "Konsentrasi CO2",
+        "href": "/konsentrasi-co2/detail"
+      },
+      {
+        "title": "Dinamika Atmosfer dan Laut",
+        "href": "/dinamika-atmosfer-dan-laut/detail"
       }
     ]
   },
@@ -98,8 +98,8 @@
         "href": "/konsentrasi-partikulat/detail"
       },
       {
-        "title": "Karbon Dioksida (CO2)",
-        "href": "/karbon-dioksida/detail"
+        "title": "Konsentrasi GRK",
+        "href": "/konsentrasi-gas-rumah-kaca/detail"
       },
       {
         "title": "Karbon Monoksida (CO)",
@@ -110,13 +110,17 @@
         "href": "/sulfur-dioksida/detail"
       },
       {
+        "title": "Nitrogen Dioksida (NO2)",
+        "href": "/nitrogen-dioksida/detail"
+      },
+      {
         "title": "Ozon Permukaan (O3)",
         "href": "/ozon-permukaan/detail"
       }
     ]
   },
   {
-    "title": "Prediksi Iklim",
+    "title": "Prediksi",
     "subMenu": [
       {
         "title": "Prediksi Musim",

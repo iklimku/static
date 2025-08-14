@@ -47,12 +47,12 @@ export function MainCarousel() {
 
   return (
     // bagi dua layarnya
-    <div className="flex flex-col-reverse xl:flex-row w-full px-0 border border-black">
-      <div className="w-full text-center xl:w-1/3 border border-black">
-        <h2 className="text-lg font-bold">{ datas[current].alt }</h2>
+    <div className="flex flex-col-reverse xl:flex-row w-full px-0 border border-black bg-[var(--bmkgblue5)]">
+      <div className="w-full xl:w-1/2 border border-black flex flex-col justify-center">
+        <h1 className="text-lg font-bold">{ datas[current].alt }</h1>
         <p>{ datas[current].description }</p>
       </div>
-      <div className="w-full xl:w-2/3 border border-black">
+      <div className="w-full xl:w-1/2 border border-black">
         <Carousel
           plugins={[
             Autoplay({

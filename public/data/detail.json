@@ -148,6 +148,24 @@
     "iframeUrl": null
   },
   {
+    "slug": "pm25",
+    "title": "Partikulat PM 2,5",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": null,
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/TEMPORARY/dashboard_pm2p5.html"
+  },
+  {
+    "slug": "gas-rumah-kaca",
+    "title": "Gas Rumah Kaca",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": null,
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/WEB-GRK/OBS/"
+  },
+  {
     "slug": "monitoring-titik-panas",
     "title": "Monitoring Titik Panas",
     "imageUrl": "",
@@ -297,7 +315,8 @@
     "imageUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/Global_SSTA_latest.gif",
     "descriptionUrl": "",
     "description": "Informasi kondisi ENSO (EL Nino dan La Nina).",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "title": "Konsentrasi Partikulat (PM2,5)",
@@ -305,7 +324,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "Informasi konsentrasi partikulat (PM2,5).",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": "null"
   },
   {
     "title": "Karbon Dioksida (CO2)",
@@ -313,7 +333,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "Informasi karbon dioksida (CO2).",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "title": "Karbon Monoksida (CO)",
@@ -321,7 +342,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "Informasi karbon monoksida (CO).",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "title": "Sulfur Dioksida (SO2)",
@@ -329,7 +351,8 @@
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "Informasi sulfur dioksida (SO2).",
-    "tabs": null
+    "tabs": null,
+    "iframeUrl": null
   },
   {
     "title": "Ozon Permukaan (O3)",

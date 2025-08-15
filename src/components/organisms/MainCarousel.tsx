@@ -30,29 +30,31 @@ interface Data {
 
 export function MainCarousel() {
   const datas: Data[] = carouselData; // Gunakan data dari file JSON
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     if (!api) {
-      return
+      return;
     }
 
-    setCurrent(api.selectedScrollSnap())
+    setCurrent(api.selectedScrollSnap());
 
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap())
-    })
-  }, [api])
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   return (
     // bagi dua layarnya
-    <div className="flex flex-col-reverse xl:flex-row w-full px-0 border border-black bg-[var(--bmkgblue5)]">
-      <div className="w-full xl:w-1/2 border border-black flex flex-col justify-center">
-        <h1 className="text-lg font-bold">{ datas[current].alt }</h1>
-        <p>{ datas[current].description }</p>
+    <div className="container mx-auto flex flex-col-reverse xl:flex-row w-full px-0 py-8">
+      <div className="w-full xl:w-1/2 flex flex-col justify-center p-6 text-center md:text-start xl:text-start">
+        <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl mb-2 text-[var(--bmkggreen1)]">
+          {datas[current].alt}
+        </h1>
+        <p className="text-muted-foreground">{datas[current].description}</p>
       </div>
-      <div className="w-full xl:w-1/2 border border-black">
+      <div className="w-full xl:w-1/2">
         <Carousel
           plugins={[
             Autoplay({

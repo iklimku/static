@@ -5,6 +5,7 @@ import LogoBMKG from "@/../public/logo-bmkg.svg";
 import GooglePlay from "@/../public/google-play.png";
 import AppStore from "@/../public/app-store.png";
 import BerAkhlak from "@/../public/Logo_BerAKHLAK.png";
+import BerAkhlak2 from "@/../public/Logo_EVP.png";
 import Link from "next/link";
 
 export function Footer() {
@@ -14,8 +15,9 @@ export function Footer() {
         {/* Kolom 1: Logo dan Kontak */}
         <div className="justify-items-center text-center md:justify-items-start md:text-start">
           <div className="flex flex-col items-center gap-4 lg:flex-row bg-white p-4 rounded-lg w-fit mx-auto md:mx-0">
-            <Image src={LogoBMKG} alt="Logo BMKG" height={56} />
-            <Image src={BerAkhlak} alt="Logo BerAKHLAK" height={56} />
+            {/* <Image src={LogoBMKG} alt="Logo BMKG" height={56} /> */}
+            <Image src={BerAkhlak} alt="Logo BerAKHLAK" height={50} />
+            <Image src={BerAkhlak2} alt="Logo BerAKHLAK" height={46} />
           </div>
           <h5 className="font-bold mt-4 text-[var(--bmkgblue5)]">
             KONTAK KAMI

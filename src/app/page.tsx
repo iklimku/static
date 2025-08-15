@@ -5,7 +5,7 @@ import { Sectorals } from "@/components/organisms/Sectorals";
 export default function Home() {
   return (
     <>
-      <main className="container mx-auto ">
+      <main className="mx-auto">
         {/* Carousel */}
         <div className="w-auto h-auto mx-4">
           <MainCarousel />

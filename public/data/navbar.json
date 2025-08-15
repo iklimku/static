@@ -15,6 +15,10 @@
         "href": "/anomali-suhu-udara/daftar"
       },
       {
+        "title": "Catatan Iklim Ekstrem",
+        "href": "/catatan-iklim-ekstrem/detail"
+      },
+      {
         "title": "Indeks Iklim Global",
         "href": "/indeks-iklim-global/detail"
       },
@@ -86,17 +90,13 @@
       },
       {
         "title": "Peringatan Dini Konsentrasi Partikulat (PM2,5)",
-        "href": "/peringatan-dini-konsentrasi-particulat/detail"
+        "href": "/peringatan-dini-konsentrasi-partikulat/detail"
       }
     ]
   },
   {
     "title": "Prakiraan Kualitas Udara",
     "subMenu": [
-      {
-        "title": "Konsentrasi Partikulat (PM2,5)",
-        "href": "/konsentrasi-partikulat/detail"
-      },
       {
         "title": "Konsentrasi GRK",
         "href": "/konsentrasi-gas-rumah-kaca/detail"
@@ -141,11 +141,8 @@
       {
         "title": "Prediksi daerah Potensi Banjir",
         "href": "/prediksi-daerah-potensi-banjir/detail"
-      },
-      {
-        "title": "Prediksi Konsentrasi GRK",
-        "href": "/prediksi-konsentrasi-grk/detail"
       }
+    
     ]
   },
   {

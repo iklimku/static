@@ -184,24 +184,6 @@
     "iframeUrl": "https://cews.bmkg.go.id/tempatirk/HOTSPOT_ARCHIVED/"
   },
   {
-    "slug": "indeks-kualitas-air",
-    "title": "Indeks Kualitas Air",
-    "imageUrl": "",
-    "descriptionUrl": "",
-    "description": "",
-    "tabs": null,
-    "iframeUrl": null
-  },
-  {
-    "slug": "dinamika-atmosfer-dan-laut",
-    "title": "Dinamika Atmosfer dan Laut",
-    "imageUrl": "",
-    "descriptionUrl": "",
-    "description": "",
-    "tabs": null,
-    "iframeUrl": null
-  },
-  {
     "slug": "analisis-hujan-dasarian",
     "title": "Analisis Hujan Dasarian",
     "imageUrl": "",
@@ -283,8 +265,17 @@
     "iframeUrl": null
   },
   {
-    "slug": "buletin",
-    "title": "Buletin",
+    "title": "Analisis Konsentrasi CO2",
+    "slug": "konsentrasi-co2",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "Informasi konsentrasi CO2.",
+    "tabs": null,
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/WEB-GRK/SPATIAL"
+  },
+  {
+    "slug": "dinamika-atmosfer-dan-laut",
+    "title": "Dinamika Atmosfer dan Laut",
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",
@@ -328,50 +319,51 @@
     "iframeUrl": "https://cews.bmkg.go.id/tempatirk/AQ-PRED/"
   },
   {
-    "title": "Konsentrasi Partikulat (PM2,5)",
-    "slug": "konsentrasi-partikulat",
+    "slug": "konsentrasi-gas-rumah-kaca",
+    "title": "Prediksi Konsentrasi GRK",
     "imageUrl": "",
     "descriptionUrl": "",
-    "description": "Informasi konsentrasi partikulat (PM2,5).",
+    "description": "Informasi ini menyediakan prediksi konsentrasi CO₂, CH₄, N₂O, dan SF₆ untuk enam bulan ke depan. Prediksi ini berbasis model statistik dan observasi historis, guna membantu pengambilan keputusan strategis dalam pengelolaan emisi dan perencanaan adaptasi terhadap perubahan iklim.",
     "tabs": null,
-    "iframeUrl": "null"
-  },
-  {
-    "title": "Karbon Dioksida (CO2)",
-    "slug": "karbon-dioksida",
-    "imageUrl": "",
-    "descriptionUrl": "",
-    "description": "Informasi karbon dioksida (CO2).",
-    "tabs": null,
-    "iframeUrl": null
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/WEB-GRK/PRED/"
   },
   {
     "title": "Karbon Monoksida (CO)",
     "slug": "karbon-monoksida",
-    "imageUrl": "",
+    "imageUrl": "https://cews.bmkg.go.id/tempatirk/CAMS_CO/update_co.gif",
     "descriptionUrl": "",
-    "description": "Informasi karbon monoksida (CO).",
+    "description": "Sistem prediksi tingkat karbon monoksida, membantu memantau polutan udara berbahaya dari emisi kendaraan dan sumber industri.",
     "tabs": null,
     "iframeUrl": null
   },
   {
     "title": "Sulfur Dioksida (SO2)",
     "slug": "sulfur-dioksida",
-    "imageUrl": "",
+    "imageUrl": "https://cews.bmkg.go.id/tempatirk/CAMS_SO2/update_so2.gif",
     "descriptionUrl": "",
-    "description": "Informasi sulfur dioksida (SO2).",
+    "description": "Sistem prediksi SO2 yang memantau polutan dari sumber industri dan aktivitas vulkanik, penting untuk kesehatan pernapasan.",
+    "tabs": null,
+    "iframeUrl": null
+  },
+  {
+    "title": "Nitrogen Dioksida (NO2)",
+    "slug": "nitrogen-dioksida",
+    "imageUrl": "https://cews.bmkg.go.id/tempatirk/CAMS_NO2/update_no2.gif",
+    "descriptionUrl": "",
+    "description": "Pemantauan dan prediksi konsentrasi NO2, terutama dari emisi lalu lintas dan industri yang mempengaruhi kualitas udara perkotaan.",
     "tabs": null,
     "iframeUrl": null
   },
   {
     "title": "Ozon Permukaan (O3)",
     "slug": "ozon-permukaan",
-    "imageUrl": "",
+    "imageUrl": "https://cews.bmkg.go.id/tempatirk/CAMS_O3/update_o3.gif",
     "descriptionUrl": "",
-    "description": "Informasi ozon permukaan (O3).",
+    "description": "Sistem prediksi ozon permukaan, memantau polutan sekunder berbahaya yang terbentuk dari emisi kendaraan dan industri.",
     "tabs": null,
     "iframeUrl": null
   },
+
   {
     "slug": "prediksi-musim",
     "title": "Prediksi Musim",
@@ -1142,17 +1134,9 @@
     "tabs": null,
     "iframeUrl": null
   },
+
   {
-    "slug": "prediksi-konsentrasi-grk",
-    "title": "Prediksi Konsentrasi GRK",
-    "imageUrl": "",
-    "descriptionUrl": "",
-    "description": "Informasi ini menyediakan prediksi konsentrasi CO₂, CH₄, N₂O, dan SF₆ untuk enam bulan ke depan. Prediksi ini berbasis model statistik dan observasi historis, guna membantu pengambilan keputusan strategis dalam pengelolaan emisi dan perencanaan adaptasi terhadap perubahan iklim.",
-    "tabs": null,
-    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/WEB-GRK/PRED/"
-  },
-  {
-    "slug": "data-iklim-harian",
+    "slug": "fakta-perubahan-iklim",
     "title": "Fakta Perubahan Iklim",
     "imageUrl": "",
     "descriptionUrl": "",
@@ -1190,6 +1174,15 @@
   {
     "slug": "proyeksi-perubahan-curah-hujan",
     "title": "Proyeksi Perubahan Curah Hujan",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": null,
+    "iframeUrl": null
+  },
+  {
+    "slug": "warming-stripes",
+    "title": "Warming Stripes",
     "imageUrl": "",
     "descriptionUrl": "",
     "description": "",

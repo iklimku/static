@@ -142,7 +142,11 @@
         "title": "Prediksi daerah Potensi Banjir",
         "href": "/prediksi-daerah-potensi-banjir/detail"
       }
-    
+      ,
+       {
+         "title": "Prediksi Konsentrasi Gas Rumah Kaca",
+         "href": "/prediksi-konsentrasi-gas-rumah-kaca/detail"
+       }
     ]
   },
   {

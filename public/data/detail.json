@@ -314,7 +314,7 @@
     "title": "Peringatan Dini Konsentrasi Partikulat (PM2,5)",
     "imageUrl": "",
     "descriptionUrl": "",
-    "description": "Informasi peringatan dini konsentrasi partikulat (PM2,5).",
+    "description": "Informasi Peringatan Dini Kualitas Udara Ekstrem untuk wilayah Indonesia sampai tiga hari ke depan. Kondisi ektrem diartikan sebagai kualitas udara pada level “TIDAK SEHAT”, “SANGAT TIDAK SEHAT”, dan “BERBAHAYA” berdasarkan konsentrasi PM2.5. Level “TIDAK SEHAT”, “SANGAT TIDAK SEHAT”, dan “BERBAHAYA” berturut-turut disajikan dalam tabel dengan warna kuning, merah, dan hitam. Informasi ini diperbaharui setiap hari pada pukul 08:00 WIB.",
     "tabs": null,
     "iframeUrl": "https://cews.bmkg.go.id/tempatirk/AQ-PRED/"
   },
@@ -325,14 +325,14 @@
     "descriptionUrl": "",
     "description": "Informasi ini menyediakan prediksi konsentrasi CO₂, CH₄, N₂O, dan SF₆ untuk enam bulan ke depan. Prediksi ini berbasis model statistik dan observasi historis, guna membantu pengambilan keputusan strategis dalam pengelolaan emisi dan perencanaan adaptasi terhadap perubahan iklim.",
     "tabs": null,
-    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/WEB-GRK/PRED/"
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/WEB-GRK/PRED-DAY/"
   },
   {
     "title": "Karbon Monoksida (CO)",
     "slug": "karbon-monoksida",
     "imageUrl": "https://cews.bmkg.go.id/tempatirk/CAMS_CO/update_co.gif",
     "descriptionUrl": "",
-    "description": "Sistem prediksi tingkat karbon monoksida, membantu memantau polutan udara berbahaya dari emisi kendaraan dan sumber industri.",
+    "description": "Informasi prakiraan tingkat karbon monoksida untuk wilayah Indonesia sampai tiga hari ke depan, membantu memantau polutan udara berbahaya dari emisi kendaraan dan sumber industriInformasi ini diperbaharui setiap hari pada pukul 08:00 WIB.",
     "tabs": null,
     "iframeUrl": null
   },
@@ -341,7 +341,7 @@
     "slug": "sulfur-dioksida",
     "imageUrl": "https://cews.bmkg.go.id/tempatirk/CAMS_SO2/update_so2.gif",
     "descriptionUrl": "",
-    "description": "Sistem prediksi SO2 yang memantau polutan dari sumber industri dan aktivitas vulkanik, penting untuk kesehatan pernapasan.",
+    "description": "Informasi prakiraan tingkat sulfur dioksida wilayah Indonesia sampai tiga hari ke depan, untuk memantau polutan dari sumber industri dan aktivitas vulkanik, sehingga penting untuk kesehatan pernapasan. Informasi ini diperbaharui setiap hari pada pukul 08:00 WIB.",
     "tabs": null,
     "iframeUrl": null
   },
@@ -350,7 +350,7 @@
     "slug": "nitrogen-dioksida",
     "imageUrl": "https://cews.bmkg.go.id/tempatirk/CAMS_NO2/update_no2.gif",
     "descriptionUrl": "",
-    "description": "Pemantauan dan prediksi konsentrasi NO2, terutama dari emisi lalu lintas dan industri yang mempengaruhi kualitas udara perkotaan.",
+    "description": "Informasi prakiraan konsentrasi nitrogen dioksida wilayah Indonesia sampai tiga hari ke depan terutama dari emisi lalu lintas dan industri yang mempengaruhi kualitas udara perkotaan. Informasi ini diperbaharui setiap hari pada pukul 08:00 WIB.",
     "tabs": null,
     "iframeUrl": null
   },
@@ -359,11 +359,10 @@
     "slug": "ozon-permukaan",
     "imageUrl": "https://cews.bmkg.go.id/tempatirk/CAMS_O3/update_o3.gif",
     "descriptionUrl": "",
-    "description": "Sistem prediksi ozon permukaan, memantau polutan sekunder berbahaya yang terbentuk dari emisi kendaraan dan industri.",
+    "description": "Informasi prakiraan konsentrasi ozon permukaanwilayah Indonesia sampai tiga hari ke depan guna memantau polutan sekunder berbahaya yang terbentuk dari emisi kendaraan dan industri. Informasi ini diperbaharui setiap hari pada pukul 08:00 WIB.",
     "tabs": null,
     "iframeUrl": null
   },
-
   {
     "slug": "prediksi-musim",
     "title": "Prediksi Musim",
@@ -1133,6 +1132,15 @@
     "description": "",
     "tabs": null,
     "iframeUrl": null
+  },
+  {
+    "slug": "prediksi-konsentrasi-gas-rumah-kaca",
+    "title": "Prediksi Konsentrasi Gas Rumah Kaca",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": null,
+    "iframeUrl": "https://cews.bmkg.go.id/tempatirk/WEB-GRK/PRED/"
   },
 
   {

@@ -408,37 +408,37 @@
     "description": "",
     "tabs": [
       {
-        "title": "PCH Bulanan Deterministik Step 1",
+        "title": "PCH satu bulan ke depan",
         "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step1.png",
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step1.txt",
         "description": ""
       },
       {
-        "title": "PCH Bulanan Deterministik Step 2",
+        "title": "PCH dua bulan ke depan",
         "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step2.png",
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step2.txt",
         "description": ""
       },
       {
-        "title": "PCH Bulanan Deterministik Step 3",
+        "title": "PCH tiga bulan ke depan",
         "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step3.png",
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step3.txt",
         "description": ""
       },
       {
-        "title": "PCH Bulanan Deterministik Step 4",
+        "title": "PCH empat bulan ke depan",
         "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step4.png",
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step4.txt",
         "description": ""
       },
       {
-        "title": "PCH Bulanan Deterministik Step 5",
+        "title": "PCH lima bulan ke depan",
         "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step5.png",
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step5.txt",
         "description": ""
       },
       {
-        "title": "PCH Bulanan Deterministik Step 6",
+        "title": "PCH enam bulan ke depan",
         "imageUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_det_step6.png",
         "descriptionUrl": "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/PCH_BLN/pch_bln_narasi_step6.txt",
         "description": ""

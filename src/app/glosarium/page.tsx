@@ -39,8 +39,8 @@ export default function GlossaryPage() {
             }
             className={`px-3 py-1 rounded text-sm font-medium transition-colors duration-200 ${
               selectedLetter === letter
-                ? "bg-[var(--bmkggreen)] text-white"
-                : "bg-gray-200 text-gray-800 hover:bg-indigo-100"
+                ? "bg-[var(--bmkggreen1)] text-white"
+                : "bg-gray-200 text-gray-800 hover:bg-[var(--bmkggreen3)]"
             }`}
           >
             {letter}

@@ -71,7 +71,12 @@ export default function GalleryPage() {
           <Button
             key={category}
             onClick={() => handleCategoryChange(category)}
-            variant={activeCategory === category ? "default" : "outline"}
+            variant="outline"
+            className={
+              activeCategory === category
+                ? "bg-[var(--bmkggreen1)] text-white"
+                : "bg-gray-200 text-gray-800 hover:bg-[var(--bmkggreen3)]"
+            }
           >
             {category}
           </Button>

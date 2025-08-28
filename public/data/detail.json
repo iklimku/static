@@ -1144,6 +1144,34 @@
   },
 
   {
+    "slug": "prediksi-ketersediaan-air-bagi-tanaman",
+    "title": "Prediksi Ketersediaan Air Bagi Tanaman",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": [
+      {
+        "title": "Satu bulan Kedepan",
+        "imageUrl": "https://cews.bmkg.go.id/tempatikl/reports/sourcePredATi/PreATi_0.png",
+        "descriptionUrl": "",
+        "description": "Prediksi ketersediaan air bagi tanaman satu bulan ke depan."
+      },
+      {
+        "title": "Dua bulan kedepan",
+        "imageUrl": "https://cews.bmkg.go.id/tempatikl/reports/sourcePredATi/PreATi_1.png",
+        "descriptionUrl": "",
+        "description": "Prediksi ketersediaan air bagi tanaman dua bulan ke depan."
+      },
+      {
+        "title": "Tiga bulan kedepan",
+        "imageUrl": "https://cews.bmkg.go.id/tempatikl/reports/sourcePredATi/PreATi_2.png",
+        "descriptionUrl": "",
+        "description": "Prediksi ketersediaan air bagi tanaman dua bulan ke depan."
+      }
+    ],
+    "iframeUrl": null
+  },
+  {
     "slug": "fakta-perubahan-iklim",
     "title": "Fakta Perubahan Iklim",
     "imageUrl": "",

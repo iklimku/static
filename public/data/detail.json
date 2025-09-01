@@ -283,6 +283,24 @@
     "iframeUrl": null
   },
   {
+    "slug": "kimia-air-hujan",
+    "title": "Kimia Air Hujan",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": null,
+    "iframeUrl": "https://visklim.bmkg.go.id/views/pHAirHujan2/DashboardKAH?%3Adevice=desktop&%3Aembed=y&%3AisGuestRedirectFromVizportal=y"
+  },
+  {
+    "slug": "suspended-particulated-matter",
+    "title": "Suspended Particulated Matter (SPM)",
+    "imageUrl": "",
+    "descriptionUrl": "",
+    "description": "",
+    "tabs": null,
+    "iframeUrl": "https://visklim.bmkg.go.id/views/PartikulatSPM2/SPM?%3Adevice=desktop&%3Aembed=y&%3AisGuestRedirectFromVizportal=y"
+  },
+  {
     "slug": "peringatan-dini-kekeringan-meteorologis",
     "title": "Peringatan Dini Kekeringan Meteorologis",
     "imageUrl": "https://cews.bmkg.go.id/operational-early-warning-pdi/0_Latest/PDKM_latest.jpg",

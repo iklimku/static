@@ -68,8 +68,8 @@ export default async function DetailTabs(item: Item) {
                 key={tab.title}
                 value={`tab${i}`}
                 className="text-sm md:text-base whitespace-nowrap px-4 py-2 rounded-md transition-colors
-                  data-[state=active]:bg-cyan-600 data-[state=active]:text-white
-                  hover:bg-cyan-100"
+                  data-[state=active]:bg-[var(--bmkggreen1)] data-[state=active]:text-white
+                  hover:bg-[var(--bmkggreen2)]"
               >
                 {tab.title}
               </TabsTrigger>
@@ -107,7 +107,7 @@ export default async function DetailTabs(item: Item) {
                 defaultValue="item-1"
               >
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="px-10 text-center bg-cyan-500 text-white hover:bg-indigo-600 mt-8 mb-8">
+                  <AccordionTrigger className="px-10 text-center bg--[var(--bmkggreen1)] text-white hover:bg-indigo-600 mt-8 mb-8">
                     Deskripsi dan Analisis
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">

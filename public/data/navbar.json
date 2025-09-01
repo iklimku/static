@@ -70,6 +70,14 @@
       {
         "title": "Dinamika Atmosfer dan Laut",
         "href": "/dinamika-atmosfer-dan-laut/detail"
+      },
+      {
+        "title": "Kimia Air Hujan",
+        "href": "/kimia-air-hujan/detail"
+      },
+      {
+        "title": "Suspended Particulated Matter (SPM)",
+        "href": "/suspended-particulated-matter/detail"
       }
     ]
   },
@@ -141,16 +149,15 @@
       {
         "title": "Prediksi daerah Potensi Banjir",
         "href": "/prediksi-daerah-potensi-banjir/detail"
+      },
+      {
+        "title": "Prediksi Konsentrasi Gas Rumah Kaca",
+        "href": "/prediksi-konsentrasi-gas-rumah-kaca/detail"
+      },
+      {
+        "title": "Prediksi Ketersediaan Air Bagi Tanaman",
+        "href": "/prediksi-ketersediaan-air-bagi-tanaman/detail"
       }
-      ,
-       {
-         "title": "Prediksi Konsentrasi Gas Rumah Kaca",
-         "href": "/prediksi-konsentrasi-gas-rumah-kaca/detail"
-       },
-        {
-          "title": "Prediksi Ketersediaan Air Bagi Tanaman",
-          "href": "/prediksi-ketersediaan-air-bagi-tanaman/detail"
-        }
     ]
   },
   {

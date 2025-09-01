@@ -68,13 +68,11 @@ export default async function DetailWithoutTabs(item: Item) {
                 defaultValue="item-1"
               >
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="px-10 text-center bg-cyan-500 text-white hover:bg-indigo-600 mt-8 mb-8">
+                  <AccordionTrigger className="px-10 text-center bg-[var(--bmkggreen1)] text-white hover:bg-indigo-600 mt-8 mb-8">
                     Deskripsi dan Analisis
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-justify text-gray-700">
-                    <div
-                      dangerouslySetInnerHTML={{ __html: description }}
-                    />
+                    <div dangerouslySetInnerHTML={{ __html: description }} />
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

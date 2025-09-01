@@ -22,47 +22,47 @@ const tabsData: {
   href: string;
   icon: LucideIcon;
 }[] = [
-    {
-      image:
-        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
-      title: "Pertanian dan Kehutanan",
-      description: "Informasi iklim untuk sektor pertanian dan kehutanan.",
-      href: "pertanian/daftar",
-      icon: Leaf,
-    },
-    {
-      image:
-        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.png",
-      title: "Sumber Daya Air & Bencana",
-      description: "Informasi iklim untuk sektor sumber daya air dan bencana.",
-      href: "air-bencana/daftar",
-      icon: Waves,
-    },
-    {
-      image:
-        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
-      title: "Kesehatan",
-      description: "Informasi iklim untuk sektor kesehatan.",
-      href: "kesehatan/daftar",
-      icon: HeartPulse,
-    },
-    {
-      image:
-        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
-      title: "Energi",
-      description: "Informasi iklim untuk sektor energi.",
-      href: "energi/daftar",
-      icon: Sun,
-    },
-    {
-      image:
-        "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi6.png",
-      title: "Perencanaan & Pembangunan",
-      description: "Informasi iklim untuk sektor pembangunan dan tata ruang.",
-      href: "pembangunan/daftar",
-      icon: Building2,
-    },
-  ];
+  {
+    image:
+      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ach_bln.png",
+    title: "Pertanian dan Kehutanan",
+    description: "Informasi iklim untuk sektor pertanian dan kehutanan.",
+    href: "pertanian/daftar",
+    icon: Leaf,
+  },
+  {
+    image:
+      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ACH_BLN/ash_bln.png",
+    title: "Sumber Daya Air & Bencana",
+    description: "Informasi iklim untuk sektor sumber daya air dan bencana.",
+    href: "air-bencana/daftar",
+    icon: Waves,
+  },
+  {
+    image:
+      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/MUSIM/permus_poster.png",
+    title: "Kesehatan",
+    description: "Informasi iklim untuk sektor kesehatan.",
+    href: "kesehatan/daftar",
+    icon: HeartPulse,
+  },
+  {
+    image:
+      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi1.png",
+    title: "Energi",
+    description: "Informasi iklim untuk sektor energi.",
+    href: "energi/daftar",
+    icon: Sun,
+  },
+  {
+    image:
+      "https://cews.bmkg.go.id/robiganstatic/PRODUK_UPDATE/ANSPI/anspi6.png",
+    title: "Perencanaan & Pembangunan",
+    description: "Informasi iklim untuk sektor pembangunan dan tata ruang.",
+    href: "pembangunan/daftar",
+    icon: Building2,
+  },
+];
 
 export function MainTabs() {
   return (
@@ -75,15 +75,13 @@ export function MainTabs() {
               key={tab.href}
               value={`tab${i}`}
               className="text-sm md:text-base whitespace-nowrap px-4 py-2 rounded-md transition-colors
-            data-[state=active]:bg-cyan-600 data-[state=active]:text-white
-            hover:bg-cyan-100 "
+            data-[state=active]:bg-[var(--bmkggreen1)] data-[state=active]:text-white
+            hover:bg-[var(--bmkggreen1)]"
             >
               <span className="lg:hidden">
                 <tab.icon />
               </span>
-              <span className="hidden lg:inline">
-                {tab.title}
-              </span>
+              <span className="hidden lg:inline">{tab.title}</span>
             </TabsTrigger>
           ))}
         </TabsList>
@@ -117,7 +115,7 @@ export function MainTabs() {
             <p className="text-gray-600 mb-4">{tab.description}</p>
             <Link
               href={tab.href}
-              className="inline-block bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 transition"
+              className="inline-block bg-[var(--bmkggreen1)] text-white px-4 py-2 rounded hover:bg-[var(--bmkggreen2)] transition"
             >
               Selengkapnya →
             </Link>

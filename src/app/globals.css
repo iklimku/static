@@ -146,3 +146,11 @@ body {
     color: var(--color-foreground);
   }
 }
+
+.text-base {
+  font-size: 12px;
+}
+
+.text-base-list {
+  font-size: 10px;
+}

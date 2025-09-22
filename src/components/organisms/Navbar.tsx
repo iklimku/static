@@ -63,10 +63,10 @@ export function Navbar() {
             <NavigationMenuList>
               {datas.map((data) => (
                 <NavigationMenuItem key={data.title}>
-                  <NavigationMenuTrigger className="font-normal hover:text-[var(--bmkggreen1)] hover:font-semibold p-1">
+                  <NavigationMenuTrigger className="text-[12px] font-normal hover:text-[var(--bmkggreen1)] hover:font-semibold p-1">
                     {data.title}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[900px] border shadow-lg bg-white rounded-md z-50 ">
+                  <NavigationMenuContent className="p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[800px] border shadow-lg bg-white rounded-md z-50 ">
                     <ul className="grid gap-2 md:grid-cols-4">
                       {data.subMenu.map((item) => (
                         <ListItem
@@ -90,7 +90,7 @@ export function Navbar() {
           <Accordion type="multiple" className="w-full">
             {datas.map((data) => (
               <AccordionItem key={data.title} value={data.title}>
-                <AccordionTrigger className="text-left text-[var(--bmkggreen1)] font-semibold">
+                <AccordionTrigger className="text-left text-[var(--bmkggreen1)] font-semibold text-[12px]">
                   {data.title}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -102,7 +102,7 @@ export function Navbar() {
                           className="block px-4 py-2 hover:bg-[var(--bmkggreen3)] rounded-md transition"
                           onClick={() => setIsOpen(false)}
                         >
-                          <div className="text-sm font-semibold">
+                          <div className="text-[10px] font-semibold">
                             {item.title}
                           </div>
                         </Link>
@@ -132,7 +132,7 @@ function ListItem({
           href={href}
           className="block px-3 py-2 rounded-md transition-colors duration-200 hover:bg-[var(--bmkggreen3)] hover:font-semibold"
         >
-          <div className="text-sm">{title}</div>
+          <div className="text-[10px]">{title}</div>
           <p className="text-xs text-muted-foreground">{children}</p>
         </Link>
       </NavigationMenuLink>

@@ -164,6 +164,10 @@
     "title": "Perubahan Iklim",
     "subMenu": [
       {
+        "title": "Warming Stripes",
+        "href": "/warming-stripes/detail"
+      },
+      {
         "title": "Fakta Perubahan Iklim",
         "href": "/fakta-perubahan-iklim/detail"
       },
@@ -182,10 +186,6 @@
       {
         "title": "Proyeksi Perubahan Curah Hujan",
         "href": "/proyeksi-perubahan-curah-hujan/detail"
-      },
-      {
-        "title": "Warming Stripes",
-        "href": "/warming-stripes/detail"
       }
     ]
   },

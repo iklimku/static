@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useState, useEffect } from "react";
+import { Suspense } from "react";
 import Loading from "@/components/organisms/Loading";
 import Image from "next/image";
 import {
@@ -12,61 +12,23 @@ import {
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
-interface Tab {
-  title: string;
-  imageUrl: string;
-  descriptionUrl: string | null;
-  description: string;
-}
-
 interface Item {
-  slug: string;
   title: string;
   imageUrl: string;
-  descriptionUrl: string;
   description: string;
-  tabs: Tab[] | null;
 }
 
-export default function DetailWithoutTabs(item: Item) {
-  const [description, setDescription] = useState(item.description);
-
-  useEffect(() => {
-    const fetchDescription = async () => {
-      if (item.descriptionUrl) {
-        try {
-          const res = await fetch(item.descriptionUrl, {
-            headers: {
-              "Cache-Control": "no-cache",
-              Pragma: "no-cache",
-            },
-            next: { revalidate: 3600 },
-          });
-          if (!res.ok) throw new Error("Failed to fetch");
-          let text = await res.text();
-
-          // replace ; to <br/>
-          text = text.replace(/;/g, ".<br/>");
-          // replace enter to <br/>
-          text = text.replace(/\n/g, "<br/>");
-
-          setDescription(text);
-        } catch (error) {
-          console.error("Error fetching description:", error);
-          setDescription(item.description || "Deskripsi tidak tersedia.");
-        }
-      }
-    };
-
-    fetchDescription();
-  }, [item.descriptionUrl, item.description]);
-
-  const isAnimatedGif = item.imageUrl.endsWith(".gif");
+export default function DetailWithoutTabs({
+  title,
+  imageUrl,
+  description,
+}: Item) {
+  const isAnimatedGif = imageUrl.endsWith(".gif");
   return (
     <>
       <main className="container mx-auto px-4 mt-20 mb-20">
         <h2 className="text-3xl font-bold text-center text-gray-800">
-          {item.title}
+          {title}
         </h2>
 
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -76,8 +38,8 @@ export default function DetailWithoutTabs(item: Item) {
                 <Zoom>
                   <div className="w-full h-auto">
                     <Image
-                      src={item.imageUrl}
-                      alt={item.title}
+                      src={imageUrl}
+                      alt={title}
                       width={1920}
                       height={1080}
                       className="w-full h-auto object-cover rounded-md"
@@ -90,7 +52,7 @@ export default function DetailWithoutTabs(item: Item) {
               </Suspense>
             </div>
 
-            {(item.description || item.descriptionUrl) && (
+            {description && (
               <Accordion
                 type="single"
                 collapsible

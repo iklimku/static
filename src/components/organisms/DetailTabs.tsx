@@ -17,94 +17,27 @@ import Image from "next/image";
 interface Tab {
   title: string;
   imageUrl: string;
-  descriptionUrl: string;
   description: string;
+  descriptionUrl?: string;
 }
 
-interface Item {
-  slug: string;
+interface Props {
   title: string;
-  imageUrl: string;
-  descriptionUrl: string | null;
-  description: string;
-  tabs: Tab[] | null;
+  tabs: Tab[];
 }
 
-export default function DetailTabs(item: Item) {
-  const [resolvedTabs, setResolvedTabs] = useState<Tab[]>([]);
-
-  useEffect(() => {
-    // Initialize with the existing tabs data
-    const initialTabs =
-      item.tabs?.map((tab) => ({
-        ...tab,
-        description: tab.description || "Loading...",
-      })) || [];
-    setResolvedTabs(initialTabs);
-
-    // Then fetch additional descriptions if needed
-    const fetchDescriptions = async () => {
-      try {
-        const updatedTabs = await Promise.all(
-          (item.tabs ?? []).map(async (tab) => {
-            if (!tab.descriptionUrl) {
-              return tab;
-            }
-
-            try {
-              const res = await fetch(tab.descriptionUrl, {
-                headers: {
-                  "Cache-Control": "no-cache",
-                  Pragma: "no-cache",
-                },
-                next: { revalidate: 3600 }, // Revalidate every hour
-              });
-
-              if (!res.ok) throw new Error("Failed to fetch");
-
-              let description = await res.text();
-              description = description
-                .replace(/;/g, ".<br/>")
-                .replace(/\n/g, "<br/>");
-
-              return { ...tab, description };
-            } catch (error) {
-              console.error(
-                `Error fetching description for ${tab.title}:`,
-                error
-              );
-              return {
-                ...tab,
-                description: tab.description || "Deskripsi tidak tersedia.",
-              };
-            }
-          })
-        );
-
-        setResolvedTabs(updatedTabs);
-      } catch (error) {
-        console.error("Error fetching descriptions:", error);
-      }
-    };
-
-    if (item.tabs?.some((tab) => tab.descriptionUrl)) {
-      fetchDescriptions();
-    }
-  }, [item.tabs]);
-
-  const isAnimatedGif = item.imageUrl.endsWith(".gif");
+export default function DetailTabs({ title, tabs }: Props) {
+  const isAnimatedGif = tabs.some((tab) => tab.imageUrl.endsWith(".gif"));
 
   return (
     <main className="container mx-auto px-4 mt-20 mb-20">
-      <h2 className="text-3xl font-bold text-center text-gray-800">
-        {item.title}
-      </h2>
+      <h2 className="text-3xl font-bold text-center text-gray-800">{title}</h2>
 
       <Tabs defaultValue="tab0" className="w-full max-w-screen-xl mx-auto mt-6">
         {/* Tab Triggers */}
         <div className="flex justify-center">
           <TabsList className="flex flex-wrap justify-center bg-gray-50 shadow-md rounded-lg p-1 gap-2 w-full h-full">
-            {resolvedTabs.map((tab, i) => (
+            {tabs.map((tab, i) => (
               <TabsTrigger
                 key={tab.title}
                 value={`tab${i}`}
@@ -119,7 +52,7 @@ export default function DetailTabs(item: Item) {
         </div>
 
         {/* Tab Contents */}
-        {resolvedTabs.map((tab, i) => (
+        {tabs.map((tab, i) => (
           <TabsContent
             key={tab.title}
             value={`tab${i}`}

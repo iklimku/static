@@ -73,11 +73,55 @@ export default async function DetailPage({ params }: Props) {
     );
   }
 
+  // Fetch main description if URL is provided
+  if (item.descriptionUrl) {
+    try {
+      const res = await fetch(item.descriptionUrl, {
+        next: { revalidate: 3600 }, // Cache for 1 hour
+      });
+      if (res.ok) {
+        const text = await res.text();
+        item.description = text.replace(/;/g, ".<br/>").replace(/\n/g, "<br/>");
+      }
+    } catch (error) {
+      console.error("Error fetching description:", error);
+    }
+  }
+
+  // Fetch descriptions for tabs if needed
+  if (item.tabs && item.tabs.length > 0) {
+    const resolvedTabs = await Promise.all(
+      item.tabs.map(async (tab) => {
+        if (!tab.descriptionUrl) {
+          return tab;
+        }
+        try {
+          const res = await fetch(tab.descriptionUrl, {
+            next: { revalidate: 3600 }, // Cache for 1 hour
+          });
+          if (!res.ok) throw new Error("Failed to fetch");
+          let description = await res.text();
+          description = description
+            .replace(/;/g, ".<br/>")
+            .replace(/\n/g, "<br/>");
+          return { ...tab, description };
+        } catch (error) {
+          console.error(`Error fetching description for ${tab.title}:`, error);
+          return {
+            ...tab,
+            description: tab.description || "Deskripsi tidak tersedia.",
+          };
+        }
+      })
+    );
+    item.tabs = resolvedTabs;
+  }
+
   // --- LOGIKA RENDER KONTEN ---
   if (item.iframeUrl) {
     return <DetailIframe {...item} />;
   } else if (item.tabs && item.tabs.length > 0) {
-    return <DetailTabs {...item} />;
+    return <DetailTabs title={item.title} tabs={item.tabs} />;
   } else {
     return <DetailWithoutTabs {...item} />;
   }

@@ -1,4 +1,6 @@
-import { Suspense } from "react";
+"use client";
+
+import { Suspense, useState, useEffect } from "react";
 import Loading from "@/components/organisms/Loading";
 import Image from "next/image";
 import {
@@ -7,6 +9,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 interface Tab {
   title: string;
@@ -24,19 +28,39 @@ interface Item {
   tabs: Tab[] | null;
 }
 
-export default async function DetailWithoutTabs(item: Item) {
-  // get descripsi from descripsiUlr (.txt) convert to string
-  let description = item.description;
-  if (item.descriptionUrl != "") {
-    const res = await fetch(item.descriptionUrl);
-    description = await res.text();
+export default function DetailWithoutTabs(item: Item) {
+  const [description, setDescription] = useState(item.description);
 
-    // replace ; to <br/>
-    description = description.replace(/;/g, ".<br/>");
+  useEffect(() => {
+    const fetchDescription = async () => {
+      if (item.descriptionUrl) {
+        try {
+          const res = await fetch(item.descriptionUrl, {
+            headers: {
+              "Cache-Control": "no-cache",
+              Pragma: "no-cache",
+            },
+            next: { revalidate: 3600 },
+          });
+          if (!res.ok) throw new Error("Failed to fetch");
+          let text = await res.text();
 
-    // replace enter to <br/>
-    description = description.replace(/\n/g, "<br/>");
-  }
+          // replace ; to <br/>
+          text = text.replace(/;/g, ".<br/>");
+          // replace enter to <br/>
+          text = text.replace(/\n/g, "<br/>");
+
+          setDescription(text);
+        } catch (error) {
+          console.error("Error fetching description:", error);
+          setDescription(item.description || "Deskripsi tidak tersedia.");
+        }
+      }
+    };
+
+    fetchDescription();
+  }, [item.descriptionUrl, item.description]);
+
   const isAnimatedGif = item.imageUrl.endsWith(".gif");
   return (
     <>
@@ -49,14 +73,20 @@ export default async function DetailWithoutTabs(item: Item) {
           <div className="p-6">
             <div className="mb-6">
               <Suspense fallback={<Loading />}>
-                <Image
-                  src={item.imageUrl}
-                  alt={item.title}
-                  width={800}
-                  height={400}
-                  className="w-full h-auto object-cover rounded-md pointer-events-none"
-                  {...(isAnimatedGif && { unoptimized: true })}
-                />
+                <Zoom>
+                  <div className="w-full h-auto">
+                    <Image
+                      src={item.imageUrl}
+                      alt={item.title}
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto object-cover rounded-md"
+                      sizes="100vw"
+                      priority
+                      {...(isAnimatedGif && { unoptimized: true })}
+                    />
+                  </div>
+                </Zoom>
               </Suspense>
             </div>
 

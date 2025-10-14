@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import BMKGTimeBar from "@/components/organisms/BMKGTimeBar";
 import Navbar from "@/components/organisms/Navbar";
 import Footer from "@/components/organisms/Footer";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal"],
-  display: "swap",
-  fallback: ["system-ui", "arial"],
+const poppins = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Poppins/Poppins-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Poppins/Poppins-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-poppins",
 });
 
@@ -26,10 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} antialiased`}
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} antialiased`}>
         <BMKGTimeBar />
         <Navbar />
         {children}

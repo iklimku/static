@@ -5,11 +5,13 @@ import BMKGTimeBar from "@/components/organisms/BMKGTimeBar";
 import Navbar from "@/components/organisms/Navbar";
 import Footer from "@/components/organisms/Footer";
 
-
 const poppins = Poppins({
-  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "700"],
+  style: ["normal"],
+  display: "swap",
+  fallback: ["system-ui", "arial"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {

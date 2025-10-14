@@ -1,4 +1,6 @@
-import { Suspense } from "react";
+"use client";
+
+import { Suspense, useState, useEffect } from "react";
 import Loading from "@/components/organisms/Loading";
 import {
   Accordion,
@@ -6,6 +8,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
@@ -26,30 +30,67 @@ interface Item {
   tabs: Tab[] | null;
 }
 
-export default async function DetailTabs(item: Item) {
-  // Ambil semua deskripsi dulu
-  const resolvedTabs = await Promise.all(
-    (item.tabs ?? []).map(async (tab) => {
-      let description = tab.description;
-      if (tab.descriptionUrl) {
-        try {
-          const res = await fetch(tab.descriptionUrl);
-          if (!res.ok) throw new Error("Gagal fetch");
-          description = await res.text();
+export default function DetailTabs(item: Item) {
+  const [resolvedTabs, setResolvedTabs] = useState<Tab[]>([]);
 
-          // replace ; to <br/>
-          description = description.replace(/;/g, ".<br/>");
+  useEffect(() => {
+    // Initialize with the existing tabs data
+    const initialTabs =
+      item.tabs?.map((tab) => ({
+        ...tab,
+        description: tab.description || "Loading...",
+      })) || [];
+    setResolvedTabs(initialTabs);
 
-          // replace enter to <br/>
-          description = description.replace(/\n/g, "<br/>");
-        } catch (error) {
-          description = "Deskripsi tidak tersedia.";
-          console.error(error);
-        }
+    // Then fetch additional descriptions if needed
+    const fetchDescriptions = async () => {
+      try {
+        const updatedTabs = await Promise.all(
+          (item.tabs ?? []).map(async (tab) => {
+            if (!tab.descriptionUrl) {
+              return tab;
+            }
+
+            try {
+              const res = await fetch(tab.descriptionUrl, {
+                headers: {
+                  "Cache-Control": "no-cache",
+                  Pragma: "no-cache",
+                },
+                next: { revalidate: 3600 }, // Revalidate every hour
+              });
+
+              if (!res.ok) throw new Error("Failed to fetch");
+
+              let description = await res.text();
+              description = description
+                .replace(/;/g, ".<br/>")
+                .replace(/\n/g, "<br/>");
+
+              return { ...tab, description };
+            } catch (error) {
+              console.error(
+                `Error fetching description for ${tab.title}:`,
+                error
+              );
+              return {
+                ...tab,
+                description: tab.description || "Deskripsi tidak tersedia.",
+              };
+            }
+          })
+        );
+
+        setResolvedTabs(updatedTabs);
+      } catch (error) {
+        console.error("Error fetching descriptions:", error);
       }
-      return { ...tab, description };
-    })
-  );
+    };
+
+    if (item.tabs?.some((tab) => tab.descriptionUrl)) {
+      fetchDescriptions();
+    }
+  }, [item.tabs]);
 
   const isAnimatedGif = item.imageUrl.endsWith(".gif");
 
@@ -86,16 +127,20 @@ export default async function DetailTabs(item: Item) {
           >
             <div className="w-full">
               <Suspense fallback={<Loading />}>
-                <Image
-                  src={tab.imageUrl}
-                  alt={tab.title}
-                  width={1920}
-                  height={1080}
-                  className="w-full h-auto rounded-lg pointer-events-none"
-                  sizes="100vw"
-                  priority
-                  {...(isAnimatedGif && { unoptimized: true })}
-                />
+                <Zoom>
+                  <div className="w-full h-auto">
+                    <Image
+                      src={tab.imageUrl}
+                      alt={tab.title}
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto rounded-lg"
+                      sizes="100vw"
+                      priority
+                      {...(isAnimatedGif && { unoptimized: true })}
+                    />
+                  </div>
+                </Zoom>
               </Suspense>
             </div>
 

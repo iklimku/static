@@ -40,28 +40,48 @@ export function Footer() {
           <h5 className="font-bold mb-2 text-[var(--bmkgblue5)]">DUKUNGAN</h5>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link className="hover:font-bold" href="/pertanian/daftar">
-                Pertanian dan Kehutanan
+              <Link
+                className="hover:font-bold"
+                href="https://bmkg.go.id/"
+                target="_blank"
+              >
+                Website utama BMKG
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/air-bencana/daftar">
-                Sumber Daya Air dan Bencana
+              <Link
+                className="hover:font-bold"
+                href="https://cews.bmkg.go.id/"
+                target="_blank"
+              >
+                Climate Early Warning System (CEWS)
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/kesehatan/daftar">
-                Kesehatan
+              <Link
+                className="hover:font-bold"
+                href="https://iklim.bmkg.go.id/"
+                target="_blank"
+              >
+                Klimatologi BMKG
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/energi/daftar">
-                Energi
+              <Link
+                className="hover:font-bold"
+                href="https://inatews.bmkg.go.id/"
+                target="_blank"
+              >
+                InaTEWS
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/pembangunan/daftar">
-                Perencanaan dan Pembangunan
+              <Link
+                className="hover:font-bold"
+                href="https://wmo.int/"
+                target="_blank"
+              >
+                World Meteorological Organization (WMO)
               </Link>
             </li>
           </ul>
@@ -72,28 +92,39 @@ export function Footer() {
           <h5 className="font-bold mb-2 text-[var(--bmkgblue5)]">TAUTAN</h5>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link className="hover:font-bold" href="/pertanian/daftar">
-                Pertanian dan Kehutanan
+              <Link
+                className="hover:font-bold"
+                href="https://dataonline.bmkg.go.id/dataonline-home"
+                target="_blank"
+              >
+                Data Online BMKG
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/air-bencana/daftar">
-                Sumber Daya Air dan Bencana
+              <Link
+                className="hover:font-bold"
+                href="https://ppid.bmkg.go.id/"
+                target="_blank"
+              >
+                PPID BMKG
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/kesehatan/daftar">
-                Kesehatan
+              <Link
+                className="hover:font-bold"
+                href="https://ptsp.bmkg.go.id/"
+                target="_blank"
+              >
+                PTSP BMKG
               </Link>
             </li>
             <li>
-              <Link className="hover:font-bold" href="/energi/daftar">
-                Energi
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:font-bold" href="/pembangunan/daftar">
-                Perencanaan dan Pembangunan
+              <Link
+                className="hover:font-bold"
+                href="https://jdih.bmkg.go.id/"
+                target="_blank"
+              >
+                JDIH BMKG
               </Link>
             </li>
           </ul>

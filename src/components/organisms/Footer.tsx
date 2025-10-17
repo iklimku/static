@@ -38,7 +38,7 @@ export function Footer() {
         {/* Kolom 2: Dukungan */}
         <div className="justify-items-center text-center md:justify-items-start md:text-start">
           <h5 className="font-bold mb-2 text-[var(--bmkgblue5)]">DUKUNGAN</h5>
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-1 text-sm list-disc pl-4">
             <li>
               <Link
                 className="hover:font-bold"
@@ -51,28 +51,39 @@ export function Footer() {
             <li>
               <Link
                 className="hover:font-bold"
-                href="https://cews.bmkg.go.id/"
+                href="https://iklim.bmkg.go.id/"
                 target="_blank"
               >
                 Climate Early Warning System (CEWS)
               </Link>
             </li>
+
             <li>
               <Link
                 className="hover:font-bold"
-                href="https://iklim.bmkg.go.id/"
+                href="https://sih3.bmkg.go.id/main/"
                 target="_blank"
               >
-                Klimatologi BMKG
+                Sistem Informasi Hidrologi Hidrometeorologi Hidrogeologi (SIH3)
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className="hover:font-bold"
+                href="https://mhews.bmkg.go.id/"
+                target="_blank"
+              >
+                Multi Hazard Early Warning System
               </Link>
             </li>
             <li>
               <Link
                 className="hover:font-bold"
-                href="https://inatews.bmkg.go.id/"
+                href="https://hidromet-sih3.bmkg.go.id/main/"
                 target="_blank"
               >
-                InaTEWS
+                Hidrometeorologi BMKG
               </Link>
             </li>
             <li>
@@ -90,7 +101,7 @@ export function Footer() {
         {/* Kolom 3: Tautan */}
         <div className="justify-items-center text-center md:justify-items-start md:text-start">
           <h5 className="font-bold mb-2 text-[var(--bmkgblue5)]">TAUTAN</h5>
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-1 text-sm list-disc pl-4">
             <li>
               <Link
                 className="hover:font-bold"
@@ -106,7 +117,7 @@ export function Footer() {
                 href="https://ppid.bmkg.go.id/"
                 target="_blank"
               >
-                PPID BMKG
+                Pejabat Pengelola Informasi dan Dokumentasi (PPID) BMKG
               </Link>
             </li>
             <li>
@@ -115,7 +126,7 @@ export function Footer() {
                 href="https://ptsp.bmkg.go.id/"
                 target="_blank"
               >
-                PTSP BMKG
+                Pelayanan Terpadu Satu Pintu (PTSP) BMKG
               </Link>
             </li>
             <li>
@@ -124,16 +135,7 @@ export function Footer() {
                 href="https://jdih.bmkg.go.id/"
                 target="_blank"
               >
-                JDIH BMKG
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:font-bold"
-                href="https://portal.bmkg.go.id/"
-                target="_blank"
-              >
-                SSO BMKG
+                Jaringan Dokumentasi dan Informasi Hukum (JDIH) BMKG
               </Link>
             </li>
           </ul>

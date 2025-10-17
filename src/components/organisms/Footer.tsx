@@ -127,6 +127,15 @@ export function Footer() {
                 JDIH BMKG
               </Link>
             </li>
+            <li></li>
+              <Link
+                className="hover:font-bold"
+                href="https://portal.bmkg.go.id/"
+                target="_blank"
+              >
+                SSO BMKG
+              </Link>
+            </li>
           </ul>
         </div>
 

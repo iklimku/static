@@ -74,7 +74,7 @@ export function Footer() {
                 href="https://mhews.bmkg.go.id/"
                 target="_blank"
               >
-                Multi Hazard Early Warning System
+                Multi Hazard Early Warning System (MHEWS)
               </Link>
             </li>
             <li>

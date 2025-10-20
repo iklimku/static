@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import LogoBMKG from "@/../public/logo-bmkg.svg";
+// import LogoBMKG from "@/../public/logo-bmkg.svg";
 import GooglePlay from "@/../public/google-play.png";
 import AppStore from "@/../public/app-store.png";
 import BerAkhlak from "@/../public/Logo_BerAKHLAK.png";

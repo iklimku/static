@@ -93,7 +93,7 @@ export function NavbarTransparent() {
                   <NavigationMenuTrigger
                     className={`text-[12px] font-normal p-1 transition-colors duration-300 ${
                       scrolled
-                        ? "text-white hover:text-yellow-200"
+                        ? "text-white hover:text-[var(--bmkggreen3)]"
                         : "text-black hover:text-[var(--bmkggreen1)]"
                     }`}
                   >
@@ -101,10 +101,18 @@ export function NavbarTransparent() {
                   </NavigationMenuTrigger>
 
                   {/* 🔸 Perbaikan di sini: submenu ikut menyesuaikan warna background */}
-                  <NavigationMenuContent
+                  {/* <NavigationMenuContent
                     className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[800px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
                       scrolled
                         ? "bg-[var(--bmkgblue1)] text-white border-blue-200"
+                        : "bg-white/95 text-gray-800 border-gray-200"
+                    }`}
+                  > */}
+
+                  <NavigationMenuContent
+                    className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[800px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
+                      scrolled
+                        ? "bg-white/95 text-gray-800 border-gray-200"
                         : "bg-white/95 text-gray-800 border-gray-200"
                     }`}
                   >
@@ -183,7 +191,7 @@ function ListItem({
           href={href}
           className={`block px-3 py-2 rounded-md transition-colors duration-200 ${
             scrolled
-              ? "hover:bg-blue-700/50 hover:text-yellow-200"
+              ? "hover:bg-[var(--bmkggreen3)] hover:text-black"
               : "hover:bg-[var(--bmkggreen3)] hover:text-black"
           }`}
         >

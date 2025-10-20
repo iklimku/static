@@ -48,7 +48,7 @@ export function MainCarousel() {
   return (
     // bagi dua layarnya
     <div className="container flex flex-col-reverse xl:flex-row w-full px-0 py-0">
-      <div className=" w-full xl:w-2/3 flex flex-col justify-center px-6 text-center md:text-start xl:text-start">
+      <div className="container w-full xl:w-2/3 flex flex-col justify-center px-6 text-center md:text-start xl:text-start">
         <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl mb-2 text-[var(--bmkggreen1)]">
           {datas[current].alt}
         </h1>

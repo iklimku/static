@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <main className="mx-auto">
         {/* Carousel */}
-        <div className="w-auto h-auto mx-4 bg-var[bg-primary]">
+        <div className="w-full h-auto">
           <MainCarousel />
         </div>
 

@@ -5,9 +5,9 @@ import { Sectorals } from "@/components/organisms/Sectorals";
 export default function Home() {
   return (
     <>
-      <main className="mx-auto">
+      <main className="mx-auto bg-var[--bmkgyellow]">
         {/* Carousel */}
-        <div className="w-auto h-auto mx-4 bg-var[bg-primary]">
+        <div className="w-full ">
           <MainCarousel />
         </div>
 

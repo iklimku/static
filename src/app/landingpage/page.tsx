@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <main className="mx-auto bg-var[--bmkgyellow]">
         {/* Carousel */}
-        <div className="w-full ">
+        <div className="w-full">
           <MainCarousel />
         </div>
 

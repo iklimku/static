@@ -2,7 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { useRouter } from "next/navigation";
-// import { MainCarousel } from "@/components/organisms/MainCarousel";
+import { MainCarousel } from "@/components/organisms/MainCarousel";
 import { HighlightsCarousel } from "@/components/organisms/HighlightsCarousel";
 import { Sectorals } from "@/components/organisms/Sectorals";
 import Loading from "@/components/organisms/Loading";
@@ -122,6 +122,15 @@ export default function Home() {
           <Suspense fallback={<Loading />}>
             <Sectorals />
           </Suspense>
+        </div>
+      </section>
+
+      <section className="mx-auto px-4 py-16">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Kabar Terkini
+        </h2>
+        <div className="w-full h-auto ">
+          <MainCarousel />
         </div>
       </section>
     </main>

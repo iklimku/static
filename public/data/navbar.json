@@ -207,6 +207,10 @@
       {
         "title": "Frequently Asked Question",
         "href": "/faq/detail"
+      },
+      {
+        "title": "Pencarian",
+        "href": "/pencarian"
       }
     ]
   }

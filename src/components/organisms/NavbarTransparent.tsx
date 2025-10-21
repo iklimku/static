@@ -110,7 +110,7 @@ export function NavbarTransparent() {
                   > */}
 
                   <NavigationMenuContent
-                    className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[700px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
+                    className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[800px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
                       scrolled
                         ? "bg-white/95 text-gray-800 border-gray-200"
                         : "bg-white/95 text-gray-800 border-gray-200"

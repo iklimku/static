@@ -110,7 +110,7 @@ export function NavbarTransparent() {
                   > */}
 
                   <NavigationMenuContent
-                    className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[800px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
+                    className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[700px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
                       scrolled
                         ? "bg-white/95 text-gray-800 border-gray-200"
                         : "bg-white/95 text-gray-800 border-gray-200"
@@ -138,7 +138,9 @@ export function NavbarTransparent() {
       {isOpen && (
         <div
           className={`xl:hidden px-4 pb-4 space-y-4 border-t transition-all duration-300 backdrop-blur-md ${
-            scrolled ? "bg-[var(--bmkgblue1)] text-white" : "bg-white/90 text-black"
+            scrolled
+              ? "bg-[var(--bmkgblue1)] text-white"
+              : "bg-white/90 text-black"
           }`}
         >
           <Accordion type="multiple" className="w-full">
@@ -183,7 +185,10 @@ function ListItem({
   href,
   scrolled,
   ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string; scrolled?: boolean }) {
+}: React.ComponentPropsWithoutRef<"li"> & {
+  href: string;
+  scrolled?: boolean;
+}) {
   return (
     <li {...props}>
       <NavigationMenuLink asChild>

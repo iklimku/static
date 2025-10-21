@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Autoplay from "embla-carousel-autoplay"
-import Link from "next/link"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
-import { Button } from "@/components/ui/button"
+} from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
 
 interface HighlightItem {
-  slug: string
-  title: string
-  description: string
-  icon: React.ReactNode
+  slug: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
 }
 
 interface Props {
-  highlightCards: HighlightItem[]
+  highlightCards: HighlightItem[];
 }
 
 export function HighlightsCarousel({ highlightCards }: Props) {
@@ -31,26 +31,26 @@ export function HighlightsCarousel({ highlightCards }: Props) {
       stopOnInteraction: false,
       stopOnMouseEnter: true, // ✅ pause kalau dihover
     })
-  )
+  );
 
   return (
-    <section id="highlights" className="w-full -mt-24 relative mb-16">
-      <div className="container mx-auto px-4">
+    <section id="highlights" className="w-full -mt-24 relative mb-16 px-8">
+      <div className="container mx-auto">
         <Carousel
           plugins={[plugin.current]}
           opts={{ align: "start", loop: true }}
           className="w-full group"
         >
-          <CarouselContent>
+          <CarouselContent className="ml-1">
             {highlightCards.map((item) => (
               <CarouselItem
                 key={item.slug}
-                className="md:basis-1/2 lg:basis-1/3 px-2 mb-8"
+                className="md:basis-1/2 lg:basis-1/3 px-2"
               >
                 <Card
                   className="
                     h-full flex flex-col justify-between
-                    shadow-xl bg-white 
+                    shadow-md bg-white 
                     hover:shadow-[0_0_15px_var(--bmkggreen)] 
                     transition-shadow duration-300
                   "
@@ -63,11 +63,11 @@ export function HighlightsCarousel({ highlightCards }: Props) {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600 mb-4">{item.description}</p>
+                      <p className="text-gray-600 ">{item.description}</p>
                     </CardContent>
                   </div>
 
-                  <div className="px-6 pb-6 mt-auto">
+                  <div className="px-6 pb-2 mt-auto">
                     <Button
                       variant="link"
                       asChild
@@ -89,5 +89,5 @@ export function HighlightsCarousel({ highlightCards }: Props) {
         </Carousel>
       </div>
     </section>
-  )
+  );
 }

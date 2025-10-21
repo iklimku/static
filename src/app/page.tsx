@@ -67,7 +67,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="w-full overflow-x-hidden">
+    <main className="w-full overflow-x-hidden mx-auto">
       {/* 1. HERO JUMBOTRON DENGAN FIXED BACKGROUND & SEARCH BOX */}
       <section
         className="relative w-full h-[500px] flex items-center justify-center text-white bg-center bg-cover bg-fixed"
@@ -75,7 +75,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black opacity-50" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-extrabold mb-4 ">
+          <h1 className="text-3xl font-extrabold mb-4 ">
             Sistem Informasi Iklim dan Kualitas Udara
           </h1>
           <p className="text-xl mb-8">
@@ -106,7 +106,7 @@ export default function Home() {
       </section>
 
       {/* 2. CAROUSEL HIGHLIGHT */}
-      <section id="highlight-carousel" className="w-full bg-white py-12">
+      <section id="highlight-carousel" className="w-full bg-white py-12 px-6">
         <Suspense fallback={<Loading />}>
           {/* Pastikan Anda sudah membuat komponen HighlightsCarousel di file terpisah */}
           <HighlightsCarousel highlightCards={highlightCards} />
@@ -125,11 +125,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto px-4 py-16">
+      <section className="mx-auto py-16">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
           Kabar Terkini
         </h2>
-        <div className="w-full h-auto ">
+        <div className="w-full h-auto px-8">
           <MainCarousel />
         </div>
       </section>

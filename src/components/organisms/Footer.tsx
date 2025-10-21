@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[var(--bmkgblue1)] text-white mt-4">
+    <footer className="w-full bg-[var(--bmkgblue1)] text-white mt-4 px-6">
       <div className="container mx-auto py-8 px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Kolom 1: Logo dan Kontak */}
         <div className="justify-items-center text-center md:justify-items-start md:text-start">

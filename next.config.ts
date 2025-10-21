@@ -37,8 +37,8 @@ const nextConfig: NextConfig = {
   // ✅ Tambahan opsional: kalau repo kamu bukan di root domain
   // contoh: https://username.github.io/nama-repo/
   // uncomment baris di bawah dan ganti nama-repo sesuai repo kamu:
-  // basePath: "/nama-repo",
-  // assetPrefix: "/nama-repo/",
+  basePath: "/static",
+  assetPrefix: "/static/",
 };
 
 export default nextConfig;

@@ -29,13 +29,13 @@ export function HighlightsCarousel({ highlightCards }: Props) {
     Autoplay({
       delay: 3500,
       stopOnInteraction: false,
-      stopOnMouseEnter: true, // ✅ pause kalau dihover
+      stopOnMouseEnter: true,
     })
   );
 
   return (
     <section id="highlights" className="w-full -mt-24 relative mb-16 px-8">
-      <div className="container mx-auto -8">
+      <div className="container mx-auto">
         <Carousel
           plugins={[plugin.current]}
           opts={{ align: "start", loop: true }}
@@ -45,7 +45,7 @@ export function HighlightsCarousel({ highlightCards }: Props) {
             {highlightCards.map((item) => (
               <CarouselItem
                 key={item.slug}
-                className="md:basis-1/2 lg:basis-1/3 px-2"
+                className="md:basis-1/2 lg:basis-1/3 lg:px-2"
               >
                 <Card
                   className="

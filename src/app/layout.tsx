@@ -51,7 +51,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${activeFont} antialiased`}>
+      <body className={`${activeFont} antialiased overflow-x-hidden`}>
         <BMKGTimeBar />
         {/* <Navbar /> */}
         <NavbarTransparent />

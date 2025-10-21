@@ -67,7 +67,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="w-full">
+    <main className="w-full overflow-x-hidden">
       {/* 1. HERO JUMBOTRON DENGAN FIXED BACKGROUND & SEARCH BOX */}
       <section
         className="relative w-full h-[500px] flex items-center justify-center text-white bg-center bg-cover bg-fixed"

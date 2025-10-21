@@ -35,13 +35,13 @@ export function HighlightsCarousel({ highlightCards }: Props) {
 
   return (
     <section id="highlights" className="w-full -mt-24 relative mb-16 px-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto -8">
         <Carousel
           plugins={[plugin.current]}
           opts={{ align: "start", loop: true }}
           className="w-full group"
         >
-          <CarouselContent className="ml-1">
+          <CarouselContent className="ml-1 mb-4">
             {highlightCards.map((item) => (
               <CarouselItem
                 key={item.slug}

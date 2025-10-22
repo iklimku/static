@@ -36,7 +36,7 @@ export default function DetailWithoutTabs({
             <div className="mb-6">
               <Suspense fallback={<Loading />}>
                 <Zoom>
-                  <div className="w-full h-auto">
+                  <div className="w-full max-w-3xl mx-auto">
                     <Image
                       src={imageUrl}
                       alt={title}

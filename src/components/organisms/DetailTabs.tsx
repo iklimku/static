@@ -61,11 +61,12 @@ export default function DetailTabs({ title, tabs }: Props) {
             <div className="w-full">
               <Suspense fallback={<Loading />}>
                 <Zoom>
-                  <div className="w-full h-auto">
+                  <div className="w-full max-w-3xl mx-auto">
                     <Image
                       src={tab.imageUrl}
                       alt={tab.title}
-                      width={600}
+                      width={1920}
+                      height={1080}
                       className="w-full h-auto rounded-lg"
                       sizes="100vw"
                       priority

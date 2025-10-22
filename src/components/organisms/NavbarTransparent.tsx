@@ -44,7 +44,7 @@ export function NavbarTransparent() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-500 backdrop-blur-md ${
+      className={`container px-12 sticky top-0 z-50 transition-all duration-500 backdrop-blur-md ${
         scrolled
           ? "bg-[var(--bmkgblue1)] text-white shadow-md"
           : "bg-transparent text-black"
@@ -110,7 +110,7 @@ export function NavbarTransparent() {
                   > */}
 
                   <NavigationMenuContent
-                    className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[800px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
+                    className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[750px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
                       scrolled
                         ? "bg-white/95 text-gray-800 border-gray-200"
                         : "bg-white/95 text-gray-800 border-gray-200"

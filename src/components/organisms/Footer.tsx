@@ -1,38 +1,40 @@
 "use client";
 
 import Image from "next/image";
-// import LogoBMKG from "@/../public/logo-bmkg.svg";
+import LogoBMKG from "@/../public/logo-bmkg.svg";
 import GooglePlay from "@/../public/google-play.png";
 import AppStore from "@/../public/app-store.png";
 import BerAkhlak from "@/../public/Logo_BerAKHLAK.png";
 import BerAkhlak2 from "@/../public/Logo_EVP.png";
 import Link from "next/link";
+import MapEmbed from "@/components/organisms/MapEmbed";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[var(--bmkgblue1)] text-white mt-4 px-6">
-      <div className="container mx-auto py-8 px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="w-full  text-white mt-4">
+      <div className="container mx-auto py-8 px-8 grid grid-cols-1 md:grid-cols-4 gap-8 bg-[var(--bmkgblue1)]">
         {/* Kolom 1: Logo dan Kontak */}
         <div className="justify-items-center text-center md:justify-items-start md:text-start">
-          <div className="flex flex-col items-center gap-4 lg:flex-row bg-white p-4 rounded-lg w-fit mx-auto md:mx-0">
-            {/* <Image src={LogoBMKG} alt="Logo BMKG" height={56} /> */}
+          {/* <div className="flex flex-col items-center gap-4 lg:flex-row bg-white p-4 rounded-lg w-fit mx-auto md:mx-0">
+            <Image src={LogoBMKG} alt="Logo BMKG" height={56} />
             <Image src={BerAkhlak} alt="Logo BerAKHLAK" height={50} />
             <Image src={BerAkhlak2} alt="Logo BerAKHLAK" height={46} />
-          </div>
-          <h5 className="font-bold mt-4 text-[var(--bmkgblue5)]">
-            KONTAK KAMI
-          </h5>
+          </div> */}
+
+          <h5 className="font-bold text-[var(--bmkgblue5)]">KONTAK KAMI</h5>
           <p className="text-sm mt-2">
             Jl. Angkasa I No.2 Kemayoran, Jakarta Pusat 10610,
             <br className="sm:hidden" />
             PO Box 3540 Jkt.
             <br />
-            Contact Center (021) 196
-            <br />
             Faks (021) 4246703
             <br />
             cc196[at]bmkg.go.id
           </p>
+
+          <div className="map-bmkg mt-2">
+            <MapEmbed />
+          </div>
         </div>
 
         {/* Kolom 2: Dukungan */}
@@ -146,7 +148,7 @@ export function Footer() {
           <h5 className="font-bold mb-2 text-[var(--bmkgblue5)]">
             CALL CENTER
           </h5>
-          <p className="text-sm mb-4">196</p>
+          <p className="text-sm mb-4"> Contact Center (021) 196</p>
 
           <h5 className="font-bold mb-2 text-[var(--bmkgblue5)]">
             DOWNLOAD APLIKASI
@@ -160,6 +162,11 @@ export function Footer() {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="flex flex-row items-center gap-4 p-4 w-full mx-auto md:mx-0 bottom-footer bg-[var(--bmkggreen3)] justify-center">
+        <Image src={LogoBMKG} alt="Logo BMKG" height={36} />
+        <Image src={BerAkhlak} alt="Logo BerAKHLAK" height={36} />
+        <Image src={BerAkhlak2} alt="Logo BerAKHLAK" height={32} />
       </div>
     </footer>
   );

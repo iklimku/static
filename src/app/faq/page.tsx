@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import {
   Accordion,
@@ -8,14 +9,16 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 
-// Fungsi bantu buat highlight kata kunci
+// 🔍 Fungsi bantu buat highlight kata kunci
 function highlightText(text: string, keyword: string) {
   if (!keyword) return text;
-  const regex = new RegExp(`(${keyword})`, "gi");
+  const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // escape karakter regex
+  const regex = new RegExp(`(${escapedKeyword})`, "gi");
   return text.replace(regex, `<mark class='bg-yellow-200'>$1</mark>`);
 }
 
-export default function FAQPage() {
+// 💡 Komponen utama FAQ
+function FAQPage() {
   const [faqs, setFaqs] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
@@ -35,21 +38,22 @@ export default function FAQPage() {
           glosariumRes.json(),
         ]);
 
-        const detailFaqs = detailData.map((item: any) => ({
+        // 🧩 Normalisasi data dari berbagai sumber
+        const detailFaqs = (detailData || []).map((item: any) => ({
           source: "Detail",
           question: item.title || item.nama || "Topik Detail",
           answer: item.deskripsi || item.keterangan || "Tidak ada deskripsi.",
         }));
 
-        const daftarFaqs = daftarData.map((item: any) => ({
+        const daftarFaqs = (daftarData || []).map((item: any) => ({
           source: "Daftar",
           question: item.judul || item.nama || "Item Daftar",
           answer: item.deskripsi || "Tidak ada keterangan.",
         }));
 
-        const glosariumFaqs = glosariumData.map((item: any) => ({
+        const glosariumFaqs = (glosariumData || []).map((item: any) => ({
           source: "Glosarium",
-          question: item.istilah || item.term,
+          question: item.istilah || item.term || "Istilah",
           answer: item.definisi || "Belum ada definisi.",
         }));
 
@@ -64,6 +68,7 @@ export default function FAQPage() {
     fetchData();
   }, []);
 
+  // 🔍 Filter FAQ berdasarkan kata kunci
   const filteredFaqs = faqs.filter(
     (faq) =>
       faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -72,20 +77,22 @@ export default function FAQPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4 text-center">
+      <h1 className="text-2xl font-bold mb-4 text-center text-[var(--bmkggreen1)]">
         Pertanyaan yang Sering Diajukan (FAQ)
       </h1>
 
+      {/* Input pencarian */}
       <div className="mb-6">
         <input
           type="text"
           placeholder="Cari pertanyaan, istilah, atau topik..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--bmkggreen1)]"
         />
       </div>
 
+      {/* Loading state */}
       {loading ? (
         <p className="text-gray-500 text-center">Memuat data FAQ...</p>
       ) : filteredFaqs.length > 0 ? (
@@ -105,6 +112,7 @@ export default function FAQPage() {
               </AccordionTrigger>
               <AccordionContent>
                 <div
+                  className="text-sm text-gray-700 leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html: highlightText(faq.answer, searchTerm),
                   }}
@@ -115,9 +123,13 @@ export default function FAQPage() {
         </Accordion>
       ) : (
         <p className="text-gray-500 text-center">
-          Tidak ditemukan hasil untuk kata kunci "{searchTerm}".
+          Tidak ditemukan hasil untuk kata kunci{" "}
+          <span className="font-semibold">"{searchTerm}"</span>.
         </p>
       )}
     </div>
   );
 }
+
+// ✅ Matikan SSR agar bebas dari hydration mismatch
+export default dynamic(() => Promise.resolve(FAQPage), { ssr: false });

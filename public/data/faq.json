@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "category": "Umum",
+    "question": "Apa itu BMKG?",
+    "answer": "BMKG adalah Badan Meteorologi, Klimatologi, dan Geofisika, lembaga pemerintah yang menyediakan informasi cuaca, iklim, dan geofisika.",
+    "tags": ["BMKG", "informasi"]
+  },
+  {
+    "id": 2,
+    "category": "Prediksi Iklim",
+    "question": "Seberapa sering prediksi sifat hujan bulanan diperbarui?",
+    "answer": "Prediksi sifat hujan bulanan diperbarui setiap bulan oleh BMKG berdasarkan analisis data iklim terbaru.",
+    "tags": ["prediksi", "hujan", "bulanan"]
+  }
+]

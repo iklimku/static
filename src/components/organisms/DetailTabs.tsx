@@ -65,8 +65,7 @@ export default function DetailTabs({ title, tabs }: Props) {
                     <Image
                       src={tab.imageUrl}
                       alt={tab.title}
-                      width={1920}
-                      height={1080}
+                      width={600}
                       className="w-full h-auto rounded-lg"
                       sizes="100vw"
                       priority

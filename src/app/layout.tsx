@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Poppins as GooglePoppins } from "next/font/google";
 import "./globals.css";
 import BMKGTimeBar from "@/components/organisms/BMKGTimeBar";
-// import Navbar from "@/components/organisms/Navbar";
 import NavbarTransparent from "@/components/organisms/NavbarTransparent";
+import Breadcrumb from "@/components/organisms/Breadcrumb";
 import Footer from "@/components/organisms/Footer";
 
 // Configure Poppins with fallback
@@ -55,6 +55,7 @@ export default function RootLayout({
         <BMKGTimeBar />
         {/* <Navbar /> */}
         <NavbarTransparent />
+        <Breadcrumb />
         {children}
         <Footer />
       </body>

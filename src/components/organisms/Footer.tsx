@@ -38,7 +38,7 @@ export function Footer() {
         </div>
 
         {/* Kolom 2: Dukungan */}
-        <div className="justify-items-center text-center md:justify-items-start md:text-start">
+        <div className="justify-items-center text-start md:justify-items-start ">
           <h5 className="font-bold mb-2 text-[var(--bmkgblue5)]">DUKUNGAN</h5>
           <ul className="space-y-1 text-sm list-disc pl-4">
             <li>
@@ -101,7 +101,7 @@ export function Footer() {
         </div>
 
         {/* Kolom 3: Tautan */}
-        <div className="justify-items-center text-center md:justify-items-start md:text-start">
+        <div className="justify-items-center text-start md:justify-items-start ">
           <h5 className="font-bold mb-2 text-[var(--bmkgblue5)]">TAUTAN</h5>
           <ul className="space-y-1 text-sm list-disc pl-4">
             <li>
@@ -144,7 +144,7 @@ export function Footer() {
         </div>
 
         {/* Kolom 4: Call Center & Aplikasi */}
-        <div className="justify-items-center text-center md:justify-items-start md:text-start">
+        <div className="justify-items-center text-center md:justify-items-start lg:text-start md:text-start">
           <h5 className="font-bold mb-2 text-[var(--bmkgblue5)]">
             CALL CENTER
           </h5>

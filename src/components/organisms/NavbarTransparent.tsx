@@ -35,94 +35,78 @@ export function NavbarTransparent() {
   const datas: Data[] = navbarJson;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`container px-12 sticky top-0 z-50 transition-all duration-500 backdrop-blur-md ${
+      className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-[var(--bmkgblue1)] text-white shadow-md"
           : "bg-transparent text-black"
       }`}
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between transition-all duration-300">
-        {/* 🔹 Logo */}
+      {/* 🔹 HEADER BAR */}
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between transition-all duration-300">
+        {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image src={LogoBMKG} alt="Logo BMKG" height={48} />
           <div className="hidden sm:flex flex-col">
             <span
-              className={`text-xs font-bold 2xl:text-sm transition-colors duration-300 ${
+              className={`text-xs font-bold 2xl:text-sm ${
                 scrolled ? "text-white" : "text-black"
               }`}
             >
               Badan Meteorologi, Klimatologi, dan Geofisika
             </span>
             <span
-              className={`text-xs transition-colors duration-300 ${
+              className={`text-xs ${
                 scrolled ? "text-gray-100" : "text-muted-foreground"
               }`}
             >
-              Deputi Klimatologi
+              Deputi Bidang Klimatologi
             </span>
           </div>
         </Link>
 
-        {/* 🔹 Mobile Menu Button */}
+        {/* Menu Button (Mobile) */}
         <button
           className="xl:hidden transition-colors duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Menu
-            className={`w-6 h-6 transition-colors duration-300 ${
+            className={`w-6 h-6 transition-colors ${
               scrolled ? "text-white" : "text-[var(--bmkggreen1)]"
             }`}
           />
         </button>
 
-        {/* 🔹 Desktop Navigation */}
+        {/* 🔹 Desktop Menu */}
         <div className="hidden xl:flex items-center gap-1">
           <NavigationMenu>
             <NavigationMenuList>
               {datas.map((data) => (
                 <NavigationMenuItem key={data.title}>
                   <NavigationMenuTrigger
-                    className={`text-[12px] font-normal p-1 transition-colors duration-300 ${
+                    className={`text-[12px] font-normal p-1 transition-all duration-200 
+                    ${
                       scrolled
-                        ? "text-white hover:text-[var(--bmkggreen3)]"
-                        : "text-black hover:text-[var(--bmkggreen1)]"
+                        ? "text-white hover:text-[var(--bmkggreen3)] hover:font-bold active:text-[var(--bmkggreen3)] aria-expanded:text-[var(--bmkggreen3)]"
+                        : "text-black hover:text-[var(--bmkggreen1)] hover:font-bold active:text-[var(--bmkggreen1)] aria-expanded:text-[var(--bmkggreen1)]"
                     }`}
                   >
                     {data.title}
                   </NavigationMenuTrigger>
 
-                  {/* 🔸 Perbaikan di sini: submenu ikut menyesuaikan warna background */}
-                  {/* <NavigationMenuContent
-                    className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[800px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
-                      scrolled
-                        ? "bg-[var(--bmkgblue1)] text-white border-blue-200"
-                        : "bg-white/95 text-gray-800 border-gray-200"
-                    }`}
-                  > */}
-
-                  <NavigationMenuContent
-                    className={`p-4 min-w-[400px] md:min-w-[500px] lg:min-w-[750px] border shadow-lg rounded-md z-50 backdrop-blur-md transition-all duration-300 ${
-                      scrolled
-                        ? "bg-white/95 text-gray-800 border-gray-200"
-                        : "bg-white/95 text-gray-800 border-gray-200"
-                    }`}
-                  >
+                  <NavigationMenuContent className="p-4 min-w-[700px] border shadow-lg rounded-md bg-white/95 text-gray-800 border-gray-200">
                     <ul className="grid gap-2 md:grid-cols-4">
                       {data.subMenu.map((item) => (
                         <ListItem
                           key={item.title}
                           title={item.title}
                           href={item.href}
-                          scrolled={scrolled}
                         />
                       ))}
                     </ul>
@@ -134,19 +118,13 @@ export function NavbarTransparent() {
         </div>
       </div>
 
-      {/* 🔹 Mobile Dropdown Navigation */}
+      {/* 🔹 MOBILE DROPDOWN AREA */}
       {isOpen && (
-        <div
-          className={`xl:hidden px-4 pb-4 space-y-4 border-t transition-all duration-300 backdrop-blur-md ${
-            scrolled
-              ? "bg-[var(--bmkgblue1)] text-white"
-              : "bg-white/90 text-black"
-          }`}
-        >
+        <div className="xl:hidden bg-white text-black px-4 pb-4 border-t shadow-sm">
           <Accordion type="multiple" className="w-full">
             {datas.map((data) => (
               <AccordionItem key={data.title} value={data.title}>
-                <AccordionTrigger className="text-left text-[12px] font-semibold">
+                <AccordionTrigger className="text-left text-[12px] font-semibold hover:text-[var(--bmkggreen1)] active:text-[var(--bmkggreen1)] aria-expanded:text-[var(--bmkggreen1)] transition-colors">
                   {data.title}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -155,11 +133,7 @@ export function NavbarTransparent() {
                       <li key={item.title}>
                         <Link
                           href={item.href}
-                          className={`block px-4 py-2 rounded-md transition ${
-                            scrolled
-                              ? "hover:bg-blue-700/60"
-                              : "hover:bg-[var(--bmkggreen3)] text-gray-800"
-                          }`}
+                          className="block px-4 py-2 rounded-md text-gray-800 hover:bg-[var(--bmkggreen3)] active:bg-[var(--bmkggreen3)] aria-[current=page]:bg-[var(--bmkggreen3)] active:font-bold hover:font-bold transition"
                           onClick={() => setIsOpen(false)}
                         >
                           <div className="text-[10px] font-semibold">
@@ -179,28 +153,15 @@ export function NavbarTransparent() {
   );
 }
 
-/* 🔹 Ubah ListItem agar bisa menerima prop scrolled */
-function ListItem({
-  title,
-  href,
-  scrolled,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & {
-  href: string;
-  scrolled?: boolean;
-}) {
+function ListItem({ title, href }: { title: string; href: string }) {
   return (
-    <li {...props}>
+    <li>
       <NavigationMenuLink asChild>
         <Link
           href={href}
-          className={`block px-3 py-2 rounded-md transition-colors duration-200 ${
-            scrolled
-              ? "hover:bg-[var(--bmkggreen3)] hover:text-black"
-              : "hover:bg-[var(--bmkggreen3)] hover:text-black"
-          }`}
+          className="block px-3 py-2 rounded-md text-[10px] hover:bg-[var(--bmkggreen3)] active:bg-[var(--bmkggreen3)] hover:text-black active:text-black transition-all duration-200"
         >
-          <div className="text-[10px]">{title}</div>
+          {title}
         </Link>
       </NavigationMenuLink>
     </li>

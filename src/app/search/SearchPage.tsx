@@ -85,11 +85,11 @@ export default function SearchPage() {
           <Link href={item.link} key={item.link + item.title}>
             <Card className="hover:bg-gray-50 transition-colors cursor-pointer m-6">
               <CardContent className="p-6">
-                <div className="flex justify-between items-start flex-wrap">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <CardTitle className="text-xl text-blue-700">
                     {item.title}
                   </CardTitle>
-                  <span className="text-sm font-medium text-gray-600 ml-2 border rounded-full px-3 py-1 bg-[var(--bmkggreen3)] whitespace-nowrap">
+                  <span className="text-sm font-medium text-gray-600 ml-2 border rounded-xl px-3 py-1 border-2 border-[var(--bmkggreen1)] break-words text-center sm:self-start gap-2">
                     {item.source}
                   </span>
                 </div>

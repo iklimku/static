@@ -12,9 +12,9 @@ import MapEmbed from "@/components/organisms/MapEmbed";
 export function Footer() {
   return (
     <footer className="w-full  text-white mt-4">
-      <div className="container mx-auto py-8 px-8 grid grid-cols-1 md:grid-cols-4 gap-8 bg-[var(--bmkgblue1)]">
+      <div className=" mx-auto py-8 px-8 grid grid-cols-1 md:grid-cols-4 gap-8 bg-[var(--bmkgblue1)]">
         {/* Kolom 1: Logo dan Kontak */}
-        <div className="justify-items-center text-center md:justify-items-start md:text-start">
+        <div className="justify-items-center md:justify-items-start md:text-start">
           {/* <div className="flex flex-col items-center gap-4 lg:flex-row bg-white p-4 rounded-lg w-fit mx-auto md:mx-0">
             <Image src={LogoBMKG} alt="Logo BMKG" height={56} />
             <Image src={BerAkhlak} alt="Logo BerAKHLAK" height={50} />

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Suspense } from "react";
 import Loading from "@/components/organisms/Loading";
-import daftarJson from "@/../public/data/daftar.json"
+import daftarJson from "@/../public/data/daftar.json";
 import {
   Card,
   CardContent,
@@ -56,12 +56,12 @@ export default async function Daftar({
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
           {item.title}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {/* Filter data based on slug (category) */}
-          {/* For now, let's just display all items from the 'data' array for demonstration */}
-          {/* In a real application, you would filter 'data' based on 'slug' */}
+        <div className="flex flex-wrap justify-center gap-6">
           {item.data.map((item, index) => (
-            <Card key={index} className="flex flex-col justify-between">
+            <Card
+              key={index}
+              className="flex flex-col justify-between flex-1 basis-[calc(25%-1.5rem)] max-w-[300px] min-w-[250px]"
+            >
               <CardContent className="p-4">
                 <Suspense fallback={<Loading />}>
                   <Image
@@ -82,8 +82,8 @@ export default async function Daftar({
               <CardFooter className="p-4 pt-0">
                 <Link href={`/${item.href}`}>
                   <Button
-                    variant={"outline"}
-                    className="w-full border-2 border-cyan-100 hover:bg-cyan-100"
+                    variant="outline"
+                    className="w-full border-2 border-[var(--bmkggreen1)] hover:bg-[var(--bmkggreen1)] hover:text-white"
                   >
                     Baca Selengkapnya
                   </Button>

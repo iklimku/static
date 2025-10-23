@@ -100,7 +100,7 @@ export function NavbarTransparent() {
                     {data.title}
                   </NavigationMenuTrigger>
 
-                  <NavigationMenuContent className="p-4 min-w-[700px] border shadow-lg rounded-md bg-white/95 text-gray-800 border-gray-200">
+                  <NavigationMenuContent className="p-4 min-w-[800px] border shadow-lg rounded-md bg-white/95 text-gray-800 border-gray-200">
                     <ul className="grid gap-2 md:grid-cols-4">
                       {data.subMenu.map((item) => (
                         <ListItem

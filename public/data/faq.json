@@ -1,16 +1,99 @@
 [
   {
-    "id": 1,
     "category": "Umum",
-    "question": "Apa itu BMKG?",
-    "answer": "BMKG adalah Badan Meteorologi, Klimatologi, dan Geofisika, lembaga pemerintah yang menyediakan informasi cuaca, iklim, dan geofisika.",
-    "tags": ["BMKG", "informasi"]
+    "questions": [
+      {
+        "q": "Apa itu Portal Informasi Iklim BMKG?",
+        "a": "Portal ini merupakan platform resmi yang menyediakan informasi iklim, seperti prediksi sifat hujan bulanan, anomali suhu, serta data klimatologi berbasis wilayah Indonesia."
+      },
+      {
+        "q": "Siapa pengelola situs ini?",
+        "a": "Portal ini dikelola oleh Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) melalui unit terkait di bidang klimatologi."
+      },
+      {
+        "q": "Apakah data di situs ini resmi?",
+        "a": "Ya. Seluruh data dan informasi bersumber dari BMKG dan dipublikasikan secara resmi sesuai jadwal rilis bulanan."
+      }
+    ]
   },
   {
-    "id": 2,
-    "category": "Prediksi Iklim",
-    "question": "Seberapa sering prediksi sifat hujan bulanan diperbarui?",
-    "answer": "Prediksi sifat hujan bulanan diperbarui setiap bulan oleh BMKG berdasarkan analisis data iklim terbaru.",
-    "tags": ["prediksi", "hujan", "bulanan"]
+    "category": "Prediksi & Informasi Cuaca",
+    "questions": [
+      {
+        "q": "Apa arti 'prediksi sifat hujan bulanan'?",
+        "a": "Prediksi sifat hujan bulanan menunjukkan kecenderungan curah hujan pada bulan tertentu dibandingkan rata-rata klimatologisnya. Kategori yang digunakan adalah Atas Normal (AN), Normal (N), dan Bawah Normal (BN)."
+      },
+      {
+        "q": "Seberapa akurat prediksi cuaca dan iklim BMKG?",
+        "a": "Prediksi didasarkan pada model numerik dan analisis statistik yang terus disempurnakan. Tingkat akurasi bervariasi tergantung wilayah dan periode waktu, namun dievaluasi secara berkala untuk menjaga kualitas."
+      },
+      {
+        "q": "Kapan data prediksi diperbarui?",
+        "a": "Produk prediksi sifat hujan bulanan diperbarui setiap awal bulan, sedangkan produk iklim lainnya disesuaikan dengan jadwal publikasi masing-masing."
+      },
+      {
+        "q": "Mengapa hasil prediksi bisa berbeda dengan kondisi di lapangan?",
+        "a": "Prediksi menggambarkan kecenderungan umum, bukan kejadian cuaca harian. Perbedaan dapat terjadi karena faktor lokal, dinamika atmosfer, dan perubahan kondisi laut yang cepat."
+      }
+    ]
+  },
+  {
+    "category": "Teknis & Penggunaan Situs",
+    "questions": [
+      {
+        "q": "Bagaimana cara mencari data tertentu di situs ini?",
+        "a": "Gunakan fitur pencarian di halaman utama atau menu navigasi kategori untuk menemukan data sesuai kebutuhan Anda."
+      },
+      {
+        "q": "Bagaimana membaca peta atau grafik di halaman prediksi?",
+        "a": "Setiap peta disertai legenda dan keterangan warna. Misalnya, warna biru menunjukkan curah hujan di bawah normal, hijau normal, dan cokelat di atas normal."
+      },
+      {
+        "q": "Apakah situs ini bisa diakses dari perangkat seluler?",
+        "a": "Ya, seluruh halaman telah dirancang responsif dan dapat diakses dari ponsel maupun tablet dengan tampilan yang menyesuaikan layar."
+      },
+      {
+        "q": "Mengapa halaman kadang lambat dimuat?",
+        "a": "Beberapa produk menampilkan data spasial dan grafik berukuran besar. Gunakan koneksi internet yang stabil untuk pengalaman terbaik."
+      }
+    ]
+  },
+  {
+    "category": "Data & Sumber Informasi",
+    "questions": [
+      {
+        "q": "Dari mana data cuaca dan iklim diambil?",
+        "a": "Data bersumber dari jaringan pengamatan BMKG, termasuk stasiun klimatologi, meteorologi, dan pos hujan di seluruh Indonesia, serta hasil pemodelan numerik."
+      },
+      {
+        "q": "Apakah data ini dapat diunduh?",
+        "a": "Beberapa produk dapat diunduh melalui menu unduh (download) yang tersedia. Jika belum tersedia, pengguna dapat mengajukan permintaan data ke Pusat Data BMKG."
+      },
+      {
+        "q": "Bagaimana cara mengutip data dari situs ini?",
+        "a": "Cantumkan sumber sebagai 'Badan Meteorologi, Klimatologi, dan Geofisika (BMKG), [tahun publikasi]'. Contoh: Sumber: BMKG, 2025."
+      },
+      {
+        "q": "Apakah data di situs ini sama dengan data di portal resmi BMKG?",
+        "a": "Ya, seluruh informasi disinkronkan dengan portal resmi BMKG dan mengikuti standar publikasi yang sama."
+      }
+    ]
+  },
+  {
+    "category": "Kontak & Bantuan",
+    "questions": [
+      {
+        "q": "Bagaimana cara menghubungi tim pengelola situs?",
+        "a": "Anda dapat mengirim email ke alamat resmi BMKG atau menggunakan formulir kontak yang tersedia di halaman 'Hubungi Kami'."
+      },
+      {
+        "q": "Bagaimana cara memberikan masukan atau melaporkan bug?",
+        "a": "Gunakan fitur umpan balik di bagian bawah situs atau kirimkan pesan melalui email pengembang."
+      },
+      {
+        "q": "Apakah situs ini memiliki akun media sosial resmi?",
+        "a": "Ya, informasi terbaru juga dapat diikuti melalui akun media sosial resmi BMKG di platform seperti Instagram, X (Twitter), dan YouTube."
+      }
+    ]
   }
 ]

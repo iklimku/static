@@ -1,135 +1,75 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
+import { Input } from "@/components/ui/input";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
-// 🔍 Fungsi bantu buat highlight kata kunci
-function highlightText(text: string, keyword: string) {
-  if (!keyword) return text;
-  const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // escape karakter regex
-  const regex = new RegExp(`(${escapedKeyword})`, "gi");
-  return text.replace(regex, `<mark class='bg-yellow-200'>$1</mark>`);
-}
-
-// 💡 Komponen utama FAQ
-function FAQPage() {
-  const [faqs, setFaqs] = useState<any[]>([]);
+export default function FAQPage() {
+  const [faqData, setFaqData] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const [detailRes, daftarRes, glosariumRes] = await Promise.all([
-          fetch("/data/detail.json"),
-          fetch("/data/daftar.json"),
-          fetch("/data/glosarium.json"),
-        ]);
-
-        const [detailData, daftarData, glosariumData] = await Promise.all([
-          detailRes.json(),
-          daftarRes.json(),
-          glosariumRes.json(),
-        ]);
-
-        // 🧩 Normalisasi data dari berbagai sumber
-        const detailFaqs = (detailData || []).map((item: any) => ({
-          source: "Detail",
-          question: item.title || item.nama || "Topik Detail",
-          answer: item.deskripsi || item.keterangan || "Tidak ada deskripsi.",
-        }));
-
-        const daftarFaqs = (daftarData || []).map((item: any) => ({
-          source: "Daftar",
-          question: item.judul || item.nama || "Item Daftar",
-          answer: item.deskripsi || "Tidak ada keterangan.",
-        }));
-
-        const glosariumFaqs = (glosariumData || []).map((item: any) => ({
-          source: "Glosarium",
-          question: item.istilah || item.term || "Istilah",
-          answer: item.definisi || "Belum ada definisi.",
-        }));
-
-        setFaqs([...detailFaqs, ...daftarFaqs, ...glosariumFaqs]);
-      } catch (err) {
-        console.error("Gagal memuat data FAQ:", err);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchData();
+    fetch("/data/faq.json")
+      .then((res) => res.json())
+      .then((data) => setFaqData(data))
+      .catch((err) => console.error("Error loading FAQ data:", err));
   }, []);
 
-  // 🔍 Filter FAQ berdasarkan kata kunci
-  const filteredFaqs = faqs.filter(
-    (faq) =>
-      faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredFaq = faqData.map((cat) => ({
+    ...cat,
+    questions: cat.questions.filter(
+      (q: any) =>
+        q.q.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        q.a.toLowerCase().includes(searchTerm.toLowerCase())
+    ),
+  }));
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4 text-center text-[var(--bmkggreen1)]">
-        Pertanyaan yang Sering Diajukan (FAQ)
+    <div className="max-w-4xl mx-auto px-4 py-10">
+      <h1 className="text-2xl font-bold text-center mb-6 text-[var(--bmkggreen1)]">
+        Frequently Asked Questions (FAQ)
       </h1>
+      <p className="text-center text-gray-600 mb-8">
+        Temukan jawaban atas pertanyaan yang sering diajukan seputar informasi
+        iklim dan penggunaan situs BMKG.
+      </p>
 
-      {/* Input pencarian */}
-      <div className="mb-6">
-        <input
-          type="text"
-          placeholder="Cari pertanyaan, istilah, atau topik..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--bmkggreen1)]"
-        />
-      </div>
-
-      {/* Loading state */}
-      {loading ? (
-        <p className="text-gray-500 text-center">Memuat data FAQ...</p>
-      ) : filteredFaqs.length > 0 ? (
-        <Accordion type="single" collapsible>
-          {filteredFaqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`}>
-              <AccordionTrigger>
-                <span className="flex flex-col text-left">
-                  <span
-                    className="font-medium"
-                    dangerouslySetInnerHTML={{
-                      __html: highlightText(faq.question, searchTerm),
-                    }}
-                  />
-                  <span className="text-xs text-gray-500">{faq.source}</span>
-                </span>
-              </AccordionTrigger>
-              <AccordionContent>
-                <div
-                  className="text-sm text-gray-700 leading-relaxed"
-                  dangerouslySetInnerHTML={{
-                    __html: highlightText(faq.answer, searchTerm),
-                  }}
-                />
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      ) : (
-        <p className="text-gray-500 text-center">
-          Tidak ditemukan hasil untuk kata kunci{" "}
-          <span className="font-semibold">"{searchTerm}"</span>.
-        </p>
+      {filteredFaq.map(
+        (category, i) =>
+          category.questions.length > 0 && (
+            <Card key={i} className="mb-6 shadow-sm border border-gray-200">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-[var(--bmkggreen1)]">
+                  {category.category}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Accordion type="single" collapsible className="w-full">
+                  {category.questions.map((item: any, idx: number) => (
+                    <AccordionItem key={idx} value={`item-${i}-${idx}`}>
+                      <AccordionTrigger className="text-left font-medium text-gray-800 hover:text-primary">
+                        {item.q}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-600">
+                        {item.a}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </CardContent>
+            </Card>
+          )
       )}
+
+      <div className="text-center text-sm text-gray-500 mt-10">
+        Terakhir diperbarui: Oktober 2025
+      </div>
     </div>
   );
 }
-
-// ✅ Matikan SSR agar bebas dari hydration mismatch
-export default dynamic(() => Promise.resolve(FAQPage), { ssr: false });

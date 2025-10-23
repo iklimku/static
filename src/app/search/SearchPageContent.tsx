@@ -22,7 +22,11 @@ export default function SearchPageContent() {
         const allResults: any[] = [];
 
         for (const src of sources) {
-          const res = await fetch(`./data/${src}.json`, { cache: "no-store" });
+          const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+          const res = await fetch(`${basePath}/data/${src}.json`, {
+            cache: "no-store",
+          });
 
           if (!res.ok) continue;
           const data = await res.json();

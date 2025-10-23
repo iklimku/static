@@ -10,10 +10,7 @@ export default function BMKGTimeBar() {
     const updateTime = () => {
       const now = new Date();
 
-      // UTC time
       const utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
-
-      // WIB = UTC + 7 jam
       const wib = new Date(utc.getTime() + 7 * 60 * 60000);
 
       const formatWithSeconds = (d: Date) =>
@@ -37,24 +34,34 @@ export default function BMKGTimeBar() {
     };
 
     updateTime();
-    const interval = setInterval(updateTime, 1000); // update tiap detik
+    const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="w-full text-xs md:text-sm px-4 py-2 flex justify-between items-center font-medium bg-[var(--bmkgblue1)] text-white">
-      <span>{dateStr}</span>
-      <span className="text-end">
-        {" "}
-        <a
-          href="https://jam.bmkg.go.id/Jam.BMKG"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Standar Waktu Indonesia
-          <br className="sm:hidden" /> | {wibTime} WIB | {utcTime} UTC
-        </a>
-      </span>
+    <div className="relative w-full overflow-hidden bg-[var(--bmkgblue1)] text-white py-2 text-xs md:text-sm font-medium">
+      <div className="animate-marquee whitespace-nowrap px-4">
+        <span className="mr-8">
+          📅 {dateStr} — 🕓 Standar Waktu Indonesia | {wibTime} WIB | {utcTime}{" "}
+          UTC
+        </span>
+      </div>
+
+      {/* CSS animasi inline */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        .animate-marquee {
+          display: inline-block;
+          animation: marquee 20s linear infinite;
+        }
+      `}</style>
     </div>
   );
 }

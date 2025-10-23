@@ -45,7 +45,7 @@ export function NavbarTransparent() {
       className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-[var(--bmkgblue1)] text-white shadow-md"
-          : "bg-transparent text-black"
+          : "bg-[var(--bmkggrey2)] text-black"
       }`}
     >
       {/* 🔹 HEADER BAR */}

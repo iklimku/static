@@ -151,8 +151,10 @@ export default function SearchPage() {
 
       {loading && <p className="text-gray-500">Memuat data...</p>}
 
-      {!loading && results.length === 0 && (
-        <p className="text-gray-500">Tidak ada hasil ditemukan.</p>
+      {!loading && !query && (
+        <p className="text-gray-400 text-center mt-6">
+          Ketikkan kata kunci di atas untuk mulai mencari data
+        </p>
       )}
 
       <ul className="space-y-4">

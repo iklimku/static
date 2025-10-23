@@ -8,13 +8,8 @@ import SearchBar from "@/components/organisms/SearchBar";
 export default function SearchPage() {
   const searchParams = useSearchParams();
   const query = searchParams.get("query")?.toLowerCase() || "";
-
   const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
-
-  // 🧩 pagination state
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
 
   useEffect(() => {
     if (!query) return;
@@ -118,7 +113,6 @@ export default function SearchPage() {
         }
 
         setResults(allResults);
-        setCurrentPage(1); // reset ke halaman 1 setiap kali search baru
       } catch (err) {
         console.error("Error saat fetch data:", err);
       } finally {
@@ -129,14 +123,9 @@ export default function SearchPage() {
     fetchData();
   }, [query]);
 
-  // === pagination logic ===
-  const totalPages = Math.ceil(results.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentItems = results.slice(startIndex, startIndex + itemsPerPage);
-
   return (
     <div className="max-w-4xl mx-auto p-6">
-      {/* ✅ Search bar di atas */}
+      {/* ✅ Tambahkan SearchBar di sini */}
       <SearchBar
         variant="page"
         placeholder="Cari lagi di seluruh data..."
@@ -156,7 +145,7 @@ export default function SearchPage() {
       )}
 
       <ul className="space-y-4">
-        {currentItems.map((item, i) => (
+        {results.map((item, i) => (
           <li
             key={i}
             className="border p-4 rounded-lg hover:bg-gray-50 transition"
@@ -174,49 +163,6 @@ export default function SearchPage() {
           </li>
         ))}
       </ul>
-
-      {/* === Pagination Controls === */}
-      {!loading && results.length > 0 && (
-        <div className="flex items-center justify-center gap-2 mt-8">
-          <button
-            onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
-            disabled={currentPage === 1}
-            className={`px-3 py-1 border rounded-md text-sm ${
-              currentPage === 1
-                ? "text-gray-400 border-gray-200"
-                : "text-blue-600 border-blue-300 hover:bg-blue-50"
-            }`}
-          >
-            ← Sebelumnya
-          </button>
-
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-            <button
-              key={page}
-              onClick={() => setCurrentPage(page)}
-              className={`px-3 py-1 border rounded-md text-sm ${
-                currentPage === page
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "text-blue-600 border-blue-300 hover:bg-blue-50"
-              }`}
-            >
-              {page}
-            </button>
-          ))}
-
-          <button
-            onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
-            disabled={currentPage === totalPages}
-            className={`px-3 py-1 border rounded-md text-sm ${
-              currentPage === totalPages
-                ? "text-gray-400 border-gray-200"
-                : "text-blue-600 border-blue-300 hover:bg-blue-50"
-            }`}
-          >
-            Selanjutnya →
-          </button>
-        </div>
-      )}
     </div>
   );
 }

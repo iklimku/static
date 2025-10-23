@@ -4,33 +4,42 @@ import { Suspense, useState } from "react";
 import { useRouter } from "next/navigation";
 import { MainCarousel } from "@/components/organisms/MainCarousel";
 import { HighlightsCarousel } from "@/components/organisms/HighlightsCarousel";
+import SearchBar from "@/components/organisms/SearchBar";
 import { Sectorals } from "@/components/organisms/Sectorals";
 import Loading from "@/components/organisms/Loading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search } from "lucide-react";
-import Link from "next/link";
 
 // URL gambar Jumbotron Anda
 const HERO_BACKGROUND_IMAGE =
   "url(https://akcdn.detik.net.id/visual/2024/03/19/gedung-bmkg-1_169.jpeg?w=650&q=90)";
 
 export default function Home() {
+  <section className="h-[80vh] flex flex-col justify-center items-center bg-gradient-to-b from-blue-50 to-white text-center">
+    <h1 className="text-3xl font-bold mb-6">
+      Selamat Datang di Portal Iklim BMKG
+    </h1>
+    <p className="text-gray-600 mb-6 max-w-lg">
+      Temukan informasi iklim, cuaca, dan lingkungan dari berbagai sumber BMKG.
+    </p>
+    <SearchBar
+      variant="landing"
+      placeholder="Cari prediksi, glosarium, FAQ..."
+    />
+  </section>;
+
   // HOOKS
   const router = useRouter();
-  const [searchTerm, setSearchTerm] = useState(""); // State untuk menyimpan input user
+  // const [searchTerm, setSearchTerm] = useState(""); // State untuk menyimpan input user
 
   // FUNGSI PENCARIAN
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault(); // Mencegah form melakukan reload halaman default
+  // const handleSearch = (e: React.FormEvent) => {
+  //   e.preventDefault(); // Mencegah form melakukan reload halaman default
 
-    // Periksa apakah input tidak kosong
-    if (searchTerm.trim()) {
-      // Arahkan ke halaman /search dengan query parameter 'q'
-      router.push(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
-    }
-  };
+  //   // Periksa apakah input tidak kosong
+  //   if (searchTerm.trim()) {
+  //     // Arahkan ke halaman /search dengan query parameter 'q'
+  //     router.push(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
+  //   }
+  // };
 
   const highlightCards = [
     {
@@ -81,27 +90,11 @@ export default function Home() {
           <p className="text-xl mb-8">
             Pusat informasi terpadu Klimatologi BMKG
           </p>
-
-          {/* WRAP INPUT DAN BUTTON DENGAN FORM DAN TAMBAHKAN HANDLER */}
-          <form
-            onSubmit={handleSearch}
-            className="max-w-2xl mx-auto flex space-x-2"
-          >
-            <Input
-              type="text"
-              placeholder="Cari data, buletin, atau istilah glosarium..."
-              className="flex-grow p-6 text-lg text-gray-800 rounded-lg bg-white shadow-lg"
-              value={searchTerm} // Hubungkan nilai input ke state
-              onChange={(e) => setSearchTerm(e.target.value)} // Update state saat user mengetik
-            />
-            <Button
-              type="submit" // Pastikan type-nya adalah submit
-              size="lg"
-              className="bg-[var(--bmkggreen1)] hover:bg-[var(--bmkggreen2)]"
-            >
-              <Search className="w-5 h-5 mr-2" /> Cari
-            </Button>
-          </form>
+          <SearchBar
+            variant="landing"
+            enablePreview
+            placeholder="Cari prediksi, glosarium, FAQ..."
+          />
         </div>
       </section>
 

@@ -5,125 +5,115 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import SearchBar from "@/components/organisms/SearchBar";
 
+// Import langsung semua data
+import daftarData from "@/../public/data/daftar.json";
+import detailData from "@/../public/data/detail.json";
+import navbarData from "@/../public/data/navbar.json";
+import glosariumData from "@/../public/data/glosarium.json";
+import faqData from "@/../public/data/faq.json";
+
 export default function SearchPageContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get("query")?.toLowerCase() || "";
   const [results, setResults] = useState<any[]>([]);
-  const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
   useEffect(() => {
     if (!query) return;
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const sources = ["daftar", "detail", "navbar", "glosarium", "faq"];
-        const allResults: any[] = [];
 
-        for (const src of sources) {
-          const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+    const allResults: any[] = [];
 
-          const res = await fetch(`${basePath}/data/${src}.json`, {
-            cache: "no-store",
+    // --- daftar.json ---
+    if (Array.isArray(daftarData)) {
+      daftarData.forEach((category) => {
+        category.data.forEach((item: any) => {
+          if (
+            item.title?.toLowerCase().includes(query) ||
+            item.description?.toLowerCase().includes(query)
+          ) {
+            allResults.push({
+              title: item.title,
+              desc: item.description,
+              href: `/${item.href}`,
+              source: "daftar",
+            });
+          }
+        });
+      });
+    }
+
+    // --- detail.json ---
+    if (Array.isArray(detailData)) {
+      detailData.forEach((item) => {
+        if (
+          item.title?.toLowerCase().includes(query) ||
+          item.description?.toLowerCase().includes(query)
+        ) {
+          allResults.push({
+            title: item.title,
+            desc: item.description || "",
+            href: `/detail/${item.slug}`,
+            source: "detail",
           });
-
-          if (!res.ok) continue;
-          const data = await res.json();
-
-          // Filter sesuai struktur masing-masing file
-          if (src === "daftar" && Array.isArray(data)) {
-            data.forEach((category) => {
-              category.data.forEach((item: any) => {
-                if (
-                  item.title?.toLowerCase().includes(query) ||
-                  item.description?.toLowerCase().includes(query)
-                ) {
-                  allResults.push({
-                    title: item.title,
-                    desc: item.description,
-                    href: `/${item.href}`,
-                    source: "daftar",
-                  });
-                }
-              });
-            });
-          }
-
-          if (src === "detail" && Array.isArray(data)) {
-            data.forEach((item) => {
-              if (
-                item.title?.toLowerCase().includes(query) ||
-                item.description?.toLowerCase().includes(query)
-              ) {
-                allResults.push({
-                  title: item.title,
-                  desc: item.description || "",
-                  href: `/detail/${item.slug}`,
-                  source: "detail",
-                });
-              }
-            });
-          }
-
-          if (src === "navbar" && Array.isArray(data)) {
-            data.forEach((menu) => {
-              menu.subMenu?.forEach((sub: any) => {
-                if (sub.title?.toLowerCase().includes(query)) {
-                  allResults.push({
-                    title: sub.title,
-                    desc: `Dari menu ${menu.title}`,
-                    href: sub.href,
-                    source: "navbar",
-                  });
-                }
-              });
-            });
-          }
-
-          if (src === "glosarium" && Array.isArray(data)) {
-            data.forEach((item) => {
-              if (
-                item.term?.toLowerCase().includes(query) ||
-                item.definition?.toLowerCase().includes(query)
-              ) {
-                allResults.push({
-                  title: item.term,
-                  desc: item.definition,
-                  href: "/glosarium",
-                  source: "glosarium",
-                });
-              }
-            });
-          }
-
-          if (src === "faq" && Array.isArray(data)) {
-            data.forEach((item) => {
-              if (
-                item.question?.toLowerCase().includes(query) ||
-                item.answer?.toLowerCase().includes(query)
-              ) {
-                allResults.push({
-                  title: item.question,
-                  desc: item.answer,
-                  href: "/faq",
-                  source: "faq",
-                });
-              }
-            });
-          }
         }
+      });
+    }
 
-        setResults(allResults);
-        setCurrentPage(1);
-      } catch (err) {
-        console.error("Error saat fetch data:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
+    // --- navbar.json ---
+    if (Array.isArray(navbarData)) {
+      navbarData.forEach((menu) => {
+        menu.subMenu?.forEach((sub: any) => {
+          if (sub.title?.toLowerCase().includes(query)) {
+            allResults.push({
+              title: sub.title,
+              desc: `Dari menu ${menu.title}`,
+              href: sub.href,
+              source: "navbar",
+            });
+          }
+        });
+      });
+    }
 
-    fetchData();
+    // --- glosarium.json ---
+    if (Array.isArray(glosariumData)) {
+      glosariumData.forEach((item) => {
+        if (
+          item.term?.toLowerCase().includes(query) ||
+          item.definition?.toLowerCase().includes(query)
+        ) {
+          allResults.push({
+            title: item.term,
+            desc: item.definition,
+            href: "/glosarium",
+            source: "glosarium",
+          });
+        }
+      });
+    }
+
+    // --- faq.json (nested structure) ---
+    if (Array.isArray(faqData)) {
+      faqData.forEach((section) => {
+        section.questions?.forEach((item: any) => {
+          if (
+            item.q?.toLowerCase().includes(query) ||
+            item.a?.toLowerCase().includes(query)
+          ) {
+            allResults.push({
+              title: item.q,
+              desc: item.a,
+              href: "/faq",
+              source: `FAQ - ${section.category}`,
+            });
+          }
+        });
+      });
+    }
+
+    setResults(allResults);
+    setCurrentPage(1);
   }, [query]);
 
   const totalPages = Math.ceil(results.length / itemsPerPage);
@@ -144,16 +134,14 @@ export default function SearchPageContent() {
         <span className="text-blue-600 font-medium">{query}</span>
       </h1>
 
-      {loading && <p className="text-gray-500">Memuat data...</p>}
-
-      {!loading && query && results.length === 0 && (
-        <p className="text-gray-500">Tidak ada hasil ditemukan.</p>
-      )}
-
-      {!loading && !query && (
+      {!query && (
         <p className="text-gray-400 text-center mt-6">
           Ketikkan kata kunci di atas untuk mulai mencari data 🌦️
         </p>
+      )}
+
+      {query && results.length === 0 && (
+        <p className="text-gray-500">Tidak ada hasil ditemukan.</p>
       )}
 
       <ul className="space-y-4">
@@ -176,7 +164,7 @@ export default function SearchPageContent() {
         ))}
       </ul>
 
-      {!loading && results.length > 0 && (
+      {results.length > 0 && (
         <div className="flex items-center justify-center gap-2 mt-8">
           <button
             onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}

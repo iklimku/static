@@ -9,44 +9,17 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import faqJson from "@/../public/data/faq.json";
-
-// {
-//   "category": "Umum",
-//   "questions": [
-//     {
-//       "q": "Apa itu Portal Informasi Iklim BMKG?",
-//       "a": "Portal ini merupakan platform resmi yang menyediakan informasi iklim, seperti prediksi sifat hujan bulanan, anomali suhu, serta data klimatologi berbasis wilayah Indonesia."
-//     },
-//     {
-//       "q": "Siapa pengelola situs ini?",
-//       "a": "Portal ini dikelola oleh Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) melalui unit terkait di bidang klimatologi."
-//     },
-//     {
-//       "q": "Apakah data di situs ini resmi?",
-//       "a": "Ya. Seluruh data dan informasi bersumber dari BMKG dan dipublikasikan secara resmi sesuai jadwal rilis bulanan."
-//     }
-//   ]
-// }
-interface FAQ {
-  category: string;
-  questions: {
-    q: string;
-    a: string;
-  }[];
-}
 
 export default function FAQPage() {
-  // const [faqData, setFaqData] = useState<any[]>([]);
+  const [faqData, setFaqData] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const faqData: FAQ[] = faqJson;
 
-  // useEffect(() => {
-  //   fetch("/data/faq.json")
-  //     .then((res) => res.json())
-  //     .then((data) => setFaqData(data))
-  //     .catch((err) => console.error("Error loading FAQ data:", err));
-  // }, []);
+  useEffect(() => {
+    fetch("/data/faq.json")
+      .then((res) => res.json())
+      .then((data) => setFaqData(data))
+      .catch((err) => console.error("Error loading FAQ data:", err));
+  }, []);
 
   const filteredFaq = faqData.map((cat) => ({
     ...cat,

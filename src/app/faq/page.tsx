@@ -9,19 +9,20 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import faqJson from "@/../public/data/faq.json";
 
 export default function FAQPage() {
-  const [faqData, setFaqData] = useState<any[]>([]);
+  // const [faqData, setFaqData] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    fetch("/data/faq.json")
-      .then((res) => res.json())
-      .then((data) => setFaqData(data))
-      .catch((err) => console.error("Error loading FAQ data:", err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("/data/faq.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setFaqData(data))
+  //     .catch((err) => console.error("Error loading FAQ data:", err));
+  // }, []);
 
-  const filteredFaq = faqData.map((cat) => ({
+  const filteredFaq = faqJson.map((cat) => ({
     ...cat,
     questions: cat.questions.filter(
       (q: any) =>
